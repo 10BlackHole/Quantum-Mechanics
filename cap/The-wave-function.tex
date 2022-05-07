@@ -57,4 +57,77 @@ There is a useful little theorem pn variances:
 \end{equation}
 
 \section{Continous variables}
+I hace assumed that we are dealing with a \textit{discrete} variable--that is, one that can take on only isolated values. But it is simple enough to generaliza to \textit{continous} distributions. If the interval is sufficiently short, this probabilty is \textit{proportional to the length of the interval}. This
+\begin{equation}\label{1.14}\marginnote{Probabilty density}
+	\mbox{{probabilty that an individual lies between $x$ and $(x+\dd x)$}}=\rho(x)\dd x
+\end{equation}
+The proportionality factor $\rho(x)$,is often loosely called "the probability of gettinf $x$", but is sloopy lanuage; a better term is \textbf{probability density}. The probability that $x$ lies between $a$ and $b$ (a finite interval) is gicen by the integral of $\rho(x)$:
+\begin{equation}\label{1.15}
+	P_{ab}=\int_a^b\rho(x)\dd x
+\end{equation}
+and the rules we deduced for discrete distributions translate in the obvious way:
+\begin{equation}\label{1.16}
+	1 = \int_{-\infty}^{+\infty}\rho(x)\dd x
+\end{equation}
+\begin{equation}\label{1.17}
+	<x>=\int_{-\infty}^{+\infty}x\rho(x)\dd x
+\end{equation}
+\begin{equation}\label{1.18}
+	<f(x)>=\int_{-\infty}^{+\infty}f(x)\rho(x)\dd x
+\end{equation}
+\begin{equation}\label{1.19}
+	\sigma^2\equiv <(\Delta x)^2>=<x^2>-<x>^2
+\end{equation}
 
+\section{Normalization}
+We return now to the statistical interpretation of the wave function (\ref{1.3}), which says that $|\Psi(x,t)|^2$ is the probability density for finding the particle at point $x$, at time $t$. It follows (\ref{1.6}) that the integral of $|\Psi|^2$ must be $1$ (the particle's got to be \textit{somewhere}):
+\begin{equation}\label{1.20}
+	\boxed{\int_{-\infty}^{+\infty}|\Psi(x,t)|^2\dd x=1}
+\end{equation}
+
+If $\Psi(x,t)$ is a solution of the Schrodinger equation , so too is $A\Psi(x,t)$, where $A$ is any (complex) constant. What we must do, then, is pick this undetermined multiplicative factor so as to ensure that (\ref{1.20}) is satisfied. This process is called \textbf{normalizing} the wave function. For some solutions to the Schrodinger equation the integral is \textit{infinite}; in that case \textit{no} multiplicative factor is going to make it $1$. The same goes for the trivial solution $\Psi=0$ . Shuch \textbf{non-normalizable} solutions cannot represent particles, and must be rejected. Physically realizable states correspond to the \textbf{square-integrable} solutions to Schrodinger equation.\footnote{Evidently $\Psi(x,t)$ must go to zero faster than $1/\sqrt{|x|}$, as $|x|\to\infty$. Incidentaly, normalziation only fixed the \textit{modulus} of $A$: the phase remains undetermiend. However, as we shall, the latter carries no physical significance anyway.}
+
+Fortunately, the Schrodinger equation has the rematkable property that it automatically preserves the normalization of the wave function.
+
+\section{Momentum}
+For a particle in state $\Psi$, the expectation value of $x$ is 
+\begin{equation}\label{1.28}\marginnote{Expectation value of $x$}
+	\boxed{<x>=\int_{-\infty}^{+\infty}x|\Psi(x,t)|^2\dd x}
+\end{equation}
+What exactly does this mean? It emphatically does not meand that if you measure the position of one particle over and over, $\int x|\Psi1^2\dd x$ is the average of the results you'll get. Rather, $<x>$ is the average of measurements, performes on particles \textit{all in the satate} $\Psi$, which means that either you must find some way to returning the particle to its original state after each measurement, or else you have to prepare a whole \textbf{ensamble} of particles, each in the same state $\Psi$, and measure the positions of all of them: $<x>$ is the average of \textit{these} results. 
+
+Now, as time goes on, $<x>$ will cahnge (because of the time dependence of $\Psi$), ando we might be interested in knowing how fast ir moves. We see that
+\begin{equation}\label{1.31}
+	\frac{\dd <x>}{\dd t}=-\frac{i\hbar}{m}\int\Psi^ *\pdv{\Psi}{x}\dd x
+\end{equation}
+
+The \textit{expectations value of the velocity is equal to the time derivative of the expectation value of position}:
+\begin{equation}\label{1.32}
+	<v>=\frac{\dd <x>}{\dd t}
+\end{equation}
+
+(\ref{1.31}) tell us, then, how to calculate $<v>$ directly from $\Psi$.
+
+Acually, it is customary to work with \textbf{momentum} ($p=mv$), rather than velocity:
+\begin{equation}\label{1.33}\marginnote{Momentum}
+	<p>=m\frac{\dd <x>}{\dd t}=-i\hbar\int\left(\Psi^*\pdv{\Psi}{x}\right)\dd x
+\end{equation}
+
+Let me write the expressions for $<x>$ and $<p>$ in a more siggestive way:
+\begin{equation}\label{1.34}
+	<x>=\int\Psi^*(x)\Psi \dd x
+\end{equation}
+\begin{equation}\label{1.35}
+	<p>=\int\Psi^*\left(\frac{\hbar}{i}\frac{\partial}{\partial x}\right)\Psi \dd x
+\end{equation}
+
+We say that the \textbf{operator} $x$ "represents" position, and the operator $(\hbar/i)(\partial/\partial x)$ "represents" momentum, in quantum mechanics; to calculate expectation values we "sandwich" the appropiate operator between $\Psi^*$ and $\Psi$, and integrate.
+
+What about other quantities? The fact is, all classical dynamics variables can be expressed in terms of position and momentum.
+
+To calculate the expectation value of any such quantuty, $Q(x,p)$, we simply replace every $p$ by $(\hbar/i)(\partial/\partial x)$, insert the resulting operator between $\Psi^*$ and $\Psi$, and integrate:
+\begin{equation}\label{1.36}
+	\boxed{<Q(x,p)>=\int\Psi^*Q\left(x,\frac{\hbar}{i}\frac{\partial}{\partial x}\right)\Psi\dd x}
+\end{equation}
+
+\section{The uncertaintly principle}
