@@ -20,3 +20,41 @@ Yhe statistical interpretation introduces a kind of \textbf{indeterminacy} into 
 We say that the wave function \textbf{collapses}, upon measurement, to spike some point. There are, then, two entirely distinct kinds of physical processes: "ordinary" oenes, in which the wave function evolves in a leisurely fashion inder the Schrodinger equation, and "measurements", in which $\Psi$ suddenly and discontinously collapses \footnote{The role of measurement in quantum mechanics is so critical and so bizarre that you may well be wondering what precisely constitutes a measurement. Does it have to do with the interaction between a miscroscopic (quantum) system and a mecorscopic (classical) measuring apparatus (as Bohr insisted), or is it intervention of a conscious "oberver" (as Wigner proposed)? For the moment let's take the naive view: A measurement is the kind of thing that a scientist does in the laboratory, with rules, stopwatches, and so on}.
 
 \section{Probability}
+I will give some definitions. The total number is  
+\begin{equation}\label{1.4}
+	N = \sum_{j=0}^\infty N(j)
+\end{equation}
+The probability of getting $j$ is
+\begin{equation}\label{1.5}
+	P(j)=\frac{N(j)}{N}
+\end{equation}
+In particular, the sum of all the probabilities is 1:
+\begin{equation}\label{1.6}
+	\sum_{j=0}^\infty P(j)=0
+\end{equation}
+
+
+In general, the average value of some \textit{function} of $j$ es given by
+\begin{equation}\label{1.9}\marginnote{Average value of a function}
+	\boxed{<f(j)>=\sum_{j=0}^\infty f(j)P(j)}
+\end{equation}
+In quantum mechanics the average is usually the quantity of interest; in that context it has come to be called the \textbf{expectation value}.
+
+Now we need a numerial measure of the amount of "spread" in a distribution, with respect to the aveerge. The most obvious way to do this would be to find out how far each individual deviates from de average,
+\begin{equation}\label{1.10}
+	\Delta j=j-<j>
+\end{equation}
+and compute the average of $\Delta j$. Trouble is, of course, that you get zero, by the nature of the avergae, $\Delta j$ is as often negative as positive. To avoid this irritating problem you might decide to average de \textit{absolute value} of $\Delta j$. But absolute values are nasty to work with; instead, we get around the sign problem by \textit{squaring} before averaging:
+
+\begin{equation}\label{1.11}\marginnote{Variance}
+	\sigma^2\equiv <(\Delta j)^2>
+\end{equation}
+This quantity is known as the \textbf{variance} of the distribution; $\sigma$ itsel is called the \textbf{standard deviation}. 
+
+There is a useful little theorem pn variances:
+\begin{equation}\label{1.12}
+	\sigma=\sqrt{<j^2> - <j>^2}
+\end{equation}
+
+\section{Continous variables}
+
