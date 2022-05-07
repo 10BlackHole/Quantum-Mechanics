@@ -1,0 +1,22 @@
+\chapter{The wave function}
+\section{The Schrodinger equation}
+Imagine a particle of mass $m$, constrained to move along the $x$-axis, subjet to some to specifies force $F(x,t)$. The program of \textit{classical} mechanics is to determine the position of the particle at any give time: $x(t)$. Once we know that, we can figure out the velocity ($v=\dv*{x}{t}$), the momentum ($p=mv$), the kinetic energy ($T=(1/2)mv^2$), or any other dynamical variable of interest. And how do we go about determining $x(t)$? We apply Newton's second law: $F=ma$. (For \textit{conservative} systems--the only kins we shall consider, and, fortunately, the only kins that \textit{occur} at the microscopic level--the force can be expresed as the derivative of a potential energy function \footnote{Magnetic forces are an exception, but let's not worry about them just yet. By the eay, we shall assume for the moment that the motion is nonrelativistic ($v<<c$)}, $F=-\pdv*{V}{x}$, and Newton's law reads $m\dd ^2x/\dd t^2=-\partial V/\partial x$) This, together with appropiate initial conditions (typically the position and velocity at $t=0$), determines $x(t)$ .
+
+Quantum mechanics approaches this same problem quite differently. In this case what we're loocking for ir the particle's \textbf{wave function}, $\Psi(x,t)$, and we get it by solving the \textbf{Schrodinger equaation}:
+\begin{equation}\label{1.1}\marginnote{Schrodinger equation}
+	\boxed{i\hbar\pdv{\Psi}{t}=-\frac{\hbar^2}{2m}\pdv[2]{\Psi}{x}+V\Psi}
+\end{equation}
+This equation plays a role logically analogous to Newton's second law: Given suitable initial conditions (typically, $\Psi(x,0)$), the Schrodignes equation determines $\Psi(x,t)$ for all future time, just as, in classical mechanics, Newton's law determines $x(t)$ for all future time.
+
+\section{The statistical interpretation}
+What exactly is this "wave function"? Born's \textbf{statistical interpretation} of the wave function, says that $|\Psi(x,t)|^2 $ gives the \textbf{probability} of finding the particle at point $x$, at time $t$, or more precisely
+\begin{equation}\label{1.3}\marginnote{Statistical interpretation}
+	\boxed{\int_a^b|\Psi(x,t)|^2\dd x=\mbox{probability of finding the particle  between $a$ and $b$, at time $b$}}
+\end{equation}
+Probability is the \textit{area} inder the graph of $|\Psi(x,t)|^2$
+
+Yhe statistical interpretation introduces a kind of \textbf{indeterminacy} into quantum mechanics, for even if you know evertything the theory has to tell you about the particle /to wit: its wave function, still you cannot predict with certainty the outcome of a simple experiment to measure its position-- all quantum mechanics has to offer is \textit{statistical} information about the \textit{possible} results.
+
+We say that the wave function \textbf{collapses}, upon measurement, to spike some point. There are, then, two entirely distinct kinds of physical processes: "ordinary" oenes, in which the wave function evolves in a leisurely fashion inder the Schrodinger equation, and "measurements", in which $\Psi$ suddenly and discontinously collapses \footnote{The role of measurement in quantum mechanics is so critical and so bizarre that you may well be wondering what precisely constitutes a measurement. Does it have to do with the interaction between a miscroscopic (quantum) system and a mecorscopic (classical) measuring apparatus (as Bohr insisted), or is it intervention of a conscious "oberver" (as Wigner proposed)? For the moment let's take the naive view: A measurement is the kind of thing that a scientist does in the laboratory, with rules, stopwatches, and so on}.
+
+\section{Probability}
