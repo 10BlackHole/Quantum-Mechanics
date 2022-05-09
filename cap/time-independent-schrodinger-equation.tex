@@ -122,10 +122,55 @@ Suppose
 \end{equation}
 Fig. (\ref{fig:2.1}). A particle in this potential is completely free, except at two ends ($x=0$ and $x=a$), where an infinte force prevents it from escaping.
 
+\textit{Outside} the well, $\psi(x)=0$ (the probability of findig the particle there is zero) \textit{Inside} the well, where $V=0$, the time-independent Schrodinger equation (\ref{2.5}) reads
+\begin{equation}\label{2.20}
+	-\frac{\hbar^2}{2m}\dv[2]{\psi}{x}=E\psi
+\end{equation}
+or
+\begin{equation}\label{2.21}
+	\dv[2]{\psi}{x}=-k^2\psi,\qquad \mbox{where } k\equiv\frac{\sqrt{2mE}}{\hbar}
+\end{equation}
+(By writinf it in this way, I have tacitly assumed that $E\geq 0$.) Equation (\ref{2.21}) is the classical \textbf{simple harmonic oscilaltor} equation; the general solution is
+\begin{equation}\label{2.22}
+	\psi(x)=A\sin kx + B\cos kx
+\end{equation}
+where $A$ and $B$ are arbitraty constants. Tipically, these constants are fixed by the \textbf{boundary conditions} of the problem. What are the appropiate boundary conditions for $\psi(x)$? Ordinatily, both $\psi$ and $\dd \psi/\dd x$ are continuous, but where the potential goes to infinity only the first of these applies.
+
+Continuity of $\psi(x)$ requieres that
+\begin{equation}\label{2.23}
+	\psi(0)=\psi(a)=0
+\end{equation}
+so as to join onto the solution outisde the well. What does this tell us about $A$ and $B$? Well,
+\begin{equation*}
+	\psi(0)=A\sin 0+B\cos 0=B
+\end{equation*}
+so $B=0$, and hence
+\begin{equation}\label{2.24}
+	\psi(x)=A\sin kx
+\end{equation}
+Then $\psi(a)=A\sin ka$, so either $A=0$ (in which case we're left with the trivial --non-normalizable--solution $\psi(x)=0$), or else $\sin ka=0$, which means that
+\begin{equation}\label{2.25}
+	ka = 0,\pm \pi,\pm 2\pi,\pm 3\pi,...
+\end{equation}
+But $k=0$ is no good (again, that would imply $\psi(x)=0$),and the negative solutions give nothing new, since $\sin(-\theta)=-\sin(\theta)$ andw e can absorb the minus sign into $A$. So the \textit{distinct} solutions are
+\begin{equation}\label{2.26}
+	k_n=\frac{n\pi}{a},\qquad \mbox{with } n=1,2,3,...
+\end{equation}
+Curiously, the boundary condition at $x=a$ does not determine the constant $A$, but rather the constant $k$, and hence the possible values of $E$:
+\begin{equation}\label{2.27}\marginnote{Possible values of $E$}
+	\boxed{E_n=\frac{\hbar^2k_n^2}{2m}=\frac{n^2\pi^2\hbar^2}{2ma^2}}
+\end{equation}
+
+
+
+
+
+
 
 
 
 
 \end{enumerate}
+
 
 
