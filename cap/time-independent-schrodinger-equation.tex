@@ -1,2 +1,92 @@
 \chapter{Time-independent Schrodinger equation}
 \section{Stationary states}
+Wa talked a lot about the wave function, and how you use it to calculare various quantities of interest. But, how do get $\Psi(x,t)$ in the first place? We need to solce the Schrodinger equation,
+\begin{equation}\label{2.1}
+	i\hbar\pdv{\Psi}{t}=-\frac{\hbar^2}{2m}\pdv[2]{\Psi}{x}+V\Psi
+\end{equation}
+for a specified potential\footnote{It is tiresome to keep saying "potential energy function", so most people jus call $V$ the "potential", even though this invites occasional confusion with electric potencial, which is actually potential energy per unit charge.} $V(x,t)$. In this chapter (and most of this book) I shall assume that $V$ is \textit{independent} of $t$. In that case the Schrodinger equation can be solved by the method of \textbf{separation of variables}: We look for solutions that are simple \textit{products},
+\begin{equation}\label{2.2}
+	\Psi(x,t)=\psi(x)\varphi(t)
+\end{equation}
+where $\psi$ is a function of $x$ alone, and $\varphi$ is a function of $t$ alone. 
+
+For separable solutions we have
+\begin{equation*}
+	\pdv{\Psi}{t}=\psi\dv{\varphi}{t},\qquad \pdv[2]{\Psi}{x}=\dv[2]{\psi}{x}\varphi
+\end{equation*}
+(\textit{ordinaty} derivatives, now), and Schrodinger equation reads
+\begin{equation}
+	i\hbar\dv{\varphi}{t}=-\frac{\hbar^2}{2m}\dv[2]{\psi}{x}\varphi + V\psi\varphi
+\end{equation}
+Or, dividing through by $\psi\varphi$:
+\begin{equation}\label{2.3}
+	i\hbar\frac{1}{\varphi}\dv{\varphi}{t}=-\frac{\hbar^2}{2m}\frac{1}{\psi}\dv[2]{\psi}{x}+V
+\end{equation}
+
+Now, the left side is a function of $t$ alone, and the right side is a function of $x$ alone\footnote{Note that this would not be true if $V$ were a function of $t$ as well as $x$.}. The only way this can possibly be true is if both sides are in fact \textit{constant} -- otherwise, by varying $t$, I could change the left side without touching the right side, and the two would no lonegr equal. For reasons that will appear in a moment, we shall call the separation constan $E$. Then
+\begin{equation*}
+	i\hbar\frac{1}{\varphi}\dv{\varphi}{t}=E
+\end{equation*}
+or
+\begin{equation*}\label{2.4}
+	\dv{\varphi}{t}=-\frac{iE}{\hbar}\varphi
+\end{equation*}
+and
+\begin{equation}
+	-\frac{\hbar^2}{2m}\frac{1}{\psi}\dv[2]{\psi}{x}+V=E
+\end{equation}
+or
+\begin{equation}\label{2.5}\marginnote{Time-independent Schrodinger equation}
+	\boxed{-\frac{\hbar^2}{2m}\dv[2]{\psi}{x}+V\psi=E\psi}
+\end{equation}
+Separation of variables hs turned a \textit{partial} differential equation into \textit{two ordinary} differential equations (\ref{2.4}) and (\ref{2.5}). The first, (\ref{2.4}) is easy to solve (just multiply through by $\dd t$ and integrate); the general solution is $C\exp(-iEt/\hbar)$, but we might as well absorb the constant $C$ into $\psi$ (since the quantity of interest is the product $\psi\varphi$). Then
+\begin{equation}\label{2.6}
+	\varphi(t)=e^{-iEt/\hbar}
+\end{equation}
+The second equation (\ref{2.5}) is called the \textit{time-independent Schrodinger equation} we can go further with it until the potencial $V(x)$ is specified.
+
+The rest of thus chapter will be devoted to solving the time-independent Schrodinger equation, fot a variety of simple potentials. But before I get to that you have every right ask: What's so great about separable solutions? After all, most solutions so the (time dependent) Schrodinger equation do not take the form $\psi(x)\varphi(t)$. I offer three answers--two of them physical, and one mathematical:
+\begin{enumerate}
+	\item They are \textbf{stationaty states}. Although the wave function itself,
+		\begin{equation}\label{2.7}
+	\Psi(x,t)=\psi(x)e^{-iEt/\hbar}
+\end{equation}
+does (obviously) depende on $t$, the \textit{probability density},
+\begin{equation}\label{2.8}
+	|\Psi(x,t)|^2=\Psi^*\Psi=\psi^*e^{+iEt/\hbar}\psi e^{-iEt/\hbar}=|\psi(x)|^2
+\end{equation}
+does not--the time-dependence cancels out\footnote{For normalizable solutions, $E$ must be real}. The same thing happens in calculate the expectation value of any dynamil variable; (\ref{1.36}) reduces to
+\begin{equation}\label{2.9}
+	<Q(x,p)>=\int\psi^*Q\left(x,\frac{\hbar}{i}\frac{\dd}{\dd x}\right)\psi\dd x
+\end{equation}
+\textit{Every expectation value is constant in time}; we might as well drop the factor $\varphi(t)$ altogether, and simply use $\psi$ in place of $\Psi$. In particular, $<x>$ is constant, and hence $<p>=0$ (See (\ref{1.33})). Nothing ever happens in a stationary state.
+
+\item They are states of \textit{definite total energy}. In classical mechanics, the total energy (kinetic plus pontential) is called the \textbf{Hamiltonian}:
+	\begin{equation}\label{2.10}
+	H(x,p)=\frac{p^2}{2m}+V(x)
+\end{equation}
+The corresponding Hamiltonian \textit{operator}, obtained by the canonical substitution $p\to (\hbar/i)(\partial /\partial x)$, is therefore\footnote{Whenever confusion might arise. I'll put a "hat" on the operator, to distinguish it from the dynamical variable it represents.}
+\begin{equation}\label{2.11}
+	\hat{H}=-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)
+\end{equation}
+Thus the time-independent Schrodinger equation (\ref{2.5}) can be written
+\begin{equation}\label{2.12}
+	\hat{H}\psi=E\psi
+\end{equation}
+and the expectation value of the total energy is
+\begin{equation}\label{2.13}
+	<H>=\int\psi^*\hat{H}\psi\dd x=E\int |\psi|^2\dd x=E\int |\Psi|^2\dd x=E
+\end{equation}
+(Notice that the normalization of $\Psi$ entails the normalization of $\psi$.) Moreover,
+$$\hat{H}^2\psi=\hat{H}(\hat{H}\psi)=\hat{H}(E\psi)=E(\hat{H}\psi)=E^2\psi$$ and hence $$<H^2>=\int\psi^*\hat{H}^2\psi\dd x=E^2\int|\psi|^2\dd x=E^2$$ So the variance of $H$ is 
+\begin{equation}\label{2.14}
+	\sigma_H^2=<H^2>-<H>^2=E^2-E^2=0
+\end{equation}
+But remember, if $\sigma=0$, then every member of the sample must share the same value (the distribution has zero spread). \textit{Conclusion}: A separable solution has the property that \textit{every measurement of the total energy is certain to return the value $E$}.
+
+\item The general solution is a \textbf{linear combiantion} of separable solutions.
+
+
+\end{enumerate}
+
+
