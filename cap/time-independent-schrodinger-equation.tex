@@ -84,7 +84,46 @@ $$\hat{H}^2\psi=\hat{H}(\hat{H}\psi)=\hat{H}(E\psi)=E(\hat{H}\psi)=E^2\psi$$ and
 \end{equation}
 But remember, if $\sigma=0$, then every member of the sample must share the same value (the distribution has zero spread). \textit{Conclusion}: A separable solution has the property that \textit{every measurement of the total energy is certain to return the value $E$}.
 
-\item The general solution is a \textbf{linear combiantion} of separable solutions.
+\item The general solution is a \textbf{linear combiantion} of separable solutions. As we're about to discover, the time-independent Schrodinger equation (\ref{2.5}) yields an infinite collection of solution ($\psi_1(x), \psi_2(x),...$),  each with its assocaites value of the reparation constant ($E_1, E_2, ...$); thus there is a different wave function for each \textbf{allowed energy}:
+	$$\Psi_1(x,t)=\psi_1(x)e^{-iE_1t/\hbar},\qquad \Psi_2(x,t)=\psi_2(x)e^{-iE_2t/\hbar}, ...$$ Nowthe time-dependent Schrodinger equation (\ref{2.1}) has the property that any linear combination\footnote{A \textbf{linear combination} of the functions $f_1(z), f_z(z),...$ is an expression of the form $$f(z)=c_1f_1(z)+c_2f_2(z)+\cdots$$ where $c_1,c_2,...$ are any (complex) constants.} of solutions is itself a solution. Once we have found the separable solutions, then, we can immediately construct a much more general solution, on the form
+	\begin{equation}\label{2.15}
+	\Psi(x,t)=\sum_{n=1}^\infty c_n\psi_n(x)e^{-iE_nt/\hbar}
+\end{equation}
+It so happens that \textit{every} solution to the (time-dependent) Schrodinger equation can be written iun this form --it is simply a matter if finding the tight constants ($c_1,c_2,...$) so as to fit the initial conditions for the problem at hand.
+
+Let me recapitulate, from a somewhat different persperctive. Here's the generic problem: You're given a (time-independent) potencial $V(x)$ and the starting wave function $\Psi(x,0)$; your job is to find the wave function, $\Psi(x,t)$, for any subsequent time $t$. To do this you must solve the (time-dependent) Schrodinger equation (\ref{2.1}); this yields, in general, an infinite set of solutions ($\psi_1(x),\psi_2(x),...$), each with its own assocaited energy ($E_1,E_2,...$). To fit $\Psi(x,0)$ you write down the general linear combination of these solutions:
+\begin{equation}\label{2.16}
+	\Psi(x,0)=\sum_{n=1}^\infty c_n\psi_n(x)
+\end{equation}
+the miraacle os that you can \textit{always} match the specified initial state by appropiate choice of the constants $c_1,c_2,...$. To construct $\Psi(x,t)$ you simply tack onto each term its characteristic time dependence, $\exp(-iE_nt/\hbar)$:
+\begin{equation}\label{2.17}
+	\boxed{\Psi(x,t)=\sum_{n=1}^\infty c_n\psi_n(x)e^{-iE_nt/\hbar}=\sum_{n=1}^\infty c_n\Psi_n(x,t)}
+\end{equation}
+The separable solutions themselves,
+\begin{equation}\label{2.18}
+	\Psi_n(x,t)=\psi_n(x)e^{-iE_nt/\hbar}
+\end{equation}
+are \textit{stationary} states, in the sense that all probabilities and expectation values are independent of time, but this property is emphatically \textit{not} shared by the general solution (\ref{2.17}); the enrgies are different, for different stationary states, and the exponentials do not cancel, when you calculate $|\Psi|^2$.
+
+\section{The infinite square well}
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[scale=0.5]{fig/01.png}
+		\caption{The infinte square well potential (\ref{2.19})}
+		\label{fig:2.1}
+	\end{center}	
+\end{figure}
+
+Suppose
+\begin{equation}\label{2.19}
+	V(x)=\left\{\begin{array}{lc}
+		0&,0\leq x\leq a\\ \infty & \mbox{,otherwise}\end{array}
+		\right.
+\end{equation}
+Fig. (\ref{fig:2.1}). A particle in this potential is completely free, except at two ends ($x=0$ and $x=a$), where an infinte force prevents it from escaping.
+
+
+
 
 
 \end{enumerate}
