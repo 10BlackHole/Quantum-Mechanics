@@ -255,6 +255,55 @@ The \textit{quantum} problem is to solve the Schrodinger equation for the potent
 In the literature you will find two entirely different approaches to this problem. The first is a straightforward "brute force" solution to the differential equation, usin the \textbf{power series method}; it has the virtue that the same strategy can be applied to many other potentials. The second is a diabolically clever algebraic technique, using so-called \textbf{ladder operator}. We'll se the algebraic methos first, because it is quicker and simpler (and a lot more fun)\footnote{We'll encounter some of the same strategies in the theory og angular momentum, and the technique generalizes to a broad class of potentials in \textbf{super-symmetric quantum mechanics}}. 
 
 \subsection{Algebraic Method}
+To begin with, let's rewrite (\ref{2.44}) in a more suggestive form:
+\begin{equation}\label{2.45}
+	\frac{1}{2m}[p^2+(m\omega x)^2]\psi=E\psi
+\end{equation}
+where $p\equiv (\hbar/i)\dd /\dd x$ is, of course, the momentum operator. The basic idea is to \textit{factor} the Hamiltonian,
+\begin{equation}\label{2.46}
+	H=\frac{1}{2m}[p^2+(m\omega x)^2]
+\end{equation}
+If these were \textit{numbers}, it would be easy: $$u^2+v^2=(iu+v)(-iu+v)$$
+Here, however, it's not quite so simple, because $p$ and $x$ are \textit{operators},  and operators do not, in general, \textbf{commute} ($xp$ is not de same as $px$). Still, this does motivate us to examine the quantities
+\begin{equation}\label{2.47}
+	\boxed{a_{\pm}\equiv\frac{1}{\sqrt{2\hbar m\omega}}(\mp ip+m\omega x)}
+\end{equation}
+(the factor in front is just there to make the final result look nicer).
+
+Well, what is the product $a_-a_+$?
+\begin{align*}
+	a_-a_+&=\frac{1}{2\hbar m\omega}(ip+m\omega x)(-ip+m\omega x)\\
+				&=\frac{1}{2\hbar m\omega}[p^2+(m\omega x)^2-im\omega(xp-px)]
+\end{align*}
+As anticipated, there's an extra term, involving $(xp-px)$. We call this the \textbf{commutator} of $x$ and $p$; it is a measure of how badly the \textit{fail} to commute. In general the commuatator of operators $A$ and $B$ (written with brackets) is
+\begin{equation}\label{2.48}
+	[A,B]\equiv AB-BA
+\end{equation}
+In this notation,
+\begin{equation}\label{2.49}
+	a_-a_+=\frac{1}{2\hbar m\omega}[p^2+(m\omega x)^2]-\frac{i}{2\hbar}[x,p]
+\end{equation}
+We need to figure out the commuatator of $x$ and $p$. \textit{Warning}: Operators are notoriously slippery to work with in the abstract, and you are bound to make mistakes unless you give them a "test function", $f(x)$, to act on. At the end you can throw away the test function, and you'll be left with an equation involving the operators alone. In the present case we have:
+\begin{equation}\label{2.50}
+	[x,p]f(x)=\left[x\frac{\hbar}{i}\dv{f}{x}-\frac{\hbar}{i}\dv{xf}{x}\right]=\frac{\hbar}{i}\left(x\dv{f}{x}-x\dv{f}{x}-x\right)=i\hbar f(x)
+\end{equation}
+Dropping the test function, which has served its purpose,
+\begin{equation}\label{2.51}\marginnote{Cannonical commutation relation}
+	\boxed{[x,p]=i\hbar}
+\end{equation}
+This lovely and obiquitous result is known as the \textbf{cannonical commutation relation}\footnote{In deep sense all of the mysteries of quantum mechanics can be traced to the fact that position and momentum do not commute. Indeed, some authors take the cannoncial commuation relation as an \textit{axiom} of the theory, and use ir to \textit{derive} $p=(\hbar/i)\dd/\dd x$}.
+
+With this, (\ref{2.49}) becomes
+
+\begin{equation}\label{2.52}
+	a_-a_+=\frac{1}{\hbar\omega}H+\frac{1}{2}
+\end{equation}
+
+
+
+
+
+
 
 
 
