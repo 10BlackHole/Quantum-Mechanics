@@ -48,7 +48,7 @@ The second equation (\ref{2.5}) is called the \textit{time-independent Schroding
 The rest of thus chapter will be devoted to solving the time-independent Schrodinger equation, fot a variety of simple potentials. But before I get to that you have every right ask: What's so great about separable solutions? After all, most solutions so the (time dependent) Schrodinger equation do not take the form $\psi(x)\varphi(t)$. I offer three answers--two of them physical, and one mathematical:
 \begin{enumerate}
 	\item They are \textbf{stationaty states}. Although the wave function itself,
-		\begin{equation}\label{2.7}
+\begin{equation}\label{2.7}
 	\Psi(x,t)=\psi(x)e^{-iEt/\hbar}
 \end{equation}
 does (obviously) depende on $t$, the \textit{probability density},
@@ -85,7 +85,8 @@ $$\hat{H}^2\psi=\hat{H}(\hat{H}\psi)=\hat{H}(E\psi)=E(\hat{H}\psi)=E^2\psi$$ and
 But remember, if $\sigma=0$, then every member of the sample must share the same value (the distribution has zero spread). \textit{Conclusion}: A separable solution has the property that \textit{every measurement of the total energy is certain to return the value $E$}.
 
 \item The general solution is a \textbf{linear combiantion} of separable solutions. As we're about to discover, the time-independent Schrodinger equation (\ref{2.5}) yields an infinite collection of solution ($\psi_1(x), \psi_2(x),...$),  each with its assocaites value of the reparation constant ($E_1, E_2, ...$); thus there is a different wave function for each \textbf{allowed energy}:
-	$$\Psi_1(x,t)=\psi_1(x)e^{-iE_1t/\hbar},\qquad \Psi_2(x,t)=\psi_2(x)e^{-iE_2t/\hbar}, ...$$ Nowthe time-dependent Schrodinger equation (\ref{2.1}) has the property that any linear combination\footnote{A \textbf{linear combination} of the functions $f_1(z), f_z(z),...$ is an expression of the form $$f(z)=c_1f_1(z)+c_2f_2(z)+\cdots$$ where $c_1,c_2,...$ are any (complex) constants.} of solutions is itself a solution. Once we have found the separable solutions, then, we can immediately construct a much more general solution, on the form
+	$$\Psi_1(x,t)=\psi_1(x)e^{-iE_1t/\hbar},\qquad \Psi_2(x,t)=\psi_2(x)e^{-iE_2t/\hbar}, ...$$ Now the time-dependent Schrodinger equation (\ref{2.1}) has the property that any linear combination\footnote{A \textbf{linear combination} of the functions $f_1(z), f_z(z),...$ is an expression of the form $$f(z)=c_1f_1(z)+c_2f_2(z)+\cdots$$ where $c_1,c_2,...$ are any (complex) constants.} of solutions is itself a solution. Once we have found the separable solutions, then, we can immediately construct a much more general solution, on the form
+\end{enumerate}
 	\begin{equation}\label{2.15}
 	\Psi(x,t)=\sum_{n=1}^\infty c_n\psi_n(x)e^{-iE_nt/\hbar}
 \end{equation}
@@ -160,17 +161,72 @@ Curiously, the boundary condition at $x=a$ does not determine the constant $A$, 
 \begin{equation}\label{2.27}\marginnote{Possible values of $E$}
 	\boxed{E_n=\frac{\hbar^2k_n^2}{2m}=\frac{n^2\pi^2\hbar^2}{2ma^2}}
 \end{equation}
-
-
-
-
-
-
-
-
-
-
+In radical contrast to the classical case, a quantum particle in the infinite square well cannot have just any old energy--it has be one of these special \textbf{allowed} values\footnote{Notice that the quantization of energy emerged as a rather technical consequence of the boudnary conditions on solutions to the time-independent Schrodinger equation}. To find $A$ we normalize $\psi$:
+$$\int_a^{a}|A|^2\sin^2(kx)\dd x=|A|^2\frac{a}{2}=1,\qquad \mbox{ so  }|A|^2=\frac{2}{a}$$ 
+This only determines the ,agnitude if $A$,  but it is simples to pick the positive real root: $A=\sqrt{2/a}$ (the phase of $A$ carries no physical significance anyway). Inside the well, the, the solutions are
+\begin{equation}\label{2.28}
+	\boxed{\psi_n(x)=\sqrt{\frac{2}{a}}\sin\left(\frac{n\pi}{a}x\right)}
+\end{equation}
+As a collection, the functions $\psi_n(x)$ have some interesting and important properties:
+\begin{enumerate}
+	\item They are alternately \textbf{even} and \textbf{odd}, with respecto to the center of the well: $\psi_1$ is even, $\psi_2$ is odd, $\psi_3$ is even,  and so on.
+	\item 
+		As you go up in energy, each successive state has one more \textbf{node} (zero-crossing): $\psi_1$ has one (the end points don't count), $\psi_4$ has one, $\psi_3$ has two, and so on.
+	\item They are mutually \textbf{orthogonal}, in the sense that
+		\begin{equation}\label{2.29}
+	\int\psi_m(x)^*\psi_n(x)\dd x=0
+\end{equation}
+whenever $m\neq n$
+We can combine orthogonality and normalization into a single satatement\footnote{In this case the $\psi$'s are real, so the * on $\psi_m$ is unnecessary, but for future purposes it's a good idea to get the habir of putting it there.}:
+\begin{equation}\label{2.30}
+	\boxed{\int\psi_m(x)^*\psi_n(x)\dd x=\delta_{mn}}
+\end{equation}
+We say that the $\psi$'s are \textbf{orthonormal}.'
+\item They are \textbf{complete}, in the sense that any other function, $f(x)$, can be expressed as a linear combination of them:
+	\begin{equation}\label{2.32}
+	f(x)=\sum_{n=1}^\infty c_n\psi_n(x)=\sqrt{\frac{2}{a}}\sum_{n=1}^\infty c_n\sin\left(\frac{n\pi}{a}x\right)
+\end{equation}
 \end{enumerate}
+(\ref{2.32}) is nothing but the \textbf{Fourier series} for $f(x)$, and the fact that any function can be expanded in this way is sometimes called \textbf{Dirichlet's theorem} 
+The coefficients $c_n$ can be evaluated--for a given $f(x)$--by a method I call \textbf{Fourier's trick}, which beautifully exploits the orthonormality of $\{\psi_n\}$: Multiply both sides of (\ref{2.32}) by $\psi_m(x)^*$, and integrate
+\begin{equation}\label{2.33}
+	\psi_m(x)^*f(x)\dd x=\sum_{n=1}^\infty c_n\int\psi_m(x)^*\psi_n(x)\dd x=\sum_{n=1}^\infty c_n\delta_{nm}=c_n
+\end{equation}
+Thus the $n$th coefficient in the expansion of $f(x)$ is 
+\begin{equation}\label{2.34}
+	\boxed{c_n=\int\psi_n(x)^*f(x)\dd x}
+\end{equation}
+Completeness holds for all the potentials you are likely to encounter, but the proofs tens to be nasty and laborious.
+
+The stationary states (\ref{2.18}) of the infinite square well are evidently
+\begin{equation}\label{2.35}
+	\Psi_n(x,t)=\sqrt{\frac{2}{a}}\sin\left(\frac{n\pi}{a}x\right)e^{-i(n^2\pi^2\hbar/2ma^2)t}
+\end{equation}
+I claimed (\ref{2.17}) that the most general solution to the (time-dependent) Schrodinger equation is a linear combinations of stationary states:
+\begin{equation}\label{2.36}
+	\Psi(x,t)=\sum_{n=1}^\infty c_n\sqrt{\frac{2}{a}}\sin\left(\frac{n\pi}{a}x\right)e^{-i(n^2\pi^2\hbar/2ma^2)t}
+\end{equation}
+It remaisn only for me to demosntrate that I can fit any prescribed initial wave fucntion, $\Psi(x,0)$, by appropiate choice of the coefficients $c_n$:
+\begin{equation*}
+	\Psi(x,0)=\sum_{n=1}^\infty c_n\psi_n(x)
+\end{equation*}
+The completeness of the $\psi$'s guarantees that I can always express $\Psi(x,0)$ in this way, and their orthonormality licenses the use of Fourier's trick to determine the actual coefficients:
+\begin{equation}\label{2.37}
+	c_n=\sqrt{\frac{2}{a}}\int_a^{a}\sin\left(\frac{n\pi}{a}x\right)\Psi(x,0)\dd x
+\end{equation}
+That does it: Given the initial wave function, $\Psi(x,0)$, we first compute the expansion coefficients $c_n$ using (\ref{2.37}), and the plug these into (\ref{2.36}) to obtain $\Psi(x,t)$.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
