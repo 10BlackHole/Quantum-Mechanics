@@ -1,5 +1,5 @@
-\chapter{Time-independent Schrodinger equation}
-\section{Stationary states}
+\chapter{Time-Independent Schrodinger Equation}
+\section{Stationary States}
 Wa talked a lot about the wave function, and how you use it to calculare various quantities of interest. But, how do get $\Psi(x,t)$ in the first place? We need to solce the Schrodinger equation,
 \begin{equation}\label{2.1}
 	i\hbar\pdv{\Psi}{t}=-\frac{\hbar^2}{2m}\pdv[2]{\Psi}{x}+V\Psi
@@ -106,7 +106,7 @@ The separable solutions themselves,
 \end{equation}
 are \textit{stationary} states, in the sense that all probabilities and expectation values are independent of time, but this property is emphatically \textit{not} shared by the general solution (\ref{2.17}); the enrgies are different, for different stationary states, and the exponentials do not cancel, when you calculate $|\Psi|^2$.
 
-\section{The infinite square well}
+\section{The Infinite Square Well}
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[scale=0.5]{fig/01.png}
@@ -215,6 +215,49 @@ The completeness of the $\psi$'s guarantees that I can always express $\Psi(x,0)
 	c_n=\sqrt{\frac{2}{a}}\int_a^{a}\sin\left(\frac{n\pi}{a}x\right)\Psi(x,0)\dd x
 \end{equation}
 That does it: Given the initial wave function, $\Psi(x,0)$, we first compute the expansion coefficients $c_n$ using (\ref{2.37}), and the plug these into (\ref{2.36}) to obtain $\Psi(x,t)$.
+
+Loosely speaking, $c_n$ tells you the "amount of $\psi_n$ that is contained in $\Psi$". Some people like to say that $|c_n|^2 $ is the "probability of finding the particle in the $n$th stationary state", but this is a bad language; the particle is in the state $\Psi$, not $\Psi_n$, and, anuhow, in the laboratory you don't "find a particle to be in a particular state" --you measure some observable, and what you get is a number. As we'll see next, what $|c_n|^2$ tells you is the probability that a measurement of the energy would yield the value $E_n$ (a competent measurement will always return one og the "allowed" values--hebce the name--and $|c_n|^2$ is the probability of getting the particular value $E_n$).
+
+Of course, the sum of these probabilities shoul be $1$,
+\begin{equation}\label{2.38}
+	\boxed{\sum_{n=1}^\infty |c_n|^2=1}
+\end{equation}
+Indeed, this follows follows from the normalization of $\Psi$.
+
+Moreover, the expectation value of the energy must be
+\begin{equation}\label{2.39}\marginnote{Expectation value of the energy}
+	\boxed{<H>=\sum_{n=1}^\infty |c_n|^2E_n}
+\end{equation}
+Notice that the probability of getting a particular energy is independent of time, and so, a fortiori, is the expectation value of $H$. This is a manifestation of \textbf{conservatio of energy} in quantum mechanics.
+
+\section{The Harmonic Oscillator}
+The paradigm for a classical harmonic oscillator is a mass $m$ attached to a spring of force constant $k$. The motion is governed by \textbf{Hooke's law}, $$F=-kx=m\dv[2]{x}{t}$$ (ignoring friction), and the solution is
+$$x(t)=A\sin(\omega t)+B\cos(\omega t)$$ where
+\begin{equation}\label{2.41}
+	\omega \equiv\sqrt{\frac{k}{m}}
+\end{equation}
+is the (angular) frequency of the oscillation. The potential energy is
+\begin{equation}\label{2.42}
+	V(x)=\frac{1}{2}kx^2
+\end{equation}
+its graph is a parabola.
+
+Virtually any oscillatory motion is approximately simple harmonic, as long as the aplitude is small.
+
+The \textit{quantum} problem is to solve the Schrodinger equation for the potential
+\begin{equation}\label{2.43}
+	V(x)=\frac{1}{2}m\omega^2x^2
+\end{equation}
+(it it customary to eliminate the spring constant in favor of the classical frequency, using (\ref{2.41})). As we have seen, it suffices to solve the time-independent Schrodinger equation:
+\begin{equation}\label{2.44}
+	-\frac{\hbar^2}{2m}\dv[2]{x}{t}+\frac{1}{2}m\omega^2x^2\psi=E\psi
+\end{equation}
+In the literature you will find two entirely different approaches to this problem. The first is a straightforward "brute force" solution to the differential equation, usin the \textbf{power series method}; it has the virtue that the same strategy can be applied to many other potentials. The second is a diabolically clever algebraic technique, using so-called \textbf{ladder operator}. We'll se the algebraic methos first, because it is quicker and simpler (and a lot more fun)\footnote{We'll encounter some of the same strategies in the theory og angular momentum, and the technique generalizes to a broad class of potentials in \textbf{super-symmetric quantum mechanics}}. 
+
+\subsection{Algebraic Method}
+
+
+
 
 
 

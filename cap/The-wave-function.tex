@@ -1,5 +1,5 @@
-\chapter{The wave function}
-\section{The Schrodinger equation}
+\chapter{The Wave Function}
+\section{The Schrodinger Equation}
 Imagine a particle of mass $m$, constrained to move along the $x$-axis, subjet to some to specifies force $F(x,t)$. The program of \textit{classical} mechanics is to determine the position of the particle at any give time: $x(t)$. Once we know that, we can figure out the velocity ($v=\dv*{x}{t}$), the momentum ($p=mv$), the kinetic energy ($T=(1/2)mv^2$), or any other dynamical variable of interest. And how do we go about determining $x(t)$? We apply Newton's second law: $F=ma$. (For \textit{conservative} systems--the only kins we shall consider, and, fortunately, the only kins that \textit{occur} at the microscopic level--the force can be expresed as the derivative of a potential energy function \footnote{Magnetic forces are an exception, but let's not worry about them just yet. By the eay, we shall assume for the moment that the motion is nonrelativistic ($v\ll c$)}, $F=-\pdv*{V}{x}$, and Newton's law reads $m\dd ^2x/\dd t^2=-\partial V/\partial x$) This, together with appropiate initial conditions (typically the position and velocity at $t=0$), determines $x(t)$ .
 
 Quantum mechanics approaches this same problem quite differently. In this case what we're loocking for ir the particle's \textbf{wave function}, $\Psi(x,t)$, and we get it by solving the \textbf{Schrodinger equaation}:
@@ -8,7 +8,7 @@ Quantum mechanics approaches this same problem quite differently. In this case w
 \end{equation}
 This equation plays a role logically analogous to Newton's second law: Given suitable initial conditions (typically, $\Psi(x,0)$), the Schrodignes equation determines $\Psi(x,t)$ for all future time, just as, in classical mechanics, Newton's law determines $x(t)$ for all future time.
 
-\section{The statistical interpretation}
+\section{The Statistical Interpretation}
 What exactly is this "wave function"? Born's \textbf{statistical interpretation} of the wave function, says that $|\Psi(x,t)|^2 $ gives the \textbf{probability} of finding the particle at point $x$, at time $t$, or more precisely
 \begin{equation}\label{1.3}\marginnote{Statistical interpretation}
 	\boxed{\int_a^b|\Psi(x,t)|^2\dd x=\mbox{probability of finding the particle  between $a$ and $b$, at time $b$}}
@@ -56,7 +56,7 @@ There is a useful little theorem pn variances:
 	\sigma=\sqrt{<j^2> - <j>^2}
 \end{equation}
 
-\section{Continous variables}
+\section{Continous Variables}
 I hace assumed that we are dealing with a \textit{discrete} variable--that is, one that can take on only isolated values. But it is simple enough to generaliza to \textit{continous} distributions. If the interval is sufficiently short, this probabilty is \textit{proportional to the length of the interval}. This
 \begin{equation}\label{1.14}\marginnote{Probabilty density}
 	\mbox{{probabilty that an individual lies between $x$ and $(x+\dd x)$}}=\rho(x)\dd x
@@ -130,7 +130,7 @@ To calculate the expectation value of any such quantuty, $Q(x,p)$, we simply rep
 	\boxed{<Q(x,p)>=\int\Psi^*Q\left(x,\frac{\hbar}{i}\frac{\partial}{\partial x}\right)\Psi\dd x}
 \end{equation}
 
-\section{The uncertaintly principle}
+\section{The Uncertaintly Principle}
 Teh wavelenght of $\Psi$ is related to the \textit{momentum} of the particle by the \textbf{de Broglie formula}:
 \begin{equation}\label{1.39}\marginnote{deBroglie formula}
 	p=\frac{\hbar}{\lambda}=\frac{2\pi\hbar}{\lambda}
