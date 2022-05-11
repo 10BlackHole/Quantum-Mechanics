@@ -320,27 +320,46 @@ In terms of $a_{\pm}$, then, the Schrodinger equation\footnote{I'm getting tired
 \end{equation}
 (in equations like this you rrad the upper signs all the way across, or else the lower signs).
 
+Now, here comes the crucial step: I claim that if \textit{$\psi$ satisfies the Schrodinger equations with enrgy $E$, (that is: $H\psi=E\psi$), then $a_+\psi$ satisfies the Schrodinger equations with energy ($E+\hbar\omega$):$H(a_+\psi)=(E+\hbar\omega)(A_+\psi)$ }
 
+Here, then is a wonderful machine for generating new solution, with higer and lower energies--if we could just find \textit{one} solution, to ger started! We call $a_{\pm}$ \textbf{ladder operators}, because they allow us to climb up and doen in energy; $A_+$ is the \textbf{raising operator}, and $a_-$ the \textbf{lowering operator}. 
 
+But wait! What if I apply the lowering operator repeatedly? Eventually I'm going to reach a state with energy less than zero, which does not exist! At some point the machine must fail. How can that happen?  We know that $a_-\psi$ is a new solution to the Schrodinger equation, but \textit{there is no guarantee that it will be normalizable}--it might be zero, or its square-integral might be infinite. In practice it is the forme: There occurs a "lowest rung" (call it $\psi_0$) such that
+\begin{equation}\label{2.58}
+	a_-\psi_0=0
+\end{equation}
+We can use this to determine $\psi_0(x)$:
+$$\frac{1}{\sqrt{2\hbar m\omega}}\left(\hbar\frac{\dd}{\dd x}+m\omega x\right)\psi_0=0$$ or $$\dv{\psi_0}{x}=-\frac{m\omega}{\hbar}x\psi_0$$
+The differential equation is easy to solve:
+$$\int\dv{\psi_0}{\psi_0}=-\frac{m\omega}{\hbar}\int x\dd x\quad\Rightarrow\quad \ln\psi_0=-\frac{m\omega}{2\hbar}x^2+\mbox{ constant}$$ so $$\psi_0(x)=Ae^{-\frac{m\omega}{2\hbar}x^2}$$
+We might as well normalize it right away: $$=|A|^2\int_{-\infty}^\infty e^{-m\omega x^2/\hbar}\dd x=|A1^2\sqrt{\frac{\pi\hbar}{m\omega}}$$ so $A^2=\sqrt{m\omega/\pi\hbar}$, and hence
+\begin{equation}\label{2.59}
+	\boxed{\psi_0(x)=\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}e^{-\frac{m\omega}{2\hbar}x^2}}
+\end{equation}
+To determine the energy of this satte we plug it into the Schrodinger equation (in the form of (\ref{2.57})), $\hbar\omega(a_+a_-+1/2)\psi_0=E_0\psi_0$. and exploit the fact that $a_-\psi_0=0$:
+\begin{equation}\label{2.60}
+	E_0=\frac{1}{2}\hbar\omega
+\end{equation}
+With our foot now securely planted on the bottom rung (the ground state of the quantum oscillator), we simply apply the raising operator (repeatedly) to generate the excited states, increasing the energy by $\hbar\omega $ with each step:
+\begin{equation}\label{2.61}
+	\boxed{\psi_n(x)=A_n(a_+)^n \psi_0(x),\qquad\mbox{ with  }E_n=\left(n+\frac{1}{2}\right)\hbar\omega     }
+\end{equation}
+where $A_n$ is the normalization constant. By applying the raising operator (repeatedly) to $\psi_0$, then, we can (in principle) construct all the stationary states of the harmonic oscillator. Meanwhile, without ever doing that explicitly, we have determined the allowed energies.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+You can even get the normalization algebraically, but it takes some fancy foorwork, wo watch closely. we know that $a_{\pm}\psi_n$ is \textit{proportional} to $\psi_{m\pm 1}$,
+\begin{equation}\label{2.63}
+	a_+\psi_n=c_n\psi_{n+1},\qquad a_-\psi_n=d_n\psi_{n-1}	
+\end{equation}
+but what are the proportionality factors, $c_n$ and $d_n$? First note that for "any" functions $f(x)$ and $g(x)$,
+\begin{equation}\label{2.64}
+	\int_{-\infty}^\infty f^*(a_{\pm}g)\dd x=\int_{-\infty}^\infty (A_{\mp}f)^*g\dd x
+\end{equation}
+(In the language of linear algebra, $a_{\mp}$ is the \textbf{hermitian conjuagte} of $A_{\pm}$).
+In particular, $$\int_{-\infty}^\infty (a_{\pm\pm}\psi_n)^*(a_{\pm}\psi_n)\dd x=\int_{-\infty}^\infty(a_{\mp}a{\pm}\psi_n)^*\psi_n\dd x $$ But (invoking (\ref{2.57}) and (\ref{2.61}))
+\begin{equation}\label{2.65}
+	a_+a_-\psi_n=n\psi_n,\qquad a_-a_+\psi_n=(n+1)\psi_n
+\end{equation}
+so
 
 
 
