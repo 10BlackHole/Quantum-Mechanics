@@ -387,4 +387,24 @@ This can be proved usign (\ref{2.65}) and (\ref{2.64}) twice--fist moving $a_+$ 
 \end{align*}
 Unless $m=n$, then, $\int\psi_m^*\psi_n\dd x$ must be zero. Orthonomality means that we can again use Forier's trcik (\ref{2.34}) to evaluate the coefficients, when we expand $\Psi(x,0)$ as a linear combination of stationary states (\ref{2.16}), and $|c_n|^2$ is again the probability that a measurement of energy would yield the vakue $E_n$.
 
+\subsection{Analytic Method}
+We return now to the Schrodinger equation for the harmonic oscillator,
+\begin{equation}\label{2.70}
+	-\frac{\hbar^2}{2m}\dv[2]{\psi}{x}+\frac{1}{2}m\omega^2x^2\psi=E\psi
+\end{equation}
+and solve it directly, by the series method. Thing loock a little cleanes if we introduce the dimensionless variable
+\begin{equation}\label{2.71}
+	\xi\equiv\sqrt{\frac{m\omega}{\hbar}}x
+\end{equation}
+in terms of $\xi$ the Schrodinger equation reads
+\begin{equation}\label{2.72}
+	\dv[2]{\psi}{\xi}=(\xi^2-K)\psi
+\end{equation}
+where $K$ is the energy, in units of $(1/2)\hbar\omega$:
+\begin{equation}
+	k\equiv\frac{2E}{\hbar\omega}
+\end{equation}
+Our problem is to solve (\ref{2.72}), and in the process obtain the "allowed" values of $K$ (and hence of $E$).
+
+
 
