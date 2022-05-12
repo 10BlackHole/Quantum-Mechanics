@@ -406,5 +406,64 @@ where $K$ is the energy, in units of $(1/2)\hbar\omega$:
 \end{equation}
 Our problem is to solve (\ref{2.72}), and in the process obtain the "allowed" values of $K$ (and hence of $E$).
 
+To begin with, note that at very large $\xi$ (which is to say, at very large $x$), $\xi^2$ completely dominates over the constant $K$, so in this regime
+\begin{equation}\label{2.74}
+	\dv[2]{\psi}{\xi}\approx \xi^2\psi
+\end{equation}
+which has the approximate solution
+\begin{equation}\label{2.75}
+	\psi(\xi)\approx Ae^{-\psi^2/2}+Be^{+\xi^2/2}
+\end{equation}
+The $B$ term is clearly not normalizable (it blows up as $|x|\to\infty)$; the physucally acceptable solutions, then, have the asympotic form
+\begin{equation}\label{2.76}
+	\psi(\xi)\to ()e^{-\xi^2/2},\qquad \mbox{ at large $\xi$ }
+\end{equation}
+This suggests that we "peel off" the exponential part,
+\begin{equation}\label{2.77}
+	\psi(\xi)=h(\xi)e^{-\xi^2/2}
+\end{equation}
+in hopes that what remains, $h(\xi)$, has a simplier functional form than $\psi(\xi)$ itself. Differentiating (\ref{2.77})
+$$\dv{\psi}{\xi}=\left(\dv{h}{\xi}-\xi h\right)e^{-\xi^2/2}$$ and
+$$\dv[2]{\psi}{\xi}=\left(\dv[2]{h}{\xi}-2\xi\dv{h}{\xi}+(\xi^2-1)h\right)e^{-\xi^2/2}$$
+so the Schrodinger equation (\ref{2.72}) becomes
+\begin{equation}\label{2.78}
+	\dv[2]{h}{\xi}-2\xi\dv{h}{\xi}+(K-1)h=0
+\end{equation}
+I propose to look fot solutions to (\ref{2.78}) in the form of \textit{power series} in $\xi$\footnote{This is known as the \textbf{Frobenius method} for solving a differential equation. According yo Taylor's theorem, any reasonably well-behaven function can be expressed as a power series, so (\ref{2.79}) ordinarily involver no loss of generality.}:
+\begin{equation}\label{2.79}
+	h(\xi)=a_0+a_1\xi+a_2\xi^2+\cdots =\sum_{j=0}^\infty a_j\xi^j
+\end{equation}
+Differentiating the seris term by term, $$\dv{h}{\xi}=a_1+2a_2\xi+3a_3\xi^2+\cdots =\sum_{j=0}^\infty ja_j\xi^{j-1}$$
+and $$\dv[2]{h}{\xi}=2a_2+2\cdot 3a_3\xi +3\cdot 4a_4\xi^2+\cdots =\sum_{j=0}^\infty (j+1)(j+2)a_{j+2}\xi^j$$
+Putting these into (\ref{2.78}), we find
+\begin{equation}\label{2.80}
+	\sum_{j=0}^\infty [(j+1)(j+2)a_{j+2}-2ja_j+(K-1)a_j]\xi^j=0
+\end{equation}
+It follows (from the uniqueness of power series expansions) that the coefficient of \textit{each power} of $\xi$ must vanish, $$(j+1)(j+2)a_{j+1}-2ja_j+(K-1)a_j=0$$ and hence that
+\begin{equation}\label{2.81}
+	a_{j+2}=\frac{(2j+1-K)}{(j+1)(j+2)}a_j
+\end{equation}
+This \textbf{recursion formula} is enterely equivalent to the Schrodinger equation. Starting with $a_0$, it generates all the even-numbered coefficients
+$$a_2=\frac{(a-K)}{2}a_0\quad a_4=\frac{(5-K)}{12}a_2=\frac{(5-K)(1-K)}{24}a_0,\quad \cdots $$
+and starting with $a_2$, it generates the odd coefficients: $$a_3=\frac{(3-K)}{6}a_1,\quad a_5=\frac{(7-K)}{20}a_3=\frac{(7-K)(3-K)}{120}a_1,\quad \cdots $$
+We write the complete solution as
+\begin{equation}\label{2.82}
+	h(\xi)=h_{\mbox{even}}(\xi)+h_{\mbox{odd}}(\xi)
+\end{equation}
+where $$h_{\mbox{even}}(\xi)\equiv a_0+a_2\xi^2+a_4\xi^4+\cdots $$ is an even fucntion of $\xi$, built on $a_0$, and $$h_{\mbox{odd}}(\xi)\equiv a_1\xi+a_3\xi^3+a_5\xi^5+\cdots $$ is an odd function, built on $a_1$
+(\ref{2.81}) determines $h(\xi)$ in terms of two arbitrary constants ($a_0$ and $a_1$)--which is just what we would expect, for a second-order differentual equation.
+
+However, not all the solutions so obtained are \textit{normalizable}. Fot at very large $j$, the recursion formula becomes (approximayely) $$a_{j+2}\approx \frac{2}{j}a_j$$ with the (approximate) solution $$a_j\approx\frac{C}{(j/2)!}$$ for some constant $C$, and this yields (at large $\xi$, where the higher powers dominate) $$h(\xi)\approx C\sum\frac{1}{(j/2)!}\xi^j\approx C\sum\frac{1}{j!}\xi^{2j}\approx Ce^{\xi^2}$$ Now, if $h$ goes like $\exp(\xi^2/2)$, then $\psi$ (remember $\psi$?--that's what we're trying to calculate) goes like $\exp(\xi^2/2)$ (\ref{2.77}), which is precisely the asymtotic behavior we didn's want\footnote{It's no surprise that the ill-behaven solutions are still in (\ref{2.81}):this recursion relation is equivalent to the Schrodinger equation, so it's got to include both the asymtotic forms we found in (\ref{2.75})}. There is only one way to wiggle out of this: For normalziable solutions the \textit{power series must terminate}. There must occur some "highest" $j$ (call it $n$), such that the recursion formula spits out $a_{a+2}=0$ (this woll truncate either series $h_{\mbox{even}}$ or the series $h_{\mbox{odd}}$; the other one must be zero from that start: $a_1=0$ if $n$ is even, and $a_0=0$ if $n$ is odd). For physically acceptable solutions, then, (\ref{2.81}) requires that $$K=2_n+1$$ for some non-neagtive integer $n$, which is to say (referring to (\ref{2.77})) that the \textit{energy} must be
+\begin{equation}\label{2.83}
+	E_n=\left(n+\frac{1}{2}\right)\hbar\omega,\qquad \mbox{ for $n=0,1,2,...$ }
+\end{equation}
+Thus we recover, by a completely different method, the fundamental quantization condition we found algebraically in (\ref{2.61}).
+
+
+
+
+
+
+
 
 
