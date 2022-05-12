@@ -331,8 +331,8 @@ But wait! What if I apply the lowering operator repeatedly? Eventually I'm going
 We can use this to determine $\psi_0(x)$:
 $$\frac{1}{\sqrt{2\hbar m\omega}}\left(\hbar\frac{\dd}{\dd x}+m\omega x\right)\psi_0=0$$ or $$\dv{\psi_0}{x}=-\frac{m\omega}{\hbar}x\psi_0$$
 The differential equation is easy to solve:
-$$\int\dv{\psi_0}{\psi_0}=-\frac{m\omega}{\hbar}\int x\dd x\quad\Rightarrow\quad \ln\psi_0=-\frac{m\omega}{2\hbar}x^2+\mbox{ constant}$$ so $$\psi_0(x)=Ae^{-\frac{m\omega}{2\hbar}x^2}$$
-We might as well normalize it right away: $$=|A|^2\int_{-\infty}^\infty e^{-m\omega x^2/\hbar}\dd x=|A1^2\sqrt{\frac{\pi\hbar}{m\omega}}$$ so $A^2=\sqrt{m\omega/\pi\hbar}$, and hence
+$$\int\frac{\dd \psi_0}{\psi_0}=-\frac{m\omega}{\hbar}\int x\dd x\quad\Rightarrow\quad \ln\psi_0=-\frac{m\omega}{2\hbar}x^2+\mbox{ constant}$$ so $$\psi_0(x)=Ae^{-\frac{m\omega}{2\hbar}x^2}$$
+We might as well normalize it right away: $$=|A|^2\int_{-\infty}^\infty e^{-m\omega x^2/\hbar}\dd x=|A1|^2\sqrt{\frac{\pi\hbar}{m\omega}}$$ so $A^2=\sqrt{m\omega/\pi\hbar}$, and hence
 \begin{equation}\label{2.59}
 	\boxed{\psi_0(x)=\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}e^{-\frac{m\omega}{2\hbar}x^2}}
 \end{equation}
@@ -352,17 +352,39 @@ You can even get the normalization algebraically, but it takes some fancy foorwo
 \end{equation}
 but what are the proportionality factors, $c_n$ and $d_n$? First note that for "any" functions $f(x)$ and $g(x)$,
 \begin{equation}\label{2.64}
-	\int_{-\infty}^\infty f^*(a_{\pm}g)\dd x=\int_{-\infty}^\infty (A_{\mp}f)^*g\dd x
+	\int_{-\infty}^\infty f^*(a_{\pm}g)\dd x=\int_{-\infty}^\infty (a_{\mp}f)^*g\dd x
 \end{equation}
 (In the language of linear algebra, $a_{\mp}$ is the \textbf{hermitian conjuagte} of $A_{\pm}$).
-In particular, $$\int_{-\infty}^\infty (a_{\pm\pm}\psi_n)^*(a_{\pm}\psi_n)\dd x=\int_{-\infty}^\infty(a_{\mp}a{\pm}\psi_n)^*\psi_n\dd x $$ But (invoking (\ref{2.57}) and (\ref{2.61}))
+In particular, $$\int_{-\infty}^\infty (a_{\pm}\psi_n)^*(a_{\pm}\psi_n)\dd x=\int_{-\infty}^\infty(a_{\mp}a{\pm}\psi_n)^*\psi_n\dd x $$ But (invoking (\ref{2.57}) and (\ref{2.61}))
 \begin{equation}\label{2.65}
 	a_+a_-\psi_n=n\psi_n,\qquad a_-a_+\psi_n=(n+1)\psi_n
 \end{equation}
 so
+$$\int_{\infty}^\infty(a_+\psi_n)^*(a_+\psi_n)\dd x=|c_n|^2\int_{-\infty}^\infty |\psi_{n+1}|^2\dd x=(n+1)\int_{-\infty}^\infty |\psi_n|^2\dd x $$
+$$\int_{-\infty}^\infty(a_-\psi_n)^*(a_-\psi_n)\dd x=|d_n|^2\int_{-\infty}^\infty |\psi_{n-1}|^2\dd x=n\int_{-\infty}^\infty |\psi_n|^2\dd x $$
+But since $\psi_n$ and $\psi_{n\pm 1}$ are normalized, it follows that $|c_n|^2=n+1$ and $|d_n|^2=n$ and hence.
+\begin{equation}\label{2.66}
+	\boxed{a_+\psi_n\sqrt{n+1}\psi_{n+1},\qquad a_-\psi_n=\sqrt{n}\psi_{n-1}}
+\end{equation}
+Thus
+$$\psi_1=a_+\psi_0,\qquad \psi_2=\frac{1}{\sqrt{2}}a_+\psi_1=\frac{1}{\sqrt{2}}(a_+)^2\psi_2$$
+$$\psi_3=\frac{1}{\sqrt{3}}a_+\psi_2=\frac{1}{\sqrt{3\cdot 2}}(a_+)^3\psi_0,\qquad \psi_4=\frac{1}{\sqrt{4}}a_+\psi_3=\frac{1}{\sqrt{4\cdot 3\cdot 2}}(a_+)^4\psi_0$$
+and so on .Clearly
+\begin{equation}\label{2.67}
+	\boxed{\psi_n=\frac{1}{\sqrt{n!}}(a_+)^n\psi_o}
+\end{equation}
+which is to say that the normalization factor in (\ref{2.61}) is $A_n=1/\sqrt{n!}$ .
 
-
-
-
+As in the case of the infinite square well, the stationary states if the harmonic oscillator are orthogonal:
+\begin{equation}\label{2.68}
+	\int_{-\infty}^\infty \psi_m^*\psi_n\dd x=\delta_{mn}
+\end{equation}
+This can be proved usign (\ref{2.65}) and (\ref{2.64}) twice--fist moving $a_+$ and then moving $a_-$:
+\begin{align*}
+	\int_{-\infty}^\infty \psi_m^*(a_+a_-)\psi_n\dd x&=n\int_{-\infty}^\infty\psi_m^*\psi_n\dd x\\
+																									 &=\int_{-\infty}^\infty(a_-\psi_m)^*(a_-\psi_n)\dd x=\int_{-\infty}^\infty(a_-a_-\psi_m)^*\psi_n\dd x\\
+																									 &=m\int_{-\infty}^\infty\psi_m^*\psi_n\dd x
+\end{align*}
+Unless $m=n$, then, $\int\psi_m^*\psi_n\dd x$ must be zero. Orthonomality means that we can again use Forier's trcik (\ref{2.34}) to evaluate the coefficients, when we expand $\Psi(x,0)$ as a linear combination of stationary states (\ref{2.16}), and $|c_n|^2$ is again the probability that a measurement of energy would yield the vakue $E_n$.
 
 
