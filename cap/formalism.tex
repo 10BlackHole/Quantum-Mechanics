@@ -39,6 +39,90 @@ If $f$ and $g$ are both square-integrable (that is, if they are both in hilber s
 \begin{equation}\label{3.7}
 	\left|\int_a^bf(x)^*g(x)\dd x\right|\leq \sqrt{\int_a^b|f(x)|^2\dd x\int_a^b|g(x)|^2\dd x}
 \end{equation}
+Notice in particular that
+\begin{equation}\label{3.8}
+	\braket{g}{f}=\braket{f}{g}^*
+\end{equation}
+Moreover, the inner product of $f(x)$ with itself,
+\begin{equation}\label{3.9}
+	\braket{f}{f}=\int_a^b|f(x)|^3\dd x
+\end{equation}
+is real and and non-negative; it's zero only when $f(x)=0$. 
+
+A function is said to be \textbf{normalized} if its inner product with itself is $1$; two functions are \textbf{orthogonal} of their inner product is $0$; and a set of functions, $\{f_n\}$, is \textbf{orthonormal} of they are normalized and mutually orthogonal
+\begin{equation}\label{3.10}
+	\braket{f_m}{f_n}=\delta_{mn}
+\end{equation}
+Finally, a set of functions is \textbf{compelte} if any other function (in Hilbert space) can be expreded as a linear combination of them:
+\begin{equation}\label{3.11}
+	f(x)=\sum_{n=1}^\infty c_nf_n(x)
+\end{equation}
+If rge functuons $\{f_n(x)\}$ are orthonrmal, the coefficients are given by Fourier's trick
+\begin{equation}\label{3.12}
+	c_n=\braket{f_n}{f}
+\end{equation}
+
+\section{Obervables}
+\subsection{Hermitian Operators}
+The expectation value of an observable $Q(x,p)$ can be expressed very neatly in inner-product notation:
+\begin{equation}\label{3.13}
+	<Q>=\int \Psi^*\hat{Q}\Psi\dd x=\bra{\Psi}\ket{\hat{Q}\Psi}
+\end{equation}
+Now, the outcome of a measurement has got to be \textit{real}, and so, a fortiori, is the average of many measurements:
+\begin{equation}\label{3.14}
+	<Q>=<Q>^*
+\end{equation}
+But the complex conjugate of an inner product reverses the order (\ref{3.8}), so
+\begin{equation}\label{3.15}
+	\bra{\Psi}\ket{\hat{Q}\Psi}=\bra{\hat{Q}\Psi}{\ket\Psi}
+\end{equation}
+and this must hold true for any wave function $\Psi$. Thus operators representing \textit{obervables} have the very special property that
+\begin{equation}\label{3.16}
+	\bra{f}\ket{\hat{Q}f}=\bra{\hat{Q}f}\ket{f}\qquad\mbox{for all $f(x)$}
+\end{equation}
+We call such operators \textbf{hermitian}.
+
+The essentiak point is that a hermitian operator can be applied either to the first member of an inner product or to the second, with the same result, and hermitian operators naturally arise in quantum mechanics because their expectations values are real:
+\begin{equation}\label{3.18}
+	\boxed{\mbox{\textbf{Obervables are represented by hermitian operators.}}}
+\end{equation}
+Is the momentum operator, for example, hermitian?
+\begin{equation}\label{3.19}
+	\bra{f}\ket{\hat{p}g}=\int_{-\infty}^\infty \frac{\hbar}{i}\dv{g}{x}\dd x=\frac{\hbar}{i}\eval{f^*g}_{-\infty}^\infty +\int_{-\infty}^\infty \left(\frac{\hbar}{i}\dv{f}{x}\right)^*g\dd x=\bra{\hat{p}f}\ket{g}
+\end{equation}
+Notice if $f(x)$ and $g(x)$ are squared integrable, they must go to zero at $\pm\infty$.
+
+\subsection{Determinate States}
+Ordinarily, when you measure an obervable $Q$ on an ensamble of identically prepared system, all in the same state $\Psi$, you do not ger the same reuslt each time--this is the indeterminancy of quantum mechanics. \textit{Question:} Would it be possible to prepare a state such that \textit{every} measurement of $Q$ is certain to return the \textit{same} value (call it $a$)? This would be, if younlike, a \textbf{determinate state}, for the obervable $Q$ (Actually, we already know one example: Stationary states are dterminate states of Hamiltonian; a measurement of the total enery, on a particle in the stationary state $\Psi_n$, is certain to yield the corresponding "allowed" energy $E_n$).
+
+Well, the standard deviation of $Q$, in a determiante state, would to be zero, shich is to say,
+\begin{equation}\label{3.21}
+	\sigma^2=<(\hat{Q}-<Q>)^2>=\bra{\Psi}\ket{(\hat{Q}-q)^2\Psi}=\bra{(\hat{Q}-q)\Psi}\ket{(\hat{Q}-q)\Psi}=0
+\end{equation}
+But the only function whose inner product with itself vanishes is $0$, so
+\begin{equation}\label{3.22}
+	\hat{Q}\Psi=q\Psi
+\end{equation}
+This is the \textbf{eigenvalue equation} for the operator $\hat{Q}$; $\Psi$ is an \textbf{eigenfunction} of $\hat{Q}$, and $q$ is the corresponding \textbf{eigenvalue}. Thus
+\begin{equation}\label{3.23}
+	\boxed{\mbox{\textbf{Determiante states are eigenfunctions of }$\hat{Q}$}}
+\end{equation}
+Measurements of $Q$ a¡on such states is certain to yield the eigenvalue, $q$.
+
+Note that the eigenvalue is a number (not a operator or a function). You can multuply any eigenfunction by a constant,  and it is still an eigenfunction, with the same eigenvalue. Zero does not count as an eigenfunction. But there's nothing wrong with zero as an eigenvalue. The collection of all the eigenvalues of an operator is called its \textbf{specturm} . Sometimes two (or more) linearly independent eigenfunctions share the same eigenvalue; in that case the spectrum is said to be \textbf{degenerate}.
+
+\section{Eigenfunctions of a Hermitian Operator}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
