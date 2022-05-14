@@ -1,0 +1,46 @@
+\chapter{Formalism}
+\section{Hilbert Space}
+
+The purpose of this chapter is to recast the theory in a more powerful form.
+
+Quantum theory is based on two constructs: \textit{wave functions} and \textit{operators}. The state of a system is represented by its wave function, obervables are represented by operators. Mathematically, weave functions satify the defining conditions for abstract \textbf{vectors}, and operators act on them as \textbf{linear transformations}. So the natural language of quantum mechanics is \textbf{linear algebra}.
+
+But it is not, I suspect, a form of linear algebra with which you are immediately familiar. In an $N$-dimensional space it is simplest to represent a vector $\ket{\alpha}$, by the $N$-tuple of its components, $\{a_n\}$, with respect to a specified orthonormal basis:
+\begin{equation}\label{3.1}
+	\ket{\alpha}\to\vb*{a}=\mqty(a_1\\a_2\\\vdots \\a_N)
+\end{equation}
+The \textbf{inner product}, $\braket{\alpha}{\beta}$, of two vectors (generalizng the dot product in three dimensions) is the complex numebr,
+\begin{equation}\label{3.2}
+	\braket{\alpha}{\beta}=a_1^*b_1+a_2^*b_2+\cdots +a_N^*b_N
+\end{equation}
+Linear transformations, $T$, are represented by \textbf{matrices} (with respect to the specified basis), which act on vectors (to produce new vectors) by the ordinary rules of matrix multiplication:
+\begin{equation}\label{3.3}
+	\ket{\beta}=T\ket{\alpha}\to \vb{b}=\vb{T}\vb{a}=\mqty(t_{11}&t_{12}&\cdots & t_{1N}\\
+	t_{21}&t_{22}&\cdots&t_{2N}\\
+	\vdots&\vdots&\vdots&\vdots\\
+	t_{N1}&t_{N2}& \cdots &t_{NN})
+\end{equation}
+But the "vectors" we encounter in quantum mechanics are (for the most specified) \textit{functions}, and they live in infinite-dimensional spaces. For them the $N$-tuple/matrix notation is awkward, at best, and manipulations that are well-behaved in the finite dimensional case can be problematic. (The underlying reason is that whereas the finite sum in (\ref{3.2}) always exists, an infinite sum--or a integral-- may not converge, in which case the inner product does not exists, and any argument involving inner products is immediately suspect.).
+
+The collection of all functions of $x$ constitutes a vector space, but fot our purposes it is much too latge. To represent a possible physical state, the function $\Psi$ must be normalized:
+$$\int |\Psi|^2\dd x=1$$ The set of all \textbf{square-integrable functions}, on a specified ineterval\footnote{Fot is, the limits ($a$ and $b$) will almost always be $\\pm\infty$, but we might as well keep thing more general for the moment},
+\begin{equation}\label{3.4}
+	f(x)\qquad \mbox{ such that  }\qquad \int_a^b |f(x)|^2\dd x<\infty
+\end{equation}
+constitutes a (much smaller) vector space. Mathematicians call it $L_2(a,b)$; physicist call it \textbf{Hilbert space}. In quantum mechanics then
+\begin{equation}\label{3.5}
+	\boxed{\mbox{\textbf{Wave functions live in Hilbert space.}}}
+\end{equation}
+We define the \textbf{inner product of two functions}, $f(x)$ and $g(x)$, as follows:
+\begin{equation}\label{3.6}
+	\braket{f}{g}\equiv\int_a^b f(x)^*g(x)\dd x
+\end{equation}
+If $f$ and $g$ are both square-integrable (that is, if they are both in hilber spaces), their inner product is guaranteed to exist. This follows from the integral \textbf{Schwartz inequality}:
+\begin{equation}\label{3.7}
+	\left|\int_a^bf(x)^*g(x)\dd x\right|\leq \sqrt{\int_a^b|f(x)|^2\dd x\int_a^b|g(x)|^2\dd x}
+\end{equation}
+
+
+
+
+
