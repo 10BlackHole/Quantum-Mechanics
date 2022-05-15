@@ -143,6 +143,76 @@ Let $f_p(x)$ be the eigenfunction and $p$ the eigenvalue:
 The general solution is $$f_p(x)=Ae^{ipc/\hbar}$$ This is not square-integrable, for any (complex) value of $p$--the momentum operator has no eigenfunctions in Hilbert space. And yet, if we restrict ourselves to \textit{real} eigenvalues. we do recover a kind of \textit{ersatz} "orthonormality". ...
 
 \subsection{Generalized Statistical Interpretation}
+\textbf{Generalized statistical interpretation:} If you measure an obervable $Q(x,p)$ on a particle in the state $\Psi(x,t)$, you are certain to get \textit{one of the eigenvalues} of the hermitian operator $\hat{q}(x,-i\hbar\dd/\dd x)$. If the spectrum of $\hat{Q}$ is discrete, the probability of getting the particular eigenvalue $q_n$ associated with the orthonormalized eifengunction $f_n(x)$ is
+\begin{equation}\label{3.43}
+	|c_n|^2,\qquad \mbox{where }\qquad c_n=\braket{f_n}{\Psi}
+\end{equation}
+If the sprectrum is continuous, with real eigenvalues $q(z)$ and associated Dirac-orthonormalized eigenfunctions $f_z(x)$, the probability of gettin a result in the range $\dd z$ is
+\begin{equation}\label{3.44}
+	|c(z)|^2\dd z \mbox{where }\qquad c(z)=\braket{f_z}{\Psi}
+\end{equation}
+Upon measurement, the wave function "collapses" to the corresponding eigenstate.
+
+The statistical interpretation is raadically different from anything we encounter in classical physics. A somewhat different persperctive helps to make it plausible:
+The eigenfunctions of an observable operator are \textit{complete}, so the wave function can be written as a linear combination of them:
+\begin{equation}\label{3.45}
+	\Psi(x,t)=\sum_nc_nf_x(x)
+\end{equation}
+(For simplicity, I'll assume that the spectrum is discrete; it's easy to generalise this argument to the continuous case.) Because the eigenfucntions are \textit{orthonormal}, the coefficients are given by Fourier's trick:
+\begin{equation}\label{3.46}
+	c_n=\braket{f_n}{\Psi}=\int f_n(x)^*\Psi(x,t)\dd x
+\end{equation}
+Qualitatively, $c_n$ tells you "how much $f_n$ is contained in $\Psi$", and given that a mesuremnet has to return one of the eigenvalues of $\hat{Q}$, it seems reasonable that the probability of getting the particular eigenvalue $q_n$ would be determined by the "amount of $f_n$" in $\Psi$. But because probabilities are determined by the absolute square of the wave function, the precise measure is actually $|c_n|^2$. That's the essential burden of the generalized statistical interpretation.
+
+Of course, the total probability (summed over all outcomes) has got to be one:
+\begin{equation}\label{3.47}
+	\sum_n|c_n|^2=1
+\end{equation}
+Similarly, the expectation value of $Q$ should be the sum over all possibles outcomes of the eigenvalue times the probability of getting the eigenvalue:
+\begin{equation}\label{3.49}
+	<Q>=\sum_nq_n|c_n1^2
+\end{equation}
+The \textbf{momentum space wave function}, $\Phi(p,t)$. It is essentially the \textit{Fourier transform} of the (\textbf{position space}) wave function $\Psi(x,t)$--which, by Plancherel'stheorem, is its \textit{inverse} Fourier transform:
+\begin{equation}\label{3.54}
+\Phi(p,t)=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^\infty e^{-ipx/\hbar}\Psi(x,t)\dd x
+\end{equation}
+\begin{equation}\label{3.55}
+	\Psi(x,t)=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^\infty e^{ipx/\hbar}\Phi(p,t)\dd p
+\end{equation}
+According to the generalized statistical interpretationm, the probability that a measurement of momentum would yiled a result in the range $\dd p$ is
+\begin{equation}\label{3.56}
+	|\Phi(p,t)|^2\dd p
+\end{equation}
+
+\section{The Uncertaintly Principle}
+
+\section{Dirac Notation}
+Imagine an ordinary vactor $\vb{A}$ in two dimensions. How would you describe this vector to someone? The most convenient way is to set up catesian axes, $x$ and $y$, and specify the components of $\vb{A}$: $a_x=\hat{i}\cdot \vb{A}, A_y=\hat{j}\cdot \vb{A}$. Of course, your sister might have drawn a different set of axed, $x'$ and $y'$, and she would report differen components: $A'_x=\hat{i}'\cdot\vb{A}, A'_y=\hat{j}'\cdot\vb{A}$. But it's all the same vector--we're simply expressing it with respecto to two different bases ($\{\hat{i},\hat{j}\}$ and $\{\hat{i}',\hat{j}'\})$. The vector itself lives "out there is space", independent of anybody's (arbitraty) choice of coordinates.
+
+The same is true for the state of a system in quantum mechancis. It is represented by a vector, $\ket{s(t)}$, that lives "out there in Hilbert space", but we can express it with respceto to any number of different bases. The wave function $\Psi(x,t)$ is actually the coefficient in the expansion of $\ket{s(t)}$ in the basis of position eigenfunctions:
+\begin{equation}\label{3.75}
+	\Psi(x,t)=\braket{x}{s(t)}
+\end{equation}
+(with $\ket{x}$ standing fot the eigenfucntions of $\hat{x}$ with eigenvalue $x$), whereas the momentum sapce wavefunction $\Phi(x,t)$ is the expansion of $\ket{s}$ in the absis of momentum eigenfucntions:
+\begin{equation}\label{3.76}
+	\Phi(p,t)=\braket{p}{s(t)}
+\end{equation}
+(with $\ket{p}$ standing for the eigenfunction of $\hat{p}$ with eigenvalue $p$). Or we could expand $\ket{s}$ in the basis of energy eigenfunctions (supposing for simplicity that the spectrum is discrete):
+\begin{equation}\label{3.77}
+	c_n(t)=\braket{n}{s(t)}
+\end{equation}
+(with $\ket{n}$ standing for thr $n$th eigenfunction of $\hat{H}$)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
