@@ -112,8 +112,37 @@ Measurements of $Q$ a¡on such states is certain to yield the eigenvalue, $q$.
 Note that the eigenvalue is a number (not a operator or a function). You can multuply any eigenfunction by a constant,  and it is still an eigenfunction, with the same eigenvalue. Zero does not count as an eigenfunction. But there's nothing wrong with zero as an eigenvalue. The collection of all the eigenvalues of an operator is called its \textbf{specturm} . Sometimes two (or more) linearly independent eigenfunctions share the same eigenvalue; in that case the spectrum is said to be \textbf{degenerate}.
 
 \section{Eigenfunctions of a Hermitian Operator}
-Our attention is thus directed to the \textit{eigenfunction of hermitian operators} (physically: determine states of obervables). These fall into two categories: If the spectrum is \textbf{discrete} (i.e., the eigenvalues are separated from one another) then the eigenfunctions lie in Hilbert space and they constitute physically realizable states. If the spectrum is \textbf{contonuous} (i.e., the eigenvalues fill out an entire range) then the eigenfunctions are non normalizable, and they do not represent possible wave functions
+Our attention is thus directed to the \textit{eigenfunction of hermitian operators} (physically: determine states of obervables). These fall into two categories: If the spectrum is \textbf{discrete} (i.e., the eigenvalues are separated from one another) then the eigenfunctions lie in Hilbert space and they constitute physically realizable states. If the spectrum is \textbf{contonuous} (i.e., the eigenvalues fill out an entire range) then the eigenfunctions are non normalizable, and they do not represent possible wave functions (\textit{though linear cominations} of them--involving neccessarily a spread in eigenvalues--may be normalizable). Some operator have a discrete spectrum only (for example, the Hamiltonian for the harmonic oscillator). some have only a continuous spectrum (for example, the free partivle Hamiltonian), and some have both discrete part and a continuous part (for example, the Hamiltonian for a finite square well). The discrete case is easier to handle. because the relevant inner product are guaranteed to exist--in fact, it is very similar to the finite-dimensional theory (the eigenvectors of a hermitian matrix). I'll treat the discrete case first, and then the continuous one:
 
+\subsection{Discrete Spectra}
+Mathematically, the normalizable eigenfunctions of a hermitian have two important properties:
+\begin{teo}
+	Their \textit{eqigenvalues} are \textit{real}.
+\end{teo}
+This is comforting: If you measure an obervable on a particle ina  dterminate state, you will at leat least get a real number.
+\begin{teo}
+	Eigenfunctions belonging to distinct eigenvalues are \textit{orthogonal}.
+\end{teo}
+In  a \textit{finite}-diemsnional vector space the eigenvectos of a hermitian matrix have a third fundamental property: The span the space (every vector can be expressed as a linar combination of them). Unfortunately, the proof does not generalize to infinite-dimensional spaces. But the property itslef is essential to the internal consistency of quantum mechanics, so we will take it as an \textit{axiom} (or, more precisely, as a restriction on the class of hermitian operators that can represent obervables):
+\begin{axiom}
+	The eigenvalues of an obervable operator are \textit{compelte}: Any function (in Hilber space) can be expressed as a linear combination of them.
+\end{axiom}
+
+\subsection{Continuous Spectra}
+If the spectrum of a hermitian operator is \textit{continuous}, the eigenfunctions are not normalizable, and the proofs of Theorems 1 and 2 fail, because the inner products may not exists. Nevertheless, there is a sense in which the three essential properties (reality, orthogonality, and complereness) still hold. I think it's best to approach this subtle case through specific examples.
+
+\begin{example}
+	Find the eigenfunctions and eigenvalues of the momentum operator
+\end{example}
+\begin{sol}
+\end{sol}
+Let $f_p(x)$ be the eigenfunction and $p$ the eigenvalue:
+\begin{equation}\label{3.30}
+	\frac{\hbar}{i}\frac{\dd}{\dd x}f_p(x)=pf_p(x)
+\end{equation}
+The general solution is $$f_p(x)=Ae^{ipc/\hbar}$$ This is not square-integrable, for any (complex) value of $p$--the momentum operator has no eigenfunctions in Hilbert space. And yet, if we restrict ourselves to \textit{real} eigenvalues. we do recover a kind of \textit{ersatz} "orthonormality". ...
+
+\subsection{Generalized Statistical Interpretation}
 
 
 
