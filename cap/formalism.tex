@@ -201,7 +201,44 @@ The same is true for the state of a system in quantum mechancis. It is represent
 \begin{equation}\label{3.77}
 	c_n(t)=\braket{n}{s(t)}
 \end{equation}
-(with $\ket{n}$ standing for thr $n$th eigenfunction of $\hat{H}$)
+(with $\ket{n}$ standing for thr $n$th eigenfunction of $\hat{H}$)--(\ref{3.46}). But it's all the same state; the functions $\Psi$ and $\Phi$, and the collection of coefficients $\{c_n\}$, contain exactly the same information--they are simply three different ways of describing the same vector:
+\begin{align}
+	\nonumber \Psi(x,t)&=\int\Psi(y,t)\delta(x-y)\dd y=\int\Phi(p,t)\frac{1}{\sqrt{2\pi\hbar}}e^{ipx/\hbar}\dd  p\\
+										 &=\sum c_ne^{-iE_nt/\hbar}\psi_n(x)\label{3.78}
+\end{align}
+Operators (representing obervables) are linear transformations--they "transform" one vector into another:
+\begin{equation}\label{3.79}
+	\ket{\beta}=\hat{Q}\ket{\alpha}
+\end{equation}
+Just as vectors are represented, with respect to a particular basis $\{\ket{e_n}\}$\footnote{I'll assume the basis is discrete: otherwise $n$ becomes a continuous index and the syms are replaced by integrals}, by their components,
+\begin{equation}\label{3.80}
+	\ket{\alpha}=\sum_n a_n\ket{e_n}, \mbox{with } a_n=\braket{e_n}{\alpha}:\quad \beta=\sum_n b_n\ket{e_n}, \mbox{with } b_n=\braket{e_n}{\beta}
+\end{equation}
+operators are represented (with respect to a particular basis) by their \textbf{matrix elements}\footnote{Tjis terminology is inspired, obviously, by the finite-dimensinal case, but the "matrix" will now typically have an infinite (maybe even uncountable) number of elements.}
+\begin{equation}\label{3.81}
+	\mel{e_m}{\hat{Q}}{e_n}\equiv Q_{mn}
+\end{equation}
+In this notations (\ref{3.79}) takes the form
+\begin{equation}\label{3.82}
+	\sum_nb_n\ket{e_n}=\sum_na_n\hat{Q}\ket{e_n}
+\end{equation}
+or, taking the inner product with $\ket{e_m}$,
+\begin{equation}\label{3.83}
+	\sum_n b_n\braket{e_m}{e_n}=\sum_na_n\mel{e_m}{\hat{Q}}{e_n}
+\end{equation}
+and hence
+\begin{equation}\label{3.84}
+	b_m=\sum_nQ_{mn}a_n
+\end{equation}
+Thus the matrix elements tell you how the components transform. 
+
+Later on we will encounter sysrem that admit only a finite number ($N$) of linearly independet states. In that case $\ket{s(t)}$ lives un an $N$-dimensional vector space; it can be represented as a column of ($N$) components (with respecto to a given bases), and operators take the form of ordinary ($N\times N$) matrices. These are the simplest quantum systems--none of the subtleties associted with infinite-dimensional vector spaces arise. 
+
+
+
+
+
+
 
 
 
