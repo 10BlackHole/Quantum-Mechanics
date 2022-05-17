@@ -234,6 +234,46 @@ Thus the matrix elements tell you how the components transform.
 
 Later on we will encounter sysrem that admit only a finite number ($N$) of linearly independet states. In that case $\ket{s(t)}$ lives un an $N$-dimensional vector space; it can be represented as a column of ($N$) components (with respecto to a given bases), and operators take the form of ordinary ($N\times N$) matrices. These are the simplest quantum systems--none of the subtleties associted with infinite-dimensional vector spaces arise. 
 
+Dirac proposed to chop the bracket notation for the inner product, $\braket{\alpha}{\beta}$, into two pieces, which he called \textbf{bra}, $\bra{\alpha}$, and \textbf{ket} $\ket{\beta}$. The latter is a vector, but what exactly is the former? It's a \textit{linear function} of vectors, in the sense that when it hits a vector (to its right) it yields a (complex) number--the inner product. (When an \textit{operator} hits a vector, it delivers another vector; when a \textit{bra} hits a vector, it delivers a number.) In a function space, the bra can be thought of as an instruction to integrate: $$\bra{f}=\int f^*[\cdots]\dd x$$ with the ellipsis $[\cdot]$ waiting to be filled by whatever function the bra encounters in the jet to its right. In a finite-dimensional vector space, with the vectors expressed as columns,
+\begin{equation}\label{3.87}
+	\ket{\alpha}=\mqty(a_1\\a_2\\\vdots\\ a_n)
+\end{equation}
+the corresponding bra is a row vector:
+\begin{equation}\label{3.88}
+	\bra{\alpha}=\mqty(a_1^* a_2^*\cdots a_n^*)
+\end{equation}
+The collection of all bras constitutes another vector space--the so-called \textbf{dual space.}
+
+The license to treat bras as separate entities in their own right allows for some powerful and pretty notation. For example, if $\ket{\alpha}$ is a normalized vector, the operator
+\begin{equation}\label{3.89}
+	\hat{P}\equiv \op{a}{a} 
+\end{equation}
+picks out the portion of any vector that "lies along" $\ket{\alpha}$: $$\hat{P}\ket{\beta}=\braket{\alpha}{\beta}\ket{\alpha}$$ we call it the \textbf{projection operator} onto the one-dimensional subspace spanned by $\ket{\alpha}$. If $\{\ket{e_n}\}$ is a discrete orthonormal basis,
+\begin{equation}\label{3.90}
+	\braket{e_m}{e_n}=\delta_{mn}
+\end{equation}
+then 
+\begin{equation}\label{3.91}
+	\sum_n\op{e_n}{e_n}=1
+\end{equation}
+(the identity operator). For if we les this operator act on any vector $\ket{\alpha}$, we recover the expansion of $\ket{\alpha}$ in the $\{\ket{e_n}\}$ basis:
+\begin{equation}\label{3.92}
+	\sum_n\ket{e_n}\braket{e_n}{\alpha}=\ket{\alpha}
+\end{equation}
+Similarly, if $\{\ket{e_z}\}$ is a \textit{Dirac} orthonormalized continuous basis,
+\begin{equation}\label{3.93}
+	\braket{e_a}{e_{z'}}=\delta(z-z')
+\end{equation}
+then
+\begin{equation}\label{3.94}
+	\int\op{e_z}{e_z}\dd z=1
+\end{equation}
+(\ref{3.91}) and (\ref{3.94}) are the tidiest ways ti express completeness.
+
+
+
+
+
 
 
 
