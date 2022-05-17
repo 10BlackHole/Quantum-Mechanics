@@ -12,5 +12,38 @@ which os to say,
 \begin{equation}\label{4.96}
 	L_x=yp_z-zp_y,\quad L_y=zp_x-xp_z,\quad L_z=xp_y-yp_x
 \end{equation}
-The corresponding quantum operators are obtained by the standard prescription
+The corresponding quantum operators are obtained by the standard prescription $p_x\to -\hbar\partial/\partial x, p_y\to -i\hbar\partial/\partial y, p_z\to -\hbar\partial/\partial z$.
+
+\subsubsection{Eigenvalues}
+The operators $L_x$ and $L_y$ do not commute; in fact\footnote{Note that all the operators we encounter in quantum mechanics are distributive with respect to addition: $A(B+C)=AB +AC$. In particular, $[A,B+C]=[A,B]+[A,C]$.}
+\begin{align}
+	\nonumber [L_x,L_y]&=[yp_z-zp_y, zp_x-xp_z]\\
+										 &=[yp_z,zp_x]-[yp_z,zp_z]-[zp_y,zp_x]+[zp_y,xp_z]\label{4.97}
+\end{align}
+From the canonical commutation relations\footnote{The cannonical commutation relations are $[r_i,p_j]=-[p_i,r_j]=i\hbar\delta_{ij}\quad [r_i,r_j]=[p_i,p_j]=0$} we know that the inly operators here that \textit{fail} to commute are $x$ with $p_x$, $y$ with $p_y$, and $z$ with $p_z$. So the two middles terms drop out, leaving
+\begin{equation}\label{4.98}
+	[L_x,L_y]=yp_x[p_z,z]+xp_y[z,p_z]=i\hbar(xp_y-yp_x)=i\hbar L_z
+\end{equation}
+Of course, we could have started out with $[L_y,L_z]$ or $[L_z,L_x]$, but there is no need to calculate these separately--we can get them immediately by cyclic permutation of the indices ($x\to y, y\to z, z\to x$)
+\begin{equation}\label{4.99}\marginnote{Fundamental commutation relations for angular momentum}
+	\boxed{[L_x,L_y]=i\hbar L_z;\quad [L_y,L_z]=i\hbar L_x;\quad [L_z,L_x]=i\hbar L_y}
+\end{equation}
+These are the fundamental commutation relations for angular momentum; everything else follows from them.
+
+Notice that $L_x, L_y$ and $L_z$ are \textit{incompatible} obervables. According to the generalized uncertainty principle (\ref{3.62})
+\begin{equation*}
+	\sigma_{L_x}^2\sigma_{L_y}^2\geq\left(\frac{1}{2i}\expval{i\hbar L_z}\right)^2=\frac{\hbar^2}{4}\expval{L_z}^2
+\end{equation*}
+or
+\begin{equation}\label{4.100}
+	\sigma_{L_x}\sigma_{L_y}\geq\frac{\hbar}{2}|\expval{L_z}|
+\end{equation}
+It would therefore be fuitle to look for states that are simultaneoulsy eigenfunctions of $L_x$ and $L_y$. On the other hand,  the square of the total angular momentum,
+\begin{equation}\label{4.101}
+	L^2\equiv L_x^2+L_y^2+L_z^2
+\end{equation}
+
+
+
+
 
