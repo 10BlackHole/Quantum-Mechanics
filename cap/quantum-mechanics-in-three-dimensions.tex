@@ -92,10 +92,44 @@ For a given value of $\lambda$, then we obtain a "ladder" of states, with each "
 \begin{equation}\label{4.110}
 	L_+f_t=0
 \end{equation}
-Let $\hbar l$ be the eigenvalue of $L_z$ at this top ring (the appropriateness of the letter "l" will appear in a moment):
+Let $\hbar l$ be the eigenvalue of $L_z$ at this top ring (the appropriateness of the letter "$l$" will appear in a moment):
 \begin{equation}\label{4.111}
 	L_zf_t=\hbar lf_t;\quad L^2f_t=\lambda f_t
 \end{equation}
+Now,
+\begin{align*}
+	L_{\pm}L_{\mp}&=(L_x\pm iL_y)(L_x\mp iL_y)=L_x^2+L_y^2\mp i(L_xL_y-L_yL_x)\\
+								&=L^2-L_z^2\mp i(i\hbar L_z)
+\end{align*}
+or, putting in the other way around,
+\begin{equation}\label{4.112}
+	L^2=L_{\pm}L_{\mp}+L_z^2\mp \hbar L_z
+\end{equation}
+It follows that
+$$L^2f_t=(L_-L_++L_z^2+\hbar L_z)f_t=(0+\hbar^2l^2+\hbar^2l)f_t=\hbar^2l(l+1)f_t$$ and hence
+\begin{equation}\label{4.113}
+	\lambda = \hbar^2l(l+1)
+\end{equation}
+This tells is the eigenvalue of $L^2$ in terms of the \textit{maximum} eigenvalue of $L_z$.
+
+Meanwhile, there is also (for the same reason) a \textit{bottom} rung, $f_b$, such that
+\begin{equation}\label{4.114}
+	L_-f_b=0
+\end{equation}
+Let $\hbar\bar{l}$ be the eugenvalue if $L_z$ at this bottom rung:
+\begin{equation}\label{4.115}
+	L_zf_b=\hbar\bar{l}f_b;\quad L^2f_b=\lambda f_b
+\end{equation}
+Using (\ref{4.112}), we have $$L^2f_b=(L_+L_-+L_z^2-\hbar L_z)f_b=(+\hbar^2\bar{l}^2-\hbar^2\bar{l})f_b=\hbar^2\bar{l}(\bar{l}-1)f_b$$ and therefore
+\begin{equation}\label{4.116}
+	\lambda = \hbar^2\bar{l}(\bar{l}-1)
+\end{equation}
+Comparing (\ref{4.113}) and ({4.116}), we see that $l(l+1)=\bar{l}(\bar{l}-1)$
+
+
+
+
+
 
 
 
