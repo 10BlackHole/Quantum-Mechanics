@@ -42,6 +42,70 @@ It would therefore be fuitle to look for states that are simultaneoulsy eigenfun
 \begin{equation}\label{4.101}
 	L^2\equiv L_x^2+L_y^2+L_z^2
 \end{equation}
+does commute with $L_x$:
+\begin{align*}
+	[L^2,L_x]&=[L_x^2,Lx]+[L_y^2,L_x]+[L_z^2,Lx]\\
+					 &=L_y[L_y,L_x]+[L_y,L_x]L_y+L_z[L_z,L_x]+[L_z,L_x]L_z\\
+					 &=L_y(-i\hbar L_z)+(-i\hbar L_z)L_y+L_z(i\hbar L_y)+(i\hbar L_y)L_z\\
+					 &=
+\end{align*}
+(I used (\ref{3.64})) to simplify the commutator; note also that any operator commutes with itself. It follows, of course, that $L^4$ also commute with $L_y$ and $L_z$:
+\begin{equation}\label{4.102}
+	[L^2,L_x]=0,\quad [L^2,L_y]=0,\quad {L^2,L_z}=0
+\end{equation}
+or, more compactly, 
+\begin{equation}\label{4.103}
+	[L^2,\vb{L}]=0
+\end{equation}
+So $L^2$ is compatible with each component of $\vb{L}$, and we can hope to find simultanoeus eigenstates of $L^2$ and (say) $L_z$:
+\begin{equation}\label{4.104}
+	L^2f=\lambda f\quad \mbox{and}\quad L_zf=\mu f
+\end{equation}
+We'll use a "ladder operator" technique, very similar to the one we applied to the harmonic oscillator back in Section \ref{sec:2.3.1}. Let
+\begin{equation}\label{4.105}
+	\boxed{L_{\pm}\equiv L_x\pm iL_y}
+\end{equation}
+The commutator with $L_z$ is
+\begin{equation*}
+	[L_z,L_{\pm}]=[L_z,L_x]\pm i[L_z,L_y]=i\hbar L_y\pm i(-i\hbar L_x)=\pm\hbar (L_x\pm iL_y)
+\end{equation*}
+so
+\begin{equation}\label{4.106}
+	[L_z,L{\pm}]=\pm \hbar L_{\pm}
+\end{equation}
+And. of course, 
+\begin{equation}\label{4.107}
+	[L^2,L_{\pm}]=0
+\end{equation}
+I claim that if $f$ es an eigenfunction of $L^2$ and $L_z$, so also is $L_{\pm} f$: (\ref{4.107}) says
+\begin{equation}\label{4.108}
+	L^2(L_{\pm}f)=L_{\pm}(L^2 f)=L_{\pm}(\lambda f)=\lambda(L_{\pm}f)
+\end{equation}
+so $L_{\pm}f$ is an eigenfunction of $L^2$, with the same eigenvalue $\lambda$, and (\ref{4.106}) says
+\begin{align}
+\nonumber	L_z(L_{\pm}f)&=(L_zL_{\pm}-L_{\pm}L_z)f+L_{\pm}L_zf=\pm\hbar L_{\pm}f+L_{\pm}(\mu f)\\
+											 &=(\mu\pm \hbar)(L_{\pm}f)\label{4.109}
+\end{align}
+so $L_{\pm} f$ is an eigenfunction of $L_z$ with the \textit{new} eigenvalue $\mu\pm\hbar$. We call $L_+$ the "raising" operator, because is \textit{increases} the eigenvalue of $L_z$ by $\hbar$, and $L_-$ the "lowering" operator, because it \textit{lowers} the eigenvalue by $\hbar$.
+
+For a given value of $\lambda$, then we obtain a "ladder" of states, with each "rung" separated from its neighbors by one unit of $\hbar$ in the eigenvalue of $L_z$. To ascend the ladder we apply the raising operator, and to descend, the lowering operator. But this procces cannot go on forever. Eventually we're going to reach a state gor which the $z$-component exceeds the \textit{total}, and that cannot be. There must exist a "top rung", such that
+\begin{equation}\label{4.110}
+	L_+f_t=0
+\end{equation}
+Let $\hbar l$ be the eigenvalue of $L_z$ at this top ring (the appropriateness of the letter "l" will appear in a moment):
+\begin{equation}\label{4.111}
+	L_zf_t=\hbar lf_t;\quad L^2f_t=\lambda f_t
+\end{equation}
+
+
+
+
+
+
+
+
+
+
 
 
 
