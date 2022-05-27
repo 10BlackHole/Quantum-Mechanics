@@ -145,6 +145,11 @@ First of all we need no rewrite $L_x, L_y$ and $L_z$ in spherical cooridinates. 
 \begin{equation}\label{4.123}
 	\nabla=\hat{r}\frac{\partial}{\partial r}+\hat{\theta}\frac{1}{r}\frac{\partial}{\partial \theta}+\hat{\phi}\frac{1}{r\sin\theta}\frac{\partial}{\partial \phi}
 \end{equation}
+meanwhile, $\vb{r}=r\hat{r}$, so $$\vb{L}=\frac{\hbar}{i}\left[r(\hat{r}\times\hat{r})\frac{\partial}{\partial r}+(\hat{r}\times\hat{\theta})\frac{\partial}{\partial\theta} + (\hat{r}\times\hat{\phi})\frac{1}{\sin\theta}\frac{\partial}{\partial\phi}\right]$$. But $(\hat{r}\times\hat{r})=0$, $(\hat{r}\times\hat{\theta})=\hat{\phi}$ , and $(\hat{r}\times\hat{\phi})=-\hat{\theta}$, and hence
+\begin{equation}\label{4.124}
+	\vb{L}=\frac{\hbar}{i}\left(\hat{\phi}\frac{\partial}{\partial\theta}-\hat{\theta}\frac{1}{\sin\theta}\frac{\partial}{\partial\phi}\right)
+\end{equation}
+
 
 
 
