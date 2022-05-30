@@ -149,6 +149,45 @@ meanwhile, $\vb{r}=r\hat{r}$, so $$\vb{L}=\frac{\hbar}{i}\left[r(\hat{r}\times\h
 \begin{equation}\label{4.124}
 	\vb{L}=\frac{\hbar}{i}\left(\hat{\phi}\frac{\partial}{\partial\theta}-\hat{\theta}\frac{1}{\sin\theta}\frac{\partial}{\partial\phi}\right)
 \end{equation}
+The unit vectors $\hat{\theta}$ and $\hat{\phi}$ can be resolved into their cartesian components:
+\begin{equation}\label{4.125}
+	\hat{\theta}=(\cos\theta\cos\phi)\hat{i } + (\cos\theta\sin\phi)\hat{j} + (\sin\theta)\hat{k}
+\end{equation}
+\begin{equation}\label{4.126}
+	\hat{\phi}=-(\sin\theta)\hat{i} + (\cos\phi)\hat{j}
+\end{equation}
+Thus $$\vb{L} = \frac{\hbar}{i}\left[(-\sin\phi\hat{i} + \cos\phi\hat{j})\frac{\partial}{\partial\theta}-(\cos\theta\cos\phi\hat{i}+\cos\theta\sin\phi\hat{j}-\sin\theta\hat{k})\frac{1}{\sin\theta}\frac{\partial}{\partial\phi}\right]$$ Evidently
+\begin{align}
+	L_x&=\frac{\hbar}{i}\left(-\sin\phi\frac{\partial}{\partial\theta}-\cos\phi\cot\theta\frac{\partial}{\partial\phi}\right)\label{4.127}\\
+	L_y&=\frac{\hbar}{i}\left(+\cos\phi\frac{\partial}{\partial\theta}-\sin\phi\cot\theta\frac{\partial}{\partial\phi}\right)\label{4.128}
+\end{align}
+and
+\begin{equation}\label{4.129}
+	\boxed{L_z=\frac{\hbar}{i}\frac{\partial}{\partial\phi}}
+\end{equation}
+We shall also need the raising and lowering operators: $$L_{\pm}=L_x\pm iL_y=\frac{\hbar}{i}\left[(-\sin\phi\pm i\cos\phi)\frac{\partial}{\partial\theta}-(\cos\phi\pm i\sin\phi)\cot\theta\frac{\partial}{\partial\phi}\right]$$ But $\cos\phi\pm i\sin\phi=e^{\pm i\phi}$, so
+\begin{equation}\label{4.130}
+	L_{\pm}=\pm \hbar e^{\pm i\phi}\left(\frac{\partial}{\partial\theta}\pm i\cot\theta\frac{\partial}{\partial\phi}\right)
+\end{equation}
+In particular
+\begin{equation}\label{4.131}
+	L_+L_-=-\hbar^2\left(\frac{\partial^2}{\partial\theta^2}+\cot\theta\frac{\partial}{\partial\theta}+\cot^2\theta\frac{\partial^2}{\partial\phi^2}+i\frac{\partial}{\partial\phi}\right)
+\end{equation}
+and hence
+\begin{equation}\label{4.132}
+	\boxed{L^2=-\hbar^2\left[\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial}{\partial\theta}\right)+\frac{1}{\sin^2\theta}\frac{\partial^2}{\partial\phi^2}\right]}
+\end{equation}
+We are now in position to determine $f_l^m(\theta,\phi)$. It's an eigenfucntion of $L^2$, with eigenvalue $\hbar^2 l(l+1)$: $$L^2f_l^m=-\hbar^2\left[\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial}{\partial\theta}\right)+\frac{1}{\sin^2\theta}\frac{\partial^2}{\partial\phi^2}\right]f_l^m=\hbar^2l(l+1)f_l^m$$ But this is precisely the "angular equation" (\ref{4.18}). And it's also an eigenfucntion of $L_z$, with the eigenvalue $m\hbar$: $$L_zf_l^m=\frac{\hbar}{i}\frac{\partial}{\partial\phi}f_l^m=\hbar mf_l^m$$, but this is equivalent to the azimuthal equation (\ref{4.21}). We have already solved this system of equations: The result (appropriately normalized) is the spherical harmonic, $Y_l^m(\theta,\phi)$. \textit{Conclusion}: Spherical harmonics are eigenfunctions of $L^2$ and $L_z$. When we solved the Schrodinger equation by separation of variables, in Section \ref{sec:4.1}, we were inadvertenly constructing simultaneous eigenfunctions of the three commuting operators $H, L^2$ and $L_z$:
+\begin{equation}\label{4.133}
+	H\phi=E\psi,\quad L^2\psi=\hbar^2l(l+1)\psi,\quad L_z\psi=\hbar m\psi
+\end{equation}
+Incidentally, we can use (\ref{4.132}) to rewrite the Schrodinger equation (\ref{4.14}) more compactly: $$\frac{1}{2mr^2}\left[-\hbar^2\frac{\partial}{\partial r}\left(r^2\frac{\partial}{\partial r}\right)+L^2\right]\psi + V\psi=E\psi$$ There is a curious final twist to this story, for the \textit{algebraic} theoryof angular momentum permits $l$ (and hence also $m$) to take on \textit{half}-integer values (\ref{4.119}), whereas separation of variables yielded eigenfunctions only for \textit{integer} values (\ref{4.29}). You might suppose that the half-integer solutions are spurious, but it turns out that they are of profuound importance, as we shall see in the following sections.
+
+\section{Spin}
+
+
+
+
 
 
 
