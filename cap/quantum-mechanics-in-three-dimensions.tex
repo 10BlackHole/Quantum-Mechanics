@@ -220,6 +220,65 @@ representing spin up, and
 for spin down.
 
 Meanshile, the spin operators become $2\times 2$ matrices, which we can work out by noting their effect on $\chi_+$ and $\chi_-$. (\ref{4.135}) says
+\begin{equation}\label{4.142}
+	\vb{S}^2\chi_+=\frac{3}{4}\hbar^2\chi_+\quad\mbox{ and  }\quad \vb{S}^2\chi_-=\frac{3}{4}\hbar^2\chi_-
+\end{equation}
+If we write $\vb{S}^2$ as a matrix with (as yet) undetermined elements, $$\vb{S}^2=\mqty(c&d\\e&f)$$ then the first equation says $$\mqty(c&d\\e&f)\mqty(1\\0)=\frac{3}{4}\hbar^2\mqty(1\\0),\quad \mbox{or }\quad \mqty(c\\e)=\mqty(\frac{3}{4}\hbar^2\\0)$$ so $c=(3/4)\hbar^2$ and $e=0$. The second equation says $$\mqty(c&d\\e&f)\mqty(0\\1)=\frac{3}{4}\hbar^2\mqty(0\\1)\quad\mbox{or }\mqty(d\\f)\mqty(0\\\frac{3}{4}\hbar^2)$$ so $d=0$ and $f=(3/4)\hbar^2$. \textit{Conclusion}:
+\begin{equation}\label{4.143}
+	\vb{S}^2=\frac{3}{4}\hbar^2\mqty(1&0\\0&1)
+\end{equation}
+Similarly,
+\begin{equation}\label{4.144}
+	\vb{S}\chi_+=\frac{\hbar}{2}\chi_+,\quad \vb{S}_z\chi_-=-\frac{\hbar}{2}\chi_-
+\end{equation}
+from which it follows that
+\begin{equation}\label{4.145}
+	\vb{S}_z=\frac{\hbar}{2}\mqty(1&0\\0&-1)
+\end{equation}
+Meanwhile, (\ref{4.136}) says $$\vb{S}_+\chi_-=\hbar\chi_+\quad \vb{S}_z\chi_+\hbar\chi_-,\quad \vb{S}_+\chi_+=\vb{S}_-\chi_-=0$$ so 
+\begin{equation}\label{1.146}
+	\vb{S}_+=\hbar\mqty(0&1\\0&0),\quad \vb{S}_-=\hbar\mqty(0&0\\1&0)
+\end{equation}
+Now $S_{\pm}=S_x\pm iS_y$, so $S_x=(1/2)(S_+ + S_-)$ and $S_y=(1/2i)(S_+-S_-)$, and hence
+\begin{equation}\label{4.147}
+	\vb{S}_x=\frac{\hbar}{2}\mqty(0&1\\1&0),\quad \vb{S}_y=\frac{\hbar}{2}\mqty(0&-i\\i&0)
+\end{equation}
+Sinse $\vb{S}_x, \vb{S}_y$ and $\vb{S}_z$ all carry a factor of $\hbar/2$, it is tider to write $\vb{S}=(\hbar/2)\sigma$, where
+\begin{equation}\label{4.148}\marginnote{Pauli spin matrices}
+	\boxed{\sigma_x\equiv\mqty(0&1\\1&0),\quad \sigma_y\equiv\mqty(0&-i\\i&0),\quad \sigma_z\equiv\mqty(1&0\\0&-1)}
+\end{equation}
+These are de famous \textbf{Pauli spin matrices}. Notice thar $\vb{S}_x, \vb{S}_y, \vb{S}_z$ and $\vb{S}^2$ are all \textit{hermitian} (as they should be, since they represnet observables). On the other hand, $\vb{S}_+$ and $\vb{S}_-$ are \textit{not} hermitian--evidently they are not obervables.
+
+Te eigenspinors of $\vb{S}_z$ are (of course):
+\begin{equation}\label{4.149}
+	\chi_+=\mqty(1\\0), \left(\mbox{eigenvalue $+\frac{\hbar}{2}$}\right);\quad \chi_-=\mqty(0\\1), \left(\mbox{eigenvalue $-\frac{\hbar}{2}$}\right)
+\end{equation}
+If you measure $S_z$ on a particle in the general state $\chi$ (\ref{4.139}), you could get $+\hbar/2$, with probability $|a|^2$, or $-\hbar/2$, with probability $|b|^2$. Since these are the \textit{only} possibilities,
+\begin{equation}\label{4.150}
+	|a|^2+|b|^2=1
+\end{equation}
+(i.e., the spinor must be \textit{normalized}).\footnote{People often say that $|a|^2$ is the "probability that the particle is in the spin-up state", but this is slppy language; what they \textit{mean} is that if you \textit{measured} $S_z$, $|a|^2$ is the probability you'd get $\hbar/2$}.
+
+But what if, instead, you chose to measure $S_x$? What the possible results, and what are thei respective probabilities? According to the generalized statistical interpretation,  we need to know the eigenvalues and eigenspinors of $\vb{S}_x$. The characteristic equation is $$\mqty|-\lambda&\hbar/2\\\hbar/2&-\lambda|=0\Rightarrow \lambda^2=\left(\frac{\hbar}{2}\right)^2\Rightarrow \lambda =\pm\frac{\hbar}{2}$$
+Not surprisongly, the possible values for $S_x$ are the same as those for $S_z$. The eigenspinor are obtained in the usual way: $$\frac{\hbar}{2}\mqty(0&1\\1&0)\mqty(\alpha\\\beta)=\pm \frac{\hbar}{2}\mqty(\alpha\\\beta)\Rightarrow \mqty(\alpha\\\beta)=\pm \mqty(\alpha\\\beta)$$, so $\beta=\pm\alpha$. Evidently the (normalized) eigenspinors of $\vb{S}_x$ are
+\begin{equation}\label{4.151}
+	\chi_+^{(x)}\mqty(\frac{1}{\sqrt{2}}\\\frac{1}{\sqrt{2}}),\left(\mbox{eigenvalue $+\frac{\hbar}{2}$}\right);\quad \chi_-^{(x)}=\mqty(\frac{1}{\sqrt{2}}\\\frac{-1}{\sqrt{2}}),\left(\mbox{eigenvalue $-\frac{\hbar}{2}$}\right)
+\end{equation}
+As the eigenvectors of hermitian matrix, they span the space; the generic spinor $\chi$ (\ref{4.139}) can be expressed as a linear combination of them:
+\begin{equation}\label{4.152}
+	\chi = \left(\frac{a+b}{\sqrt{2}}\right)\chi_+^{(x)} + \left(\frac{a-b}{\sqrt{2}}\right)\chi_-^{(x)}
+\end{equation}
+If you measure $S_x$, the probability of getting $+\hbar/2$ is $(1/2)|a+b|^2$, and the probability of getting $-\hbar/2$ is $(1/2)|a-b|^2$. (You shouls check for yourself that these probabilities add up to $1$).
+
+
+
+
+
+
+
+
+
+
 
 
 
