@@ -1,7 +1,49 @@
 \chapter{Quantum Mechanics In Three Dimensions}
 %\section{Schrodinger Eqaution In Spherical Coordinates}
 
-%\section{The Hydrogen Atom}
+\section{The Hydrogen Atom}
+The hydrogen atom consists of a heavy, essentially motionless proton (we may as well put it at the origin), of charge $e$, together with a much lighter electron (charge $-e$) that orbits around it, bound by the mutual attraction of opposite charges. From Coulomb's law, the potential energy (in SI units) is
+\begin{equation}\label{4.52}
+	V(r)=-\frac{e^2}{4\pi\epsilon_0}\frac{1}{r}
+\end{equation}
+and the radial equation (\ref{4.37}) says
+\begin{equation}\label{4.53}
+	-\frac{\hbar^2}{2m}\dv[2]{u}{r}+\left[-\frac{e^2}{4\pi\epsilon_0}\frac{1}{r}+\frac{\hbar^2}{2m}\frac{l(l+1)}{r^2}\right]u=Eu
+\end{equation}
+Our problem is to solve this equation for $u(r)$, and determine the allowed energies, $W$. The hydrogen atom is such an important case that I'm not going hand you the solutions this time--we'll work them out in detail, by the method we used in the analytica solution to the harmonic oscillator. 
+
+Insidentally, the Coulomb potential (\ref{4.53}) admits \textit{continuum} states (with $E>0$), describing electron-proton scattering, as well as discrete \textit{bound} states, representing the hydrogen atom, but we shall confine our attention to the latter.
+
+\subsubsection{The Radial Wave Function}
+Our first task is to tidy up the notation. Let
+\begin{equation}\label{4.54}
+	\kappa\equiv\frac{\sqrt{-2mE}}{\hbar}
+\end{equation}
+(For bound states, $E$ is negative, so $\kappa$ is \textit{real}.) Dividing (\ref{4.53}) by $E$, we have $$\frac{1}{\kappa^2}\dv[2]{u}{r}=\left[1-\frac{me^2}{2\pi\epsilon_0\hbar^2\kappa}\frac{1}{(\kappa r)}+\frac{l(l+1)}{(\kappa r)^2}\right]u$$ This suggests that we introduce
+\begin{equation}\label{4.55}
+	\rho\equiv\kappa r,\quad \mbox{and}\quad \rho_0\equiv\frac{me^2}{2\pi\epsilon_0\hbar^2\kappa}
+\end{equation}
+so that
+\begin{equation}\label{4.56}
+	\dv[2]{u}{\rho}=\left[1-\frac{\rho_0}{\rho}+\frac{l(l+1)}{\rho^2}\right]u
+\end{equation}
+Next we examine the asymptotic form of the solutions. As $\rho\to 0\infty$, the constant term in the brackets dominates, so (approximately) $$\dv[2]{u}{\rho}=u$$ The general solution is
+\begin{equation}\label{4.57}
+	u(\rho)=Ae^{-\rho}+Be^{\rho}
+\end{equation}
+but $e^{\rho}$ blows up (as $\rho\to\infty$), so $B=0$. Evidently
+\begin{equation}\label{4.58}
+	u(\rho)\thicksim Ae^{-\rho}
+\end{equation}
+for large $\rho$. On the other hand, as $\rho\to 0$ the centrifugal term dominates\footnote{This argument does not apply when $l=0$ (although the conclusion, (\ref{4.59}, is in fact valid for that case too). But never mind: All I am trying to do is provide some \textit{motivation} for a change of variables (\ref{4.60}))}; approximately, then: $$\dv[2]{u}{\rho}=\frac{l(l+1)}{\rho^2}u$$ The general solution (check it!) is $$u(\rho)=C\rho^{l+1}+D\rho^{-l}$$ but $\rho^{-1}$ blows op (as $\rho\to 0$), so $D=0$. Thus
+\begin{equation}\label{4.59}
+	u(\rho)\thicksim \rho^{l+1}
+\end{equation}
+
+
+
+
+
 
 \section{Angular Momentum}
 Classically, the angular momentum of a particle (with respecto to the origin) is given by the formula
@@ -275,6 +317,37 @@ I'd loke now to walk you through an imaginary mesurement scenario involving spin
 At this point our challegner grabs the test-tube and \textit{measures} the $x$-component of its spin; let's say he gets the value $+\hbar/2$. "Aha!" (he shouts it triumph), "You \textit{lied}! This particle has a perfectly well-defined value of $S_x=\hbar/2$" Well, sure--it does \textit{now} , but that doesn't prove it \textit{had} the value, prior to your measuerement. "You have obviously been reduced to splittin hairs. And anyway, what happened to your ucnertainty principle? I now know both $S_x$ \textit{and} $S_z$" I'm sorry, but you do \textit{not}: In the course of your measurement, you altered the particle's state; it is noy in the state $\chi_-^{(x)}$, and whereas you know the value of $S_x$, you no longer know the calue of $S_z$. "But I was extremely careful not to disturb the particle when I measured $S_x$". Veru well, if you don't belive me, \textit{check it out}: Measure $S_z$,  and see what you get. (Of course, he \textit{may} get $+\hbar/2$, which will be embarrasing to my case--but if we repeat this whole scenario over and over, half the time he weill get $-\hbar/2$.)
 
 To the layman, the philosopher, or the classical physicist, a statement of the form "this particle doesn't have a well-defined position" (or momentum, or $x$-component of spin angular momentum, or whatever) sound vague, incompetent, or (worst of all) profound. It is none od these. But its precise meaning is, I think, almost impossible to convey to anyone who has not studied quantum mechanics in some depth. If you find your own comprehension slipping, from time to time (if you \textit{don't}, you probably haven't understood the problem), come back to the spin-$1/2$ system: It is the simplest and cleanest context for thinking through the conecptual paradoxes of quantum mechanics.
+
+\subsubsection{Electron in a Magnetic Field}\label{sec:4.4.2}
+A spinning charged particle constitutes a magnetic dipole. Its \textbf{magnetic dipolemoment}, $\vb*{\mu}$ is proportional to its spin angular momentum, $\vb{S}$
+\begin{equation}\label{4.156}
+	\vb*{\mu}=\gamma\vb{S}
+\end{equation}
+the proportionality constant, $\gamma$, is called the \textbf{gyromagnetic ratio}. When a magnetic dipole is placed in a magnetic field $\vb{B}$, it experiences a torque, $\vb*{\mu}\times\vb{B}$, which tends to line it up parallel to the fields (just like a compass needle). The energy assocaited with this torque is
+
+\begin{equation}\label{4.157}
+	H =-\vb*{\mu}\cdot\vb{B}
+\end{equation}
+so the Hamiltonian of a spinning charged particle, at rest in a magnetic field $\vb{B}$ is
+\begin{equation}\label{4.158}
+	H = -\gamma\vb{B}\cdot\vb{S}
+\end{equation}
+
+\begin{example}
+	\textbf{Larmor precession:}
+\end{example}
+
+\begin{example}
+	\textbf{The Stern-Gerlach experiment:}
+\end{example}
+
+\subsubsection{Addition of Angular Momenta}\label{sec:4.4.3}
+Suppose now that we have \textit{two} spin -$1/2$ particles--for example, the electron and the proton in the ground state\footnote{I put them in the ground state so there won't be any \textit{orbital} angular momentum to worry about.} of hydrogen. Each can have spin up or spin down, so there are four possibilities in all\footnote{More precisely, each particle is in a \textit{linear combinatio} of spin up and spin down, adn the composite system is in a \textit{linear combination} of the four states listed.}
+\begin{equation}\label{4.175}
+	\uparrow\uparrow,\quad \uparrow\downarrow,\quad \downarrow\uparrow, \quad \downarrow\downarrow
+\end{equation}
+
+
 
 
 
