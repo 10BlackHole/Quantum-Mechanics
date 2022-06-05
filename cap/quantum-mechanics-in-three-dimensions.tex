@@ -27,7 +27,7 @@ so that
 \begin{equation}\label{4.56}
 	\dv[2]{u}{\rho}=\left[1-\frac{\rho_0}{\rho}+\frac{l(l+1)}{\rho^2}\right]u
 \end{equation}
-Next we examine the asymptotic form of the solutions. As $\rho\to 0\infty$, the constant term in the brackets dominates, so (approximately) $$\dv[2]{u}{\rho}=u$$ The general solution is
+Next we examine the asymptotic form of the solutions. As $\rho\to \infty$, the constant term in the brackets dominates, so (approximately) $$\dv[2]{u}{\rho}=u$$ The general solution is
 \begin{equation}\label{4.57}
 	u(\rho)=Ae^{-\rho}+Be^{\rho}
 \end{equation}
@@ -39,6 +39,41 @@ for large $\rho$. On the other hand, as $\rho\to 0$ the centrifugal term dominat
 \begin{equation}\label{4.59}
 	u(\rho)\thicksim \rho^{l+1}
 \end{equation}
+for small $\rho$.
+
+The next step is to peel off the asymptotic behavior, introducing the new function $v(\rho)$:
+\begin{equation}\label{4.60}
+	u(\rho)=\rho^{l+1}e^{-\rho}v(\rho)
+\end{equation}
+in the hope that $v(\rho)$ will turn out to be simpler than $u(\rho)$. The first indications are not auspicious: $$\dv{u}{\rho}=\rho^le^{-\rho}\left[(l+1-\rho)v+\rho\dv{v}{\rho}\right]$$ and $$\dv[2]{u}{\rho}=\rho^le^{-\rho}\left\{\left[-2l-2+\rho+\frac{l(l+1)}{\rho}\right]v+2(l+1-\rho)\dv{v}{\rho}+\rho\dv[2]{v}{\rho}\right\}$$ In terms of $v(\rho)$, then, the radial equation (\ref{4.56}) reads
+\begin{equation}\label{4.61}
+	\rho\pdv[2]{v}{\rho}+2(l+1-\rho)\dv{v}{\rho}+[\rho_0-2(l+1)]v=0
+\end{equation}
+Finally, we assume the solution, $v(\rho)$, can be expressed as a power series in $\rho$:
+\begin{equation}\label{4.62}
+	v(\rho)=\sum_{j=1}^\infty c_j\rho^j
+\end{equation}
+Our problem is to determine the coefficients ($c_0, c_1, c_2,...$). Differentiating term by term $$\dv{v}{\rho}=\sum_{j=0}^\infty jc_j\rho^{j-1}=\sum_{j=0}^\infty(j+1)c_{j+1}\rho^j$$
+[In the second summation]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -46,6 +81,7 @@ for large $\rho$. On the other hand, as $\rho\to 0$ the centrifugal term dominat
 
 
 \section{Angular Momentum}
+
 Classically, the angular momentum of a particle (with respecto to the origin) is given by the formula
 \begin{equation}\label{4.95}
 	\vb{L}=\vb{r}\times\vb{p}
