@@ -1,5 +1,49 @@
 \chapter{Quantum Mechanics In Three Dimensions}
-%\section{Schrodinger Eqaution In Spherical Coordinates}
+\section{Schrodinger Equation In Spherical Coordinates}
+The generalization to three dimensions is straightforward. Schrodinger's equation says
+\begin{equation}\label{4.1}
+	i\hbar\pdv{\Psi}{t}=H\Psi
+\end{equation}
+the Hamiltonian operator\footnote{Where confusion might otherwise occur I have been putting "hats" on operators, to distinguish the from the corresponding classical observables. I don't think therw will be much occasion for ambiguity in this chapter, and the hats get to be cumbersome, so I going to leave the off from now on.} $H$ is obtained from the classical energy $$\frac{1}{2}mv^2+V=\frac{1}{2}(p_x^2+p_y^2+p_z^2)+V$$ by the standard prescription (applied now to $y$ and $z$, as well as $x$):
+\begin{equation}\label{4.2}
+	p_x\to\frac{\hbar}{i}\frac{\partial}{\partial x},\quad p_y\to\frac{\hbar}{i}\frac{\partial}{\partial y},\quad p_z\to\frac{\hbar}{i}\frac{\partial}{\partial z}
+\end{equation}
+or
+\begin{equation}\label{4.3}
+	\boxed{\vb{p}\to\frac{\hbar}{i}\nabla}
+\end{equation}
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{The Hydrogen Atom}
 The hydrogen atom consists of a heavy, essentially motionless proton (we may as well put it at the origin), of charge $e$, together with a much lighter electron (charge $-e$) that orbits around it, bound by the mutual attraction of opposite charges. From Coulomb's law, the potential energy (in SI units) is
@@ -10,7 +54,7 @@ and the radial equation (\ref{4.37}) says
 \begin{equation}\label{4.53}
 	-\frac{\hbar^2}{2m}\dv[2]{u}{r}+\left[-\frac{e^2}{4\pi\epsilon_0}\frac{1}{r}+\frac{\hbar^2}{2m}\frac{l(l+1)}{r^2}\right]u=Eu
 \end{equation}
-Our problem is to solve this equation for $u(r)$, and determine the allowed energies, $W$. The hydrogen atom is such an important case that I'm not going hand you the solutions this time--we'll work them out in detail, by the method we used in the analytica solution to the harmonic oscillator. 
+Our problem is to solve this equation for $u(r)$, and determine the allowed energies, $E$. The hydrogen atom is such an important case that I'm not going hand you the solutions this time--we'll work them out in detail, by the method we used in the analytica solution to the harmonic oscillator. 
 
 Insidentally, the Coulomb potential (\ref{4.53}) admits \textit{continuum} states (with $E>0$), describing electron-proton scattering, as well as discrete \textit{bound} states, representing the hydrogen atom, but we shall confine our attention to the latter.
 
@@ -54,7 +98,32 @@ Finally, we assume the solution, $v(\rho)$, can be expressed as a power series i
 	v(\rho)=\sum_{j=1}^\infty c_j\rho^j
 \end{equation}
 Our problem is to determine the coefficients ($c_0, c_1, c_2,...$). Differentiating term by term $$\dv{v}{\rho}=\sum_{j=0}^\infty jc_j\rho^{j-1}=\sum_{j=0}^\infty(j+1)c_{j+1}\rho^j$$
-[In the second summation]
+[In the second summation I have renamed the "dummy index": $j\to j+1$. If this troubles you, write out the first few terms explicitly, and \textit{check} it. You may object that the sum should now begin at $j=-1$, but the factor $(j+1)$ kills that term anyway, so we might as well start at zero.] Differentiating again $$\dv[2]{v}{\rho}=\sum_{j=1}^\infty j(j+1)c_{j+1}\rho^{j-1}$$ Inserting these into (\ref{4.61}), we have $$\sum_{j=1}^\infty j(j+1)c_{j+1}\rho^j+2(l+1)\sum_{j=0}^\infty (j+1)c_{j+1}\rho^j$$ $$-2\sum_{j=0}^\infty jc_j\rho^j+[\rho_0-2(l+1)]\sum_{j=0}^\infty c_j\rho^j=0$$ Equating the coefficients of like powers yields $$j(j+1)c_{j+1}+2(l+1)(j+1)c_{j+1}-2cc_j+[\rho_0-2(l+1)]c_j=0$$ or 
+\begin{equation}\label{4.63}
+	c_{j+1}=\left\{\frac{2(j+l+1)-\rho_0}{(j+1)(j+2l+2)}\right\}c_j
+\end{equation}
+This recursion formular determines the coefficients, and hence de function $v(\rho)$: We start with $c_0$ (this becomes an overall constant, to be fixde eventually by normalization), and (\ref{4.63}) gives is $c_1$; putting this back in, we obtain $c_2$, and so on\footnote{You might wonder why I didn't use the series method directly on $u(\rho)$--why factor out the asymptotic behavior before applying this procedure? Well, the reason for peeling off $\rho^{l+1}$ is largely aesthetic: Without this, the sequnce would begin with a long string of zeris (the first nonzero coefficient begin $c_{l+1}$): by factoring out $\rho^{l+1}$ we obtain a series that starts out with $\rho^0$. The $e^{-\rho}$ factor is more critical--if you don't pull that out, you get a three-term recursion formula, involving $c_{j+1}, c_{j+1}$, and $c_j$  and that is enormously more difficult to work with.}.
+
+Now let's see what the coefficients look like for large $j$ (this corresponds to large $\rho$, where the higher powers dominate). In this regime the recursion formula says $$c_{j+1}\approx \frac{2j}{j(j+1)}c_j=\frac{2}{j+1}c_j$$ Suppose for a moment that this were \textit{exact}. Then 
+\begin{equation}\label{4.64}
+	c_j=\frac{2^j}{j!}c_0
+\end{equation}
+so $$ v(\rho)=C_0\sum_{j=0}^\infty \frac{2^j}{j!}\rho^j=c_0e^{2\rho}$$ and hence 
+\begin{equation}\label{4.65}
+	u(\rho)=c_0\rho^{l+1}e^\rho
+\end{equation}
+which blows uo at large $\rho$. The positive exponential is precisely the asymptotic behavior we didn't want, in (\ref{4.57}). (It's no accident that it reappears here; after all, it does represent the asymptotic form of \textit{some} solutions to the radial equation--they just don't happen to be the ones we're interested in, because thay aren't normalizable.) There is only one way out of this dilema: The \textit{series must terminate}. There must occur some maximal integer, $j_{max}$, such that
+\begin{equation}\label{4.66}
+	c(j_{max}+1)=0
+\end{equation}
+(and beyond which all coefficients vanish automatically). Evidently (\ref{4.63}) $$2(j_{max}+l+1)-\rho_0=0$$ Defining
+\begin{equation}\label{4.67}
+	n\equiv j_{max} +l+1
+\end{equation}
+
+
+
+
 
 
 
