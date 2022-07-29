@@ -1,2 +1,37 @@
 \chapter{Identical Particles}
 \section{Two-Particle Systems}
+For a single particle, $\Psi(\vb{r},t)$ is a function of the spatial coordinates, $\vb{r}$, and thr time $t$ (we'll ignore spin, for the moment). The state of two-particle system is a function of the coordinates of particle one ($\vb{r}_1$), the coordinates of pa<rticle two ($\vb{r}_2$) and the time:
+\begin{equation}\label{5.1}
+	\Psi(\vb{r}_1,\vb{r}_2,t)
+\end{equation}
+Its time evolution is determined (as always) by the Schrodinger equation:
+\begin{equation}\label{5.2}
+	i\hbar\pdv{\Psi}{t}=H\Psi
+\end{equation}
+where $H$ is the Hamiltonian for the whole system:
+\begin{equation}\label{5.3}
+	H=-\frac{\hbar^2}{2m_1}\nabla_1^2-\frac{\hbar^2}{2m_2}\nabla_2^2+V(\vb{r}_1,\vb{r}_2,t)
+\end{equation}
+(the subscript on $\nabla$ indicates differentiation with respect to the coordinates of particle $1$ or particle $2$, as the case may be). The statistical interpretation carries over in the obvious way:
+\begin{equation}\label{5.4}
+	|\Psi(\vb{r}_1,\vb{r}_2,t)|^2\dd^3\vb{r}_1\dd^3\vb{r}_2
+\end{equation}
+is the probability of finding particle $q$ in the volume $\dd^3\vb{r}_1$ and the particle $2$ in the volume $\dd^3\vb{r}_2$; evidently $\Psi$ must be normalized in such a way that
+\begin{equation}\label{5.5}
+	\int|\Psi(\vb{r}_1,\vb{r}_2,t)|^2\dd^3\vb{r}_1\vb{r}_2=1
+\end{equation}
+For time-independet potentials, we obtain a complete set of solutions by separation of variables:
+\begin{equation}\label{5.6}
+	\Psi(\vb{r}_1,\vb{r}_2,t)=\psi(\vb{r}_1,\vb{r}_2)e^{-iEt/\hbar}
+\end{equation}
+where the spatial function ($\psi$) satisfies the time-independent Schrodinger equation:
+\begin{equation}\label{5.7}
+	-\frac{\hbar^2}{2m_1}\nabla_1^2\psi - \frac{\hbar^2}{2m_2}\nabla_2^2\psi+V\psi=E\psi
+\end{equation}
+and $E$ is the total energy of the system.
+
+
+
+
+
+
