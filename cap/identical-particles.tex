@@ -30,6 +30,47 @@ where the spatial function ($\psi$) satisfies the time-independent Schrodinger e
 \end{equation}
 and $E$ is the total energy of the system.
 
+\subsection{Bosons and Fermions}
+Suppose particle $1$ is in the (one-particle) state $\psi_a(\vb{r})$, and particle $2$ is in the state $\psi_b(\vb{r})$. (Remember: I'm ignoring spin, for the moment). In that case $\psi(\vb{r}_1,\vb{r}_2$) is a simple \textit{product}:
+\begin{equation}\label{5.9}
+	\psi(\vb{r}_1,\vb{r}_2)=\psi_a(\vb{r}_1)\psi_b(\vb{r}_2)
+\end{equation}
+Of course, this assumes that we can tell the particles apart--otherwise it wouldn't make any sense to claim that number $1$ is in state $\psi_a$ and number $2$ is in state $\psi_b$; all we could say is that one of them is in state $\psi_a$ and the other is in state $\psi_b$, but we wouldn't know which is which. If we were talking classical mechanics this would be a silly objetion: Yous can always tell the particles apart, in principle--just paint one of them red and the other one blue, or stamp identification numbers on them, or hire private detectives to follow them around. But in quantum mechanics the situation is fundamentally different: You can't paint an electron red, or pin a label on it, and a detentive's observations will inevitably and unpredictably alter its state, raising doubts as to whether the two had perhaps switched places. The fact is, all electrons are \textit{utterly identical} , in a way that no two classical objets can ever be. It's not just that we don't happen to know which electron is which; God doesn't know which is which, because there is no such thing as 'this' electron, or 'that' electron; all we can legitimately speak about is 'an' electron.
+
+Quantum mechanics neatly accommodates the existence of particles that are indistinguishable in principle: We sumpy construct a wave function that is non-committal as to which particle is in which state. There are actually two ways to do it:
+\begin{equation}\label{5.10}
+	\psi_{\pm}(\vb{r}_1,\vb{r}_2)=A[\psi_a(\vb{r}_1)\psi_b(\vb{r}_2)\pm \psi_b(\vb{r}_1)\psi_a(\vb{r}_2)]
+\end{equation}
+Thus the thoery admits two kinds of identical particles: \textbf{bosons}, for which we use the plus sign, and \textbf{fermions}, for which we use the minus sign. Photons and mesons are bosons; protons and electrons are fermions. It so happens that
+\begin{align}
+	\nonumber &\mbox{all particles with \textit{integer} spin are bosons, and } \\
+						&\mbox{all particles with \textit{half integer} spin are fermions}\label{5.11}
+\end{align}
+This conection between \textbf{spin and statistics} (as we shall see, bosons and fermions have quite different statistical properties) can be proved in relativistic quantum mechanics; in the nonrelativistic theory it is taken as an axiom.
+
+It follows, in particular, that two identical fermions (for example, two electrons) cannot occupy the same state. For if $\psi_a=\psi_b$, then $$\psi_-(\vb{r}_1,\vb{r}_2) = A[\psi_a(\vb{r}_1)\psi_a(\vb{r}_2)-\psi_a(\vb{r}_1)\psi_a(\vb{r}_2)] = 0$$ and we are left with no wave function at all. This is the famous \textbf{Pauli exclusion priciple}. It is not (as you may have been led to belive) a weird ad hoc assumption applying only to electrons, but rather a consequance of the rules for constructing two-particle wave functions, applying to \textit{all} identical fermions.
+
+I assumed, for the sake of argument, that one particle was in the state $\psi_a$ and the other in state $\psi_b$, but there is a more general (and more sophisticated) way to formulate the problem. Let us define the \textbf{exchange operator}, $P$, which interchanges the two particles:
+\begin{equation}\label{5.12}
+	Pf(\vb{r}_1,\vb{r}_2) = f(\vb{r}_2,\vb{r}_1)
+\end{equation}
+Clearly, $P^2=1$, and it follows (prove it for yourself) that the eigenvalues of $P$ are $\pm 1$. Now, if the two particles are identical, the Hamiltonian must treat them the same: $m_1=m_2$ and $V(\vb{r}_1,\vb{r}_2)=V(\vb{r}_2,\vb{r}_1)$. It follows that $P$ and $H$ are compatible observables,
+\begin{equation}\label{5.13}
+	[P,H]=0
+\end{equation}
+and hence we can find a complete set of functions that are simultaneous eigenstates of both. That is to say, we can find solutions to the Schrodinger equation that are either symmetric (eigenvalue $+1$) or antisymmetric (eigenvalue $-1$) under exchange:
+\begin{equation}\label{5.14}
+	\boxed{\psi(\vb{r}_1,\vb{r}_2) = \pm\psi(\vb{r}_2,\vb{r}_1)}
+\end{equation}
+Moreover, if a system starts out in such a state, it will remain in such a state. The \textit{new} law (I'll call it the \textbf{symmetrization requeriment}) is that for identical particles the eave function is not merely \textit{allowed}, but \textit{requiered} to satisfy (\ref{5.14}), with the plus sign for bosons, and the minus sign for fermions. This is the \textit{general} statement, of which (\ref{5.10}) is a special case.
+
+
+
+
+
+
+
+
 
 
 
