@@ -570,6 +570,33 @@ Each of the four composite states is an eigensate of $S_z$--the $z$-components s
 	\downarrow\uparrow :m&=0\\
 	\downarrow\downarrow :m&=-1
 \end{align*}
+At first glance, this doesn't look right: $m$ is supposed to advance in integer steps, from $-s$ to $+s$, so it appears that $s=1$ but there is an extra state with $m=0$. One way to untangle this problem is to apply the lowering operator $S_-=S_-^{(1)}+S_-^{(2)}$ to the state $\uparrow\uparrow$, using (\ref{4.143}):
+\begin{align*}
+	S_-(\uparrow\uparrow)&=(S_-^{(1)}\uparrow)\uparrow + \uparrow(S_-^{(2)}\uparrow)\\
+											 &=(\hbar\downarrow)\uparrow+\uparrow(\hbar\downarrow)=\hbar(\downarrow\uparrow + \uparrow\downarrow)
+\end{align*}
+Evidently the three states with $s=1$ are (in the notation $\ket{sm}$):
+\begin{equation}\label{4.177}
+\left	\{
+	\begin{array}{cccc}
+	&\ket{11}&=&\uparrow\uparrow\\
+	&\ket{10}&=&\frac{1}{\sqrt{2}}(\uparrow\downarrow + \downarrow\uparrow)\\
+	&\ket{1-1}&=&\downarrow\downarrow
+\end{array}
+\right \}\qquad s=1 \quad \mbox{(triplet)}
+\end{equation}
+This is called the \textbf{triplet} combination, for the obvious reason. Meanwuile, the orthogonal state with $m=0$ carries $s=0$:
+\begin{equation}\label{4.178}
+	\left \{
+		\begin{array}{cccc}
+			&\ket{00}&=&\frac{1}{\sqrt{2}}(\uparrow\downarrow - \downarrow\uparrow)
+		\end{array}
+	\right \}\qquad s=0\quad \mbox{(singlet)}
+\end{equation}
+
+
+
+
 
 
 
