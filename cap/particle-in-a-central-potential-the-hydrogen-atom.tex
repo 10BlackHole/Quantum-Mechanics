@@ -85,7 +85,31 @@ Since the potential $V$ depends only on the distance  $r $of the particle from t
 \begin{equation}\label{A-15}
 	\Delta = \frac{1}{r}\pdv[2]{r}r+\frac{1}{r^2}\left(\pdv[2]{\theta} +\frac{1}{\tan\theta}\pdv{\theta}+\frac{1}{\sin^2\theta}\pdv[2]{\varphi}\right)
 \end{equation}
-andd look for eigenfucntions $\varphi(\vb{r})$ that are functions of the variables $r,\theta,\varphi$.
+and look for eigenfucntions $\varphi(\vb{r})$ that are functions of the variables $r,\theta,\varphi$.
+
+If we compare expression (\ref{A-15}) with the one for the operator $\vb{\mathcal{L}}^2$, wee see that the quantum mechanical Hamiltonian $\mathcal{H}$ can be put in a form completely analogous to (\ref{A-9}):
+\begin{equation}\label{A-16}
+	\boxed{H=-\frac{\hbar^2}{2\mu}\frac{1}{r}\pdv[2]{r}+\frac{1}{2\mu r^2}\vb{L}^2+V(r)}
+\end{equation}
+The angular dependence of the Hamiltonian is contained entirely in the $\vb{L}^2$ term, which is an operator here. We could, in fact, perfect the analogy by defining an operator $P_r$, which would allow us to write the first term of (\ref{A-16}) like the one in (\ref{A-9}).
+
+We shall now show how one can solve the eigenvalue equation:
+\begin{equation}\label{A-17}
+	\left[-\frac{\hbar^2}{2\mu}\frac{1}{r}\pdv[2]{r}+\frac{1}{2\mu r^2}\vb{L}^2+V(r)\right]\varphi(r,\theta,\varphi)=E\varphi(r,\theta,\varphi)
+\end{equation}
+
+\subsection{Separation of variables}
+\subsubsection{Angular dependence of the eigenfunctions}
+We know that the three components of the angular momentum operator $\vb{L}$ act only on the angular variables $\theta$ and $\varphi$ ; consequently, they commute with all operators acting only on the $r$-dependence. In addition, they commute with $\vb{L}^2$. Therefore, according to expression (\ref{A-16}) for the Hamiltonian, \textit{the three components of L are constants of the motion\footnote{(\ref{A-18}) express the fact that $H$ is a scalar operator with respect to rotations about the point $O$. This is true because the potential energy is invariant under rotations about $O$.}} in the quantum mechanical sense:
+\begin{equation}\label{A-18}
+	[H,\vb{L}]=\vb{0}
+\end{equation}
+
+Obviously, $H$ also commutes with $\vb{L}^2$.
+
+Although we have at our disposition four constants of the motion ($L_x,L_y,L_z$ and $\vb{L}^2$), we cannot use all four of them to solve equation (\ref{A-17}) because they do not commute with each other; we shall use only $\vb{L}^2$ and $L_z$. Since the three observables $H$, $\vb{L}^2$ and $L_z$ commute, we can find a basis of the state space $\mathcal{E}_r$ of the particle composed of eigenfunctions common to these three observables. We can, therefore,  require the functions $\varphi(r,\theta,\varphi)$, solutions of equation (\ref{A-17}), to be eigenfunctions of $\vb{L}^2$ and $L_z$  as well. We must then solve the system of differential equations:
+
+
 
 
 
