@@ -108,6 +108,26 @@ We know that the three components of the angular momentum operator $\vb{L}$ act 
 Obviously, $H$ also commutes with $\vb{L}^2$.
 
 Although we have at our disposition four constants of the motion ($L_x,L_y,L_z$ and $\vb{L}^2$), we cannot use all four of them to solve equation (\ref{A-17}) because they do not commute with each other; we shall use only $\vb{L}^2$ and $L_z$. Since the three observables $H$, $\vb{L}^2$ and $L_z$ commute, we can find a basis of the state space $\mathcal{E}_r$ of the particle composed of eigenfunctions common to these three observables. We can, therefore,  require the functions $\varphi(r,\theta,\varphi)$, solutions of equation (\ref{A-17}), to be eigenfunctions of $\vb{L}^2$ and $L_z$  as well. We must then solve the system of differential equations:
+\begin{align}
+	\label{A-19a}H\varphi(\vb{r})&=E\varphi(\vb{r})\\
+	\label{A-19b}\vb{L}^2\varphi(\vb{r})&=l(l+1)\hbar^2\varphi(\vb{r})\\
+	L_z\varphi(\vb{r})&=m\hbar \varphi(\vb{r}) \label{A-19c}
+\end{align}
+But we already know the general form of the common eigenfunctions of $\vb{L}^2$ and $L_z$: the solutions $\varphi(\vb{r})$ of equations (\ref{A-19a}), (\ref{A-19b}), (\ref{A-19c}) corresponding to fixed values $l$ of and $m$ , are necessarily products of a function of $r$ alone and the spherical harmonic $Y_l^m(\theta,\varphi)$:
+\begin{equation}\label{A-20}
+	\varphi(\vb{r})=R(r)Y_l^m(\theta,\varphi)
+\end{equation}
+Whatever the radial function $R(r)$, $\varphi(\vb{r})$ is a solution of equations (\ref{A-19b}) and (\ref{A-19c}). The only problem which remains to be solved is therefore how to determine $R(r)$ such that $\varphi(\vb{r})$ is also an eigenfunction of $H$ [equation (\ref{A-19a})].
+
+\subsubsection{The radial equation}
+We shall now substitute expressions (\ref{A-16}) and (\ref{A-20}) into (\ref{A-19a}). Since $\varphi(\vb{r})$ is an eigenfunction of $\vb{L}^2$ with the eigenvalue $l(l+1)\hbar^2$, we see that $Y_l^m(\theta,\varphi)$ is a common factor on both sides. After simplifyng, we obtain the radial equation:
+\begin{equation}\label{A-21}
+	\left[-\frac{\hbar^2}{2\mu}\frac{1}{r}\dv[2]{r}r+\frac{l(l+1)\hbar^2}{2\mu r^2}+V(r)\right]R(r)=ER(r)
+\end{equation}
+Actually, a solution of (\ref{A-21}), substituted into (\ref{A-20}), does not necessarily yield a solution of the eigenvalue equation (\ref{A-14}) of the Hamiltonian. As we have already pointed out, expression (\ref{A-15}) for the Laplacian is not necessarily valid at $r=0$. We must therefore make sure that the behavior of the solutions $R(r$) of (\ref{A-21}) at the origin is sufficiently regular for (\ref{A-20}) to be in fact a solution of (\ref{A-14}).
+
+Instead of solving the partial differential equation (\ref{A-17}) involving the three variables $r,\theta\varphi$ we must now solve a differential equation involving only the variable $r$, but dependent on a parameter $l$: we are looking for eigenvalues and eigenfunctions of an operator $H_l$ which is different for each value of $l$.
+
 
 
 
