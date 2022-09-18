@@ -149,6 +149,41 @@ This equation is analogous to the one we would have to solve if, in a \textit{on
 Nevertheless, we must not lose sight of the fact that the variable $r$ can take on only \textit{non-negative} real values. The term $l(l+1)\hbar^2/2\mu r^2$ which is added to the potentual $V(r)$ is always positive or zero; the corresponding force (equal to minus the gradient of this term) always tend to repel the particle from the force center $O$; this is whay this term is called the \textit{centrifugal potential} (or centrifugal barrier).
 
 \subsubsection{Behavior of the solutions of the radial equation at the origin}
+We have already pointed out that it is necessary to examine the behavior of the solutions $R(r)$ of the radial equation (\ref{A-21}) at the origin in order to know if they are really solutions of (\ref{A-14}).
+
+We shall assume that when $r$ approaches zero, the potential $V(r)$ remains finite, or at least approaches infinity less rapidly than $1/r$ (this hypothesis is true in most cases encountered in physics and, in particular, in the case of the Coulomb potential. We shall consider a solution of (\ref{A-22}) and assume that it behaves at the origin like $r^s$:
+\begin{equation}\label{A-26}
+	R_{k,l}(r)\thicksim Cr^s\quad \mbox{,as } r\to 0
+\end{equation}
+Substituting (\ref{A-26}) into (\ref{A-22}), and setting the coefficient of the dominant term equal to zero, we obtain the equation:
+\begin{equation}
+	-s(s+1) + l(l+1)=0
+\end{equation}
+and, consequently:
+
+\begin{equation}\label{A-28}
+	\left \{
+		\begin{array}{ccc}
+			\mbox{either} & s=l\\
+			\mbox{or}  & s=-(l+1)
+		\end{array}
+	\right.
+\end{equation}
+
+For a given value of $E_{k,l}$, there are therefore two linearly independent solutions of the second-order equation (\ref{A-22}), behaving at the origin like $r^l$ and $1/R^{l+1}$, respectively. But those which behave like $1/r^{l+1}$ must be rejected, since it can be shown\footnote{This is because the Laplacian of $\frac{1}{r^{l+1}}Y_l^m(\theta,\varphi)$ involves the $l$th derivatives of $\delta(\vb{r})$.} that $\frac{1}{r^{l+1}}Y_l^m(\theta,\varphi)$ is not a solution of the eigenvalue equation (\ref{A-14}) for $r=0$. From this, we see that acceptable solution of (\ref{A-24}) go to zero at the origin for all $l$, since:
+\begin{equation}\label{A-29}
+	u_{k,l}(r)\thicksim Cr^{l+1}\quad  \mbox{,as } r\to 0
+\end{equation}
+Consequantly, to (\ref{A-24}) must be added the condition:
+\begin{equation}\label{A-30}
+	\boxed{u_{k,l}(0)=0}
+\end{equation}
+
+\subsection{Statioanary states of a particle in a central potential}
+\subsubsection{Quantum numbers}
+
+
+
 
 
 
