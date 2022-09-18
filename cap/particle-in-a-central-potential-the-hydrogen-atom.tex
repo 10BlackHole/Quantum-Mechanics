@@ -128,6 +128,31 @@ Actually, a solution of (\ref{A-21}), substituted into (\ref{A-20}), does not ne
 
 Instead of solving the partial differential equation (\ref{A-17}) involving the three variables $r,\theta\varphi$ we must now solve a differential equation involving only the variable $r$, but dependent on a parameter $l$: we are looking for eigenvalues and eigenfunctions of an operator $H_l$ which is different for each value of $l$.
 
+In other words, we consider separately, in the state space $\mathcal{E}_r$, the subspaces $\mathcal{E}(l,m)$ corresponding to fixed values of $l$ and $m$ , studying the eigenvalue equation of $H$ in each of these subspaces (which is possible because $H$ commutes with $\vb{L}^2$ and $L_z$). The equation to be solved depends on $l$ , but not on $m$ ; it is therefore the same in the $(2l+1)$ subspaces $\mathcal{E}(l,m)$ associated with a given value of $l$. We shall denote by $_{k,l}$ the eigenvalues of $H_l$ , that is, the eigenvalues of the Hamiltonian $H$ inside a given subspace $\mathcal{E}(l,m)$. The index $k$, which can be discrete or continuous, represents the various eigenvalues associated with the same value of $l$. As for the eigenfunctions of $H_l$, we shall label them with the same two indices as the eigenvalues: $R_{k,l}(r)$. It is not obvious that this is sufficient: several radial functions might exist and be eigenfunctions of the same operator $H_l$ with the same eigenvalue $E_{k,l}$; we shall see that this is not the case and that, consequently, the two indices $k $and $l$ are sufficient to characterize the different radial functions. We shall therefore rewrite equation (\ref{A-21}) in the form:
+\begin{equation}\label{A-22}
+	\left[-\frac{\hbar^2}{2\mu}\frac{1}{r}\dv[2]{r}+\frac{l(l+1)\hbar^2}{2\mu r^2}+V(r)\right]R_{k,l}(r)=E_{k,l}R_{k,l}(r)
+\end{equation}
+We can simplify the differential operator to be studied by a change in functions.
+
+We set:
+\begin{equation}\label{A-23}
+	R_{k,l}(r)=\frac{1}{r}u_{k,l}(r)
+\end{equation}
+Multiplying both sides of (\ref{A-22}) by $r$, we obtain for $u_{k,l}(r)$ the following differential equation:
+\begin{equation}\label{A-24}
+	\boxed{\left[-\frac{\hbar^2}{2\mu}\dv[2]{r}+\frac{l(l+1)\hbar^2}{2\mu r^2}+V(r)\right]u_{k,l}(r)=E_{k,l}(r)u_{k,l}(r)}
+\end{equation}
+This equation is analogous to the one we would have to solve if, in a \textit{one-dimensional} problem, a particle of mass $\mu$ were moving in an \textit{effective potential} $V_{eff}(r)$: 
+\begin{equation}\label{A-25}
+	V_{eff}(r)=V(r)+\frac{l(l+1)\hbar^2}{2\mu r^2}
+\end{equation}
+Nevertheless, we must not lose sight of the fact that the variable $r$ can take on only \textit{non-negative} real values. The term $l(l+1)\hbar^2/2\mu r^2$ which is added to the potentual $V(r)$ is always positive or zero; the corresponding force (equal to minus the gradient of this term) always tend to repel the particle from the force center $O$; this is whay this term is called the \textit{centrifugal potential} (or centrifugal barrier).
+
+\subsubsection{Behavior of the solutions of the radial equation at the origin}
+
+
+
+
 
 
 
