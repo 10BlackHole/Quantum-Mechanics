@@ -213,6 +213,83 @@ Finally, the eigenfunctions of the Hamiltonian $H$ of a particle placed in a cen
 
 \subsubsection{Degeneracy of the energy levels}
 
+\section{Potion of the center of mass and relative motion for a system fo two interacting particles}
+
+\subsection{Motion od the center of masss and relative motion in classical mechanics}
+
+\subsection{Separation of variables in quantum mechanics}
+\subsubsection{Eigenvalues and eigenfunctions of the Hamiltonian}
+
+\section{The hydrogen atom}
+\subsection{Introduction}
+The hydrogen atom consists of a proton, of mass:
+\begin{equation}\label{C-1}
+	m_p\approx 1.7\times 10^{-27} \mbox{ kg}
+\end{equation}
+and charge:
+\begin{equation}\label{C-2}
+	q\approx 1.6\times 10^{-19} \mbox{ Coulomb}
+\end{equation}
+and of and electron, of mass:
+\begin{equation}\label{C-3}
+	m_e\approx 0.91\times 10^{-30}\mbox kg
+\end{equation}
+and a charge $-q$. The interaction between these two particles is essentially electrostatic. The corresponding potential energy is:
+\begin{equation}\label{C-4}
+	V(r)\approx \frac{q^2}{4\pi\epsilon_0}\frac{1}{r}=-\frac{e^2}{r}
+\end{equation}
+where $r$ denotes the distance between the two particles, and:
+\begin{equation}\label{C-5}
+	\frac{q^2}{4\pi\epsilon_0}=e^2
+\end{equation}
+We confine ourselves to the study of this system in the center of mass frame. The classical Hamiltonian that describes the relative motion of the two particles is then:
+\begin{equation}\label{C-6}
+	\mathcal{H}(\vb{r},\vb{p})=\frac{\vb{p}^2}{2\mu}-\frac{e^2}{r}
+\end{equation}
+Since $m_p \gg m_e$ [formulas (\ref{C-1}) and (\ref{C-3})], the reduced mass $\mu$ of the system is very close to $m_e$:
+\begin{equation}\label{C-7}
+	\mu=\frac{m_em_p}{m_e+m_p}\approx m_e\left(1-\frac{m_e}{m_p}\right)
+\end{equation}
+(the correction term $m_e/m_p$ is on the order of $1/1800$).  This means that the center of mass of the system is practically at the position of the proton, and that the relative particle can be identified, to a very good approximation, with the electron. This is why we shall adopt the slightly inaccurate convention of calling the relative particle the electron and the center of mass the proton.
+
+\subsection{The Bohr model}
+We shall briefly review the results of the Bohr model, which relate to the hydrogen atom. This model, which is based on the concept of a trajectory, is incompatible with the ideas of quantum mechanics. However, it allows us to introduce, in a very simple way, fundamental quantities such as the ionization energy $E_I$ of the hydrogen atom and a parameter which characterizes atomic dimensions (the Bohr radius $a_0$). In addition, it so happens that the energies $E_n$ given by the Bohr theory are the same as the eigenvalues of the Hamiltonian we shall calculate in \ref{sec:C-3}. Finally, quantum mechanical theory is in agreement with some of the intuitive images of the Bohr model.
+
+This semi-classical model is based on the hypotesis that the electron describes a \textit{circular orbit} of radius $r$ about the proton, obeying the following equations:
+\begin{align}
+	\label{C-8}E&=\frac{1}{2}\mu v^2-\frac{e^2}{r}\\
+	\label{C-9}\frac{\mu v^2}{r}&=\frac{e^2}{r^2}\\
+	\mu  v r&=n\hbar\quad ; \quad \mbox{$n$ a positive number}\label{C-10}
+\end{align}
+The first two equations are classical ones. (\ref{C-8}) expresses the fact that the total energy $E$ of the electron is the sum of its kinetic energy $\mu v^2/2$  and its potential energy $-e^2/r$ . (\ref{C-9}) is none other than the fundamental equation of Newtonian dynamics ($e^2/r^2$ is the Coulomb force exerted on the electron, and $v^2/r$ is the acceleration of its uniform circular motion). The third equation expresses the quantization condition, introduced empirically by Bohr in order to explain the existence of discrete energy levels: he postulated that only circular orbits satisfying this condition are possible trajectories for the electron. The different orbits, as well as the corresponding values of the various physical quantities, are labeled by the integer $n$ associated with them.
+
+A very simple algebraic calculation then yields the expressions for $E_n,r_n$ and $v_n$:
+\begin{align}
+	\label{C_11a}E_n&=-\frac{1}{n^2}E_I\\
+	\label{C-11b}r_n&=n^2a_0\\
+	v_n&=\frac{1}{n}v_0\label{C-11c}
+\end{align}
+with 
+\begin{align}
+	\label{C-12a}E_I&=\frac{\mu e^4}{2\hbar^2}\\
+	\label{C-12b}a_0&=\frac{\hbar^2}{\mu e^2}\\
+	v_0&=\frac{e^2}{\hbar}\label{C-12c}
+\end{align}
+When this model was proposed by Bohr, it marked an important step towards the understanding of atomic phenomena, since it yielded the correct values for the energy level of the hydrogen atom. These values indeed follow the $1/n^2$ (the Balmer formula) law indicated by expression (\ref{C-11a}). Moreover, the experimentally measured \textit{ionization energy} (the energy which must be supplied to the hydrogen atom in its ground state in order to remove the electron) is equal to the numerical value of $E_I$:
+\begin{equation}\label{C-13}
+	E_I\approx 13.6 \mbox{ eV }
+\end{equation}
+Finally, the \textit{Bohr radius} $a_0$ indeed characterized atomix¡c dimensions:
+\begin{equation}\label{C-14}
+	a_0\approx 0.52  \,\si{\angstrom}
+\end{equation}
+
+\subsection{Quantum mechanical theory of the hydrogen atom}\label{sec:C-3}
+
+
+
+
+
 
 
 
