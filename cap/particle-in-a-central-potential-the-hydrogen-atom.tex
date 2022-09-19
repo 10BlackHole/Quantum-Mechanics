@@ -181,6 +181,37 @@ Consequantly, to (\ref{A-24}) must be added the condition:
 
 \subsection{Statioanary states of a particle in a central potential}
 \subsubsection{Quantum numbers}
+We can summarize the results as follows: the fact that the potential $V(r)$ is independent of $\theta$ and $\varphi$ makes it possible:
+\begin{enumerate}
+	\item to require the eigenfunctions of $H$ to be \textit{simultaneous eigenfunctions} of $\vb{L}^2$ \textit{and} $L_z$, \textit{which determines their angular dependence}:
+		\begin{equation}\label{A-31}
+	\varphi_{k,l,m}(\vb{r})=R_{k,l}(r)Y_l^m(\theta,\varphi)=\frac{1}{r}u_{k,l}(r)Y_l^m(\theta,\varphi)
+\end{equation}
+\item \textit{to replace the eigenvalue equation of} $H$, an equation involving partial derivatives with respect to $r,\theta,\varphi$ by a \textit{differential equation involving only the variable} $r$ and depending on a parameter $l$ [(\ref{A-24})], with condition (\ref{A-30}) imposed.
+\end{enumerate}
+
+In principle, the functions $\varphi_{k,l,m}(r,\theta,\varphi)$ must be squre-integrable, that is, normalizable:
+\begin{equation}\label{A-32}
+	\int |\varphi_{k,l,m}(r,\theta,\varphi)|^2r^2\dd r\dd \Omega = 1
+\end{equation}
+Their form (\ref{A-31}) allows us to separate radial and angular integrations:
+\begin{equation}\label{A-33}
+	\int |\varphi_{k,l,m}(r,\theta,\varphi)|^2r^2\dd r\dd \Omega =\int_0^\infty r^2\dd r R_{k,l}(r)|^2\int \dd\Omega |Y_l^m(\theta,\varphi)|^2
+\end{equation}
+But the spherical harmonics $Y_l^m(\theta,\varphi)$ are normalized with respect to $\theta$ and $\varphi$; condition (\ref{A-32}) therefore reduces to:
+\begin{equation}\label{A-34}
+	\int_0^\infty r^2\dd r |R_{k,l}(r)|^2=\int_0^\infty \dd r |u_{k,l}(r)|^2=1
+\end{equation}
+Actually, we know that it is often convenient to accept eigenfunctions of the Hamil- tonian that are not square-integrable. If the spectrum of $H$ has a continuous part, we shall require only that the corresponding eigenfunctions be orthonormalized in the ex- tended sense, that is, that they satisfy a condition of the form:
+\begin{equation}\label{A-35}
+	\int_0^\infty r^2\dd r R_{k,l}^*(r)R_{k,l}(r)=\int_0^\infty \dd r u_{k,l}^*(r)u_{k,l}(r)=\delta(k'-k)
+\end{equation}
+where $k$ is a continuous index.
+In (\ref{A-34}) and (\ref{A-35}), the integrals converge at their lower limit, $r=0$ [condition (\ref{A-30})]. This is physically satisfying since the probability of finding the particle in any volume of finite dimensions is then always finite. It is therefore only because of the behavior of the wave functions for $r\to \infty$ that, in the case of a continuous spectrum, the normalization integrals (\ref{A-35}) diverge if $k=k'$.
+
+Finally, the eigenfunctions of the Hamiltonian $H$ of a particle placed in a central potential $V(r)$ depend on at least three indices [formula (\ref{A-31})]: $\varphi_{k,l,m}(r,\theta,\varphi)=R_{k,l}(r)Y_l^m(\theta,\varphi)$ is a somultaneous eigenfunction of $H, \vb{L}^2$ and $L_z$ with the respective eigenvalues $E_{k,l}, l(l+1)\hbar^2$ and $m\hbar$. $k$ is called the \textit{radial} quantum number; $l$, the \textit{azimuthal} quantum number; and $m$ the \textit{magnetic} quantum number. The radial part $R_{k,l}(r)=\frac{1}{r}u_{k,l}(r)$ of the eigenfunction and the eigenvalue $E_{k,l}$ of $H$ are independent of the magnetic quantum number and are given by the radial equation (\ref{A-24}). The angular part of the eigenfunction depends only on $l$ and $m$ and not on $k$; it does not depend on the form of the potentual $V(r)$.
+
+\subsubsection{Degeneracy of the energy levels}
 
 
 
