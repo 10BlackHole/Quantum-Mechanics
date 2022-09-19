@@ -3,7 +3,7 @@ In this chapter, we shall consider the quantum mechanical properties of a partic
 
 
 
-\section{Statioanary states of a particle in a central potential}
+\section{Statioanary states of a particle in a central potential}\label{sec:A}
 In this section, we consider a (spinless) particle of mass $\mu$, subjected to a central force derived from the potential $V(r)$ (the center of force is chosen as the origin).
 \subsection{Outline of the problem}
 \subsubsection{Review of some classical results}
@@ -148,7 +148,7 @@ This equation is analogous to the one we would have to solve if, in a \textit{on
 \end{equation}
 Nevertheless, we must not lose sight of the fact that the variable $r$ can take on only \textit{non-negative} real values. The term $l(l+1)\hbar^2/2\mu r^2$ which is added to the potentual $V(r)$ is always positive or zero; the corresponding force (equal to minus the gradient of this term) always tend to repel the particle from the force center $O$; this is whay this term is called the \textit{centrifugal potential} (or centrifugal barrier).
 
-\subsubsection{Behavior of the solutions of the radial equation at the origin}
+\subsubsection{Behavior of the solutions of the radial equation at the origin}\label{sec:A-2-c}
 We have already pointed out that it is necessary to examine the behavior of the solutions $R(r)$ of the radial equation (\ref{A-21}) at the origin in order to know if they are really solutions of (\ref{A-14}).
 
 We shall assume that when $r$ approaches zero, the potential $V(r)$ remains finite, or at least approaches infinity less rapidly than $1/r$ (this hypothesis is true in most cases encountered in physics and, in particular, in the case of the Coulomb potential. We shall consider a solution of (\ref{A-22}) and assume that it behaves at the origin like $r^s$:
@@ -285,6 +285,109 @@ Finally, the \textit{Bohr radius} $a_0$ indeed characterized atomix¡c dimension
 \end{equation}
 
 \subsection{Quantum mechanical theory of the hydrogen atom}\label{sec:C-3}
+We shall now take up the question of the determination of the eigenvalues and eigenfunctions of the Hamiltonian $H$ describing the relative motion of the proton and
+the electron in the center of mass frame [formula (\ref{C-6})]. In the $\{\ket{\vb{r}}\}$ representation, the eigenvalue equation of the Hamiltonian $H$ is written:
+\begin{equation}\label{C-15}
+	\left[-\frac{\hbar^2}{2\mu}\Delta -\frac{e^2}{r}\right]\varphi(\vb{r})=E\varphi(\vb{r})
+\end{equation}
+Since the potential $-e^2/r$ is central, we can apply the results of \ref{sec:A}: the eigenfunctions $\varphi(\vb{r})$ are of the form:
+\begin{equation}\label{C-16}
+	\varphi_{k,l,m}(\vb{r})=\frac{1}{r}u_{k,l}(r)Y_l^m(\theta,\varphi)
+\end{equation}
+$u_{k,l}(r)$ is given by the radial equation, (\ref{A-24}), that is:
+\begin{equation}\label{C-17}
+	\left[-\frac{\hbar^2}{2\mu}\dv[2]{r}+\frac{l(l+1)\hbar^2}{2\mu r^2}-\frac{e^2}{r}\right]u_{k,l}(r)=E_{k,l}(r)u_{k,l}(r)
+\end{equation}
+We add to this equation condition (\ref{A-30}):
+\begin{equation}\label{C-18}
+	u_{k,l}(0)=0
+\end{equation}
+
+\subsubsection{Change of variables}
+To simplify the reasoning, we shall choose $a_0$ and [formulas (\ref{C-12a}), (\ref{C-12b}) and (\ref{C-12c})] as the units of length and energy. That is, we shall introduce the dimensionless quantities:
+\begin{equation}\label{A-19}
+	\rho = r/a_0
+\end{equation}
+\begin{equation}\label{C-20}
+	\lambda_{k,l}=\sqrt{-E_{k,l}/E_I}
+\end{equation}
+(the quantity under the radical sign is positive, since we are looking for the bound states).
+
+With expressions (\ref{C-12a}) and (\ref{C-12b}) for $E_I $and $a_0$ taken into account, the radial equation (\ref{C-17}) becomes simply:
+\begin{equation}\label{C-21}
+	\left[\dv[2]{\rho}-\frac{l(l+1)}{\rho^2}+\frac{2}{\rho}\right]u_{k,l}(\rho)=0
+\end{equation}
+
+\subsubsection{Solving the radial equation}
+In order to solve (\ref{C-21}), we shall expanding $u_{k,l}(\rho)$ in a power series.
+
+\begin{itemize}
+	\item Asymptotic behavior
+
+		Let us determine the asymptotic behavior of $u_{k,l}(\rho)$ qualitatively. When $\rho$ approaches infinity, the terms in $1/\rho$ and $1/\rho^2$ become negligible compared to the constant term $\lambda_{k,l}^2$, so that (\ref{C-21}) practically reduces to:
+		\begin{equation}\label{C-22}
+			\left[\dv[2]{\rho}-\lambda_{k,l}^2\right]u_{k,l}(\rho)=0
+\end{equation}
+whose solutions are $e^{\pm\rho\lambda_{k,l}}$. This argument is not rigorous, since we have completely neglected the terms in $1/\rho$ and $1/\rho^2$; actually, it can be shown that $u_{k,l}(\rho)$ is equal to $E^{\pm\rho\lambda_{k,l}}$ multiplied by a power of $\rho$.
+
+We shall later be led by physical considerations to require the function $u_{k,l}(\rho)$ to be bounded at infinity, and hence to reject the solutions of (\ref{C-21}) whose asymptotic behavior is governed by $e^{+\rho\lambda_{kl}}$ . This is why we perform the change of function:
+\begin{equation}\label{C-23}
+	u_{k,l}(\rho)=e^{-\rho\lambda_{k,l}}y{k,l}(\rho)
+\end{equation}
+Although this change of function singles out $e^{-\rho\lambda_{k,l}}$ , it clearly does not eliminate solutions in $e^{+\rho\lambda_{k,l}}$ , which must be identified and then rejected at the end of the calculation. The differential equation that $y_{k,l}(\rho)$ must satisfy can easily be derived from (\ref{C-21}):
+\begin{equation}\label{C-24}
+	\left\{\dv[2]{\rho}-2\lambda_{k,l}\dv{\rho}+\left[\frac{2}{\rho}-\frac{l(l+1)}{\rho^2}\right]\right\}y_{k,l}(\rho)=0
+\end{equation}
+Condition (\ref{C-18}) must be associated with this equation, that is:
+\begin{equation}\label{C-25}
+	y_{k,l}(\rho)=0
+\end{equation}
+\item Solutions in the form of power series
+
+	Consider de expansion of $y_{k,l}(\rho)$ in a powers of $\rho$:
+	\begin{equation}\label{C-26}
+	y_{k,l}(\rho)=\rho^s\sum_{q=0}^\infty c_q\rho^q
+\end{equation}
+By definition, $c_0$ is the first non-zero coefficient of this expansion:
+\begin{equation}\label{C-27}
+	c_0\neq 0
+\end{equation}
+Condition (\ref{C-25}) implies that $s$ is stricly positive.
+
+We calculate $\dv{\rho}y_{k,l}(\rho)$ and $\dv[2]{\rho}y_{k,l}(\rho)$ from (\ref{C-26}):
+\begin{align}
+	\label{C-28a}\dv{\rho}&=\sum_{q_0}^\infty (q+s)c_q\rho^{q+s-1}\\
+	\dv[2]{\rho}y_{k,l}(\rho)&=\sum_{q=0}^\infty (q+s)(q+s-1)c_1\rho^{q+s-2}\label{C-28b}
+\end{align}
+To obtain the left-hand side of (\ref{C-24}), we multiply expressions (\ref{C-26}), (\ref{C-28a}) and (\ref{C-28b}) respectively by the factors $\left[\frac{2}{\rho}-\frac{-(l+1)}{\rho^2}\right]$, $-2\lambda_{k,l}$ and $1$. According to (\ref{C-24}), the series to determined must ve identically zero, that is, all ist coefficients must be zero.
+
+The lowest term is in $\rho^{s-2}$. Taking its coefficient as zero, we obtain:
+\begin{equation}\label{C-29}
+	[-(l+1)+s(s-1)]c_0=0
+\end{equation}
+If we take (\ref{C-27}) into account, we see that $s$ can take on one of two values:
+\begin{equation}\label{C-30}
+	\left \{
+		\begin{array}{cc}
+			s&=l+1\\
+			s&=-l
+		\end{array}
+	\right.
+\end{equation}
+(in agreement with the general result of \ref{sec:A-2-c}). We have seen that only (\ref{A-30a}) gives a behavior at the origin that can lead to an acceptable solution [condition (\ref{C-25})]. Setting the coefficient of the general term in $\rho^{q+s-2}$ equal to zero, we obtain (with $s=l+1$) the following recurrence relation:
+\begin{equation}\label{C-31}
+	q(q+2l+1)c_q=2[(q+l)\lambda_{k,l}-1]c_{q-1}
+\end{equation}
+If we fix $c_0$, this relation enables us to calculate $c_1$, then $c_2$m and thus by recurrence all the coefficients $c_q$. Since $c_1/c_{q-1}$ approaches zero when $q\to 0$, the corresponding series is convergent for all $\rho$. Thus we have determined, for any value of $\lambda_{k,l}$, the solution of (\ref{C-24}) that satisfies condition (\ref{C-25}).
+\end{itemize}
+
+\subsubsection{Energy quantization. Radial functions}
+
+
+
+
+
+
 
 
 
