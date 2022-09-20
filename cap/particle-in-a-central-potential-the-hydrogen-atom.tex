@@ -390,6 +390,47 @@ If the term in brackets on the right-hand side of (\ref{C-31}) does not go to ze
 \end{equation}
 Now, the power series expansion of the function $e^{2\lambda_{k,l}}$ is written:
 
+\begin{equation}\label{C-33}
+	\left \{
+		\begin{array}{cc}
+			e^{2\rho\lambda_{k,l}}&=\sum_{q=0}^\infty d_q\rho^q\\
+			d_q&=\frac{(2\lambda_{k,l})^q}{q!}
+		\end{array}
+	\right.
+\end{equation}
+which implies:
+\begin{equation}\label{C-34}
+	\frac{d_1}{d_{q-1}}=\frac{2\lambda_{k,l}}{q}
+\end{equation}
+If we compare (\ref{C-32}) and (\ref{C-34}), we see that, for large values of $\rho$ , the series being considered behaves like $e^{2\rho\lambda_{k,l}}$. The corresponding function $u_{k,l}$ [formula (\ref{C-23})] is then proportional to $e^{+\rho\lambda_{k,l}}$ , which is not physically acceptable.
+
+Consequently, we must reject all cases in which expansion (\ref{C-26}) is an infinite series. The only possible values of $\lambda_{k,l}$ are those for which (\ref{C-26}) has only a finite number of terms, that is, those for which $y_{k,l} $reduces to a polynomial. The corresponding function $u_{k,l}$ is then physically acceptable, since its asymptotic behavior is dominated by $e^{-\rho\lambda_{k,l}}$ . Therefore, all we need is an integer $k$ such that the term in brackets of the right-hand side of (\ref{C-31}) goes to zero for $q=k$: the corresponding coefficient $c_k$ is then zero, as are all those of higher order, since the fact that $c_k$ is zero means that $c_{k+1}$ is as well, and so on. For fixed $l$, we label the corresponding values of $\lambda_{k,l}$ by this integer $k$ (note that $k$ is greater than or equal to $1$, since $c_0$ never goes to zero). We then have, according to (\ref{C-31}):
+\begin{equation}\label{C-35}
+	\lambda_{k,l}=\frac{1}{k+l}
+\end{equation}
+For a given $l$, the only negative energies possible are therefore [formula (\ref{C-20})]:
+\begin{equation}\label{C-36}
+	E_{k,l}=\frac{-E_I}{(k+l)^2};\qquad k=1,2,3,...
+\end{equation}
+We shall discuss this result in \ref{sec:C-4}
+
+$y_{k,l}$ is therefore a polynomial, whose term of lowest order is in $\rho^{l+1}$ and whose term of highest order is in $\rho^{k+l}$ . Its various coefficients can be calculated in terms of $c_0$ by solving recurrence relation (\ref{C-31}), which can be written, using (\ref{C-35}):
+\begin{equation}\label{C-37}
+	c_q=-\frac{2(k-q)}{q(q+2l+1)(k+l)}c_{q-1}
+\end{equation}
+It is easy to show that:
+\begin{equation}\label{C-38}
+	c_q=(-1)^q\left(\frac{2}{k+l}\right)^q\frac{(k-1)!}{(k-q-1)!}\frac{(2l+1)!}{q!(q+2l+1)!}c_0
+\end{equation}
+$u_{k,l}$ is then given by formula (\ref{C-23}), and $c_0$ is determined (to within a phase factor) by normalization condition (\ref{A-34}) [we must first, of course, return to the variable $r$ by using (\ref{C-19})]. Finally, we obtain the true function $R_{k,l}(r)$ by dividing $u_{k,l}(r)$ by $r$. The following three examples give an idea of the form of these radial functions:
+\begin{align}
+	\label{C-39a}R_{k=1,l=0}(r)&=2(a_0)^{-3/2}e^{-r/a_0}\\
+	\label{C-39b}R_{k=2,l=0}(r)&=2(a_0)^{-3/2}\left(1-\frac{r}{2a_0}\right)e^{-r/2a_0}\\
+	R_{k=1,l=1}(r)&=(2a_0)^{-3/2}\frac{1}{\sqrt{3}}\frac{r}{a_0}e^{-r/2a_0}\label{C_39c}
+\end{align}
+
+\subsection{Discussion of the results}\label{sec:C-4}
+
 
 
 
