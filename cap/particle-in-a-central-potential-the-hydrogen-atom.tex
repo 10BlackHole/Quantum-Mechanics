@@ -459,6 +459,49 @@ It follows that:
 	E_I\ll m_ec^2
 \end{equation}
 
+\subsubsection{Energy levels}
+\begin{itemize}
+	\item \textit{Possible values of the quantum numbers; degeneracies}
+
+
+		For fixed $l$, there exists an infinite number of possible energy values [formula (\ref{C-36})], corresponding to $k= 1, 2, 3$, ... Each of them is at least $(2 + 1)$-fold degenerate: this is an \textit{essential degeneracy} related to the fact that the radial equation depends only on the quantum number $l$ and not on $m$ (\ref{sec:A-3})). But, in addition, there exist \textit{accidental degeneracies}: equation (\ref{C-36}) indicates that two eigenvalues $E_{k,l}$ and $E_{k',l'}$ corresponding to different radial equations $(l'\neq l)$ are equal if $k+l=k'+l'$. 
+
+		In the special case of the hydrigen atom, $E_{k,l}$ does not depend on $k$ and $l$ separately, but only on their sum. We set:
+		\begin{equation}\label{C-46}
+	n = k+l
+\end{equation}
+The various energy states are labeled by the integer $n$ (greater than or equal to $1$), and (\ref{C-36}) becomes:
+\begin{equation}\label{C-47}
+	E_n=-\frac{1}{n^2}E_I
+\end{equation}
+According to (\ref{C-46}), it is equivalent to specify $k$ and $l$ or $n$ and $l$ to determine the eigenfunctions. Following convention, from now on we shall use the quantum numbers $n$ and $l$. The energy is fixed by $n$, which is called the \textit{`principal quantum number}; a given value of $n$ characterizes what is called an \textit{electron shell}.
+
+Since $k$ is necessarily an integer which is greater than or equal to $1$, there is only a finite number of values of $l$ associated with the same vale¡ue of $n$. According to (\ref{C-46}), if $n$ is fixed, one can have:
+\begin{equation}\label{C-48}
+	l=0,1,2,...,n-1
+\end{equation}
+The shell characterized by $n$ is said to contain $n$ \textit{sub-shells}, each one corresponding to one of the values $l$ of given in (\ref{C-48}). Finally, each sub-shell contains $(2l+1)$ distinct states, associated with the $(2l+1)$ possible values of $m$ for fixed $l$.
+
+The total degeneracy of the energy level $E_n$ is therefore:
+\begin{equation}\label{C-49}
+	g_n=\sum_{l=0}^{n-1}(2l+1)=2\frac{(n-1)n}{2}+n=n^2
+\end{equation}
+We sall see that the existence of electron spin multiplies this number by $2$ (if we also take into account the proton spin, which is equal to that of the electron, we obtain another factor of $2$).
+
+\item \textit{Spectroscopic notation}
+
+For historical reasons (dating from the period, before the development of quantum mechanics, in which the study of spectra resulted in an empirical classification of the numerous lines observed), letters of the alphabet are associated with the various values of $l$. The correspondence is as follows:
+\begin{align*}
+	l&=0\leftrightarrow s\\
+	l&=1\leftrightarrow p\\
+	l&=2\leftrightarrow d\\
+	l&=3\leftrightarrow f\\
+	l&=4\leftrightarrow g\\
+	\vdots & \vdots
+	%\mbox{alphabetical order}
+\end{align*}
+
+\end{itemize}
 
 
 
