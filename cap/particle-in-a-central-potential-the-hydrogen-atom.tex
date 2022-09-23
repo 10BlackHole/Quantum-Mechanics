@@ -504,6 +504,36 @@ Therefore, \textit{spectroscopic notation} labels a sub-shell by the correspondi
 \end{itemize}
 
 \subsubsection{Wave functions}\label{sec:C-4-c}
+The wave functions associated with the eigenstates common to $\vb{L}^2$, $L_z$ and the Hamiltonian $H$ of the hydrogen atom are generally labeled, not by the three quantum numbers $k,l,m$ as we have done until now, but by $n$,$l$ and $m$ [passage from one set to the other simply involves use of relation (\ref{C-46})]. Since the operators $H, $$\vb{L}^2$ and $L_z$ constitute a C.S.C.O. (cf. \ref{A-3}), specification of the three integers $n,l$ and $m$ which is equivalent to that of the eigenvalues of $H$, $\vb{L}^2$ and $L_z$, unambiguously determines the corresponding eigenfunction $\varphi_{n,l,m}(\vb{r})$.
+
+\begin{itemize}
+	\item \textit{Angular dependence}
+
+		As is the case for any central potential, the functions $\varphi_{n,l,m}(\vb{r})$ are products of a radial function and a spherical harmonic $Y_l^m(\theta,\varphi)$.To visualize their angular dependence on the axis characterized by the polar angles $\theta$ and $\varphi$, we can measure off a distance that is proporcional to $|\varphi_{n,l,m}(r,\theta,\varphi)|^2$ for any \textit{fixed} $r$, that is, proportional to $|Y_l^m(\theta,\varphi)|^2$. Thys, we obtain a surface of revolution about $Oz$ axis, since we know squently, $|Y_l^m(\theta,\varphi)|^2$ is independent of $\varphi$. We can therefore represent its cross-section by a plane containing $Oz$.
+
+	\item \textit{Radial dependence}
+
+		The radial functions $R_{n,l}(r)$, each of which characterizes a sub-sehll, can be calculated from the results of \ref{sec:C-3-c}, paying attention, however, to the change in notation introduced by formula (\ref{C-46}). 
+		
+		Finally, we can derive formula (\ref{C-11b}) for the successive Bohr radio. To do so, consider the various states for which $l=n$. We calculate the variation with of the probability density for each of the preceding levels in an infinitesimal solid angle $\dd \Omega$ about a fixed direction of polar angles $\theta$ and $\varphi$. In general, the position probability for the electron in the volume element $\dd^3 r=r^2\dd r\dd\Omega$ situated at the point $(r,\theta,\varphi)$ is given by:
+\begin{align}\
+	\nonumber \dd^3\mathcal{P}_{n,l,m}(r,\theta,\varphi)&=|\varphi_{n,l,.}(r,\theta,\varphi)|^2r^2\dd r\dd\Omega\\
+																											 &=|R_{n,l}(r)|^2r^2\dd r\times |Y_l^m(\theta,\varphi)|^2\dd\Omega\label{C-52}
+\end{align}
+Here, we have fixed $\theta$, $\varphi$ and $\dd\Omega$. The probability of finding the electron between $r$ and $r+\dd r$ , inside the solid angle under consideration, is then proportional to $r^2|R_{n,l}(r)|^2\dd r$ . The corresponding density is therefore, to within a constant factor, $r^2|R_{n,l}(r)|^2$ (the factor $r^2$ arises from the expression for the volume element in spherical coordinates). We are interested in the case where $l=n-1$, that is, $k=n-l=1$; \ref{sec:C-3-c} then indicates
+that the polynomial which enters into $R_{n,l}(r)$ contains only one term in $(r/a_0)^{n-1}$ desired probability density is therefore proportional to:
+\begin{align}
+	\nonumber f_n(r)&=\frac{r^2}{a_0^2}\left[\left(\frac{r}{a_0}\right)^{n-1}e^{r/na_0}\right]^2\\
+									&=\left(\frac{r}{a_0}\right)^{2n}e^{-2r/na_0}\label{C-54}
+\end{align}
+This function has a maximum for:
+\begin{equation}\label{C-54}
+	r=r_n=n^2a_0
+\end{equation}
+which is the radius of the Bohr orbit corresponding to the energy $E_n$.
+
+
+\end{itemize}
 
 
 
