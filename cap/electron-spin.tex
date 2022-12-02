@@ -1,2 +1,74 @@
 \chapter{Electron Spin}\footnote{Quantum Mechanics - Cohen-Tannoudji, Diau, Laloe.}
 \section{Introduction of electron spin}
+\subsection{Experimental evidence}
+\subsubsection{Fine structure of spectral lines}
+\subsubsection{"Anomalous" Zeeman effect}
+\subsubsection{Existence of half-integral angular momenta}
+
+\subsection{Quantum description: postulates of the Pauli theory}
+
+\section{Special properties of an angular momentum $1/2$}
+We shall restrict ourselves from now on to the case of the electron, which is a spin $1/2$ particle. From the preceding chapters, we know how to handle its orbital variables. We are now going to study in more detail its spin degrees of freedom.
+
+The spin state space is two-dimensional. We shall take as a basis the orthonormal system $\{\ket{+}, \ket{-}\}$ of eigenkets common to $\vb{S}^2$and $S_z$ which satisfy the equations:
+
+\begin{equation}\label{B-1}
+	\left \{
+		\begin{array}{ll}
+			\vb{S}^{2}\ket{\pm}&=\frac{3}{4}\hbar^2\ket{\pm}\\
+			S_z\ket{\pm}&=\pm\frac{1}{2}\hbar\ket{\pm}
+		\end{array}
+	\right.
+\end{equation}
+
+\begin{equation}\label{B-2}
+	\left \{
+		\begin{array}{ll}
+			\braket{+}{-}&=0\\
+			\braket{+}{+}&=\braket{-}{-}=1
+		\end{array}
+	\right.
+\end{equation}
+
+\begin{equation}\label{B-3}
+	\ket{+}\bra{+} + \ket{-}\bra{-}=\mathbb{1}
+\end{equation}
+where $\mathbb{1}$ is the unit operator. The most general spin state is described by an arbitrary vector of $\mathcal{E}_c$:
+\begin{equation}\label{B-4}
+	\ket{\xi}=c_+\ket{+} + c_-\ket{-}
+\end{equation}
+where $c_+$ and $c_-$ are complex numbers. According to (\ref{B-1}), all the kets of $\mathcal{E}_s$ are eigenvectors of $\vb{S}^2$with the same eigenvalue $3\hbar^2/4$, which causes $\vb{S}^2$ to be proportional to the identity operator of $\mathcal{E}_s$:
+\begin{equation}\label{B-5}
+	\vb{S}^2=\frac{3}{4}\hbar^2
+\end{equation}
+(in the right hand side of this equation, as is usually done, we have not written the unit operator $\mathbb{1}$ explicitly). Since $\vb{S}$ is, by definition, an angular momentum, it possesses all the general properties derived before. The action of the operators:
+\begin{equation}\label{B-6}
+	S_{\pm}=S_x\pm iS_i
+\end{equation}
+on the basis vectors $\ket{+}$ and $\ket{-}$ is given by the general formulas (\ref{C-50}) when one sets $j=s=1/2$:
+\begin{align}
+	\label{B-7a}S_-\ket{+}&=0\qquad S_+\ket{-}=\hbar\ket{+}\\
+	S_-\ket{+}&=\hbar\ket{-}\qquad S_-\ket{-}=0\label{B-7b}
+\end{align}
+Any operator acting in $\mathcal{E}_s$ can be representes, in the $\{\ket{+}, \ket{-}\}$ basis, by a $2\times 2$ matrix. In particular, using (\ref{B-1b}) and (\ref{B-7}), we find the matrices corresponding to $S_x, S_y$ and $S_z$ in the form:
+\begin{equation}\label{B-8}
+	(\vb{S})=\frac{\hbar}{2}\vb*{\sigma}
+\end{equation}
+where $\vb{\sigma}$ designates the set of three \textit{Pauli matrices}:
+\begin{equation}\label{B-9}
+	\sigma_x=\mqty(0&1\\1&0)\qquad \sigma_y=\mqty(0&-i\\i&0)\qquad  \sigma_z=\mqty(1&0\\0&-1)
+\end{equation}
+The Pauli matrices posses the following properties, which can easily be verifed from their explicit form (\ref{B-9})
+\begin{align}
+	\label{B-10a}\sigma_x^2=\sigma_y^2=\sigma_z^2&=\mathbb{1}\\
+	\label{B-10b}\sigma_x\sigma_y + \sigma_y\sigma_x&=0\\
+	\label{B-10c}[\sigma_x,\sigma]&=2i\sigma_z\\
+	\sigma_x\sigma_y&=i\sigma_z\label{B-10d}
+\end{align}
+(to the last three formulas must bee added those obtained through cyclic permutation of the $x,y,z$ indices). It also follow from (\ref{B-9}) that:
+
+
+
+
+
+
