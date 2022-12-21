@@ -23,7 +23,7 @@ Linear transformations, $T$, are represented by \textbf{matrices} (with respect 
 But the "vectors" we encounter in quantum mechanics are (for the most specified) \textit{functions}, and they live in infinite-dimensional spaces. For them the $N$-tuple/matrix notation is awkward, at best, and manipulations that are well-behaved in the finite dimensional case can be problematic. (The underlying reason is that whereas the finite sum in (\ref{3.2}) always exists, an infinite sum--or a integral-- may not converge, in which case the inner product does not exists, and any argument involving inner products is immediately suspect.).
 
 The collection of all functions of $x$ constitutes a vector space, but fot our purposes it is much too latge. To represent a possible physical state, the function $\Psi$ must be normalized:
-$$\int |\Psi|^2\dd x=1$$ The set of all \textbf{square-integrable functions}, on a specified ineterval\footnote{Fot is, the limits ($a$ and $b$) will almost always be $\\pm\infty$, but we might as well keep thing more general for the moment},
+$$\int |\Psi|^2\dd x=1$$ The set of all \textbf{square-integrable functions}, on a specified ineterval\sn{Fot is, the limits ($a$ and $b$) will almost always be $\\pm\infty$, but we might as well keep thing more general for the moment},
 \begin{equation}\label{3.4}
 	f(x)\qquad \mbox{ such that  }\qquad \int_a^b |f(x)|^2\dd x<\infty
 \end{equation}
@@ -116,13 +116,13 @@ Our attention is thus directed to the \textit{eigenfunction of hermitian operato
 
 \subsection{Discrete Spectra}
 Mathematically, the normalizable eigenfunctions of a hermitian have two important properties:
-\begin{teo}
+\begin{theorem}
 	Their \textit{eqigenvalues} are \textit{real}.
-\end{teo}
+\end{theorem}
 This is comforting: If you measure an obervable on a particle ina  dterminate state, you will at leat least get a real number.
-\begin{teo}
+\begin{theorem}
 	Eigenfunctions belonging to distinct eigenvalues are \textit{orthogonal}.
-\end{teo}
+\end{theorem}
 In  a \textit{finite}-diemsnional vector space the eigenvectos of a hermitian matrix have a third fundamental property: The span the space (every vector can be expressed as a linar combination of them). Unfortunately, the proof does not generalize to infinite-dimensional spaces. But the property itslef is essential to the internal consistency of quantum mechanics, so we will take it as an \textit{axiom} (or, more precisely, as a restriction on the class of hermitian operators that can represent obervables):
 \begin{axiom}
 	The eigenvalues of an obervable operator are \textit{compelte}: Any function (in Hilber space) can be expressed as a linear combination of them.
@@ -134,8 +134,8 @@ If the spectrum of a hermitian operator is \textit{continuous}, the eigenfunctio
 \begin{example}
 	Find the eigenfunctions and eigenvalues of the momentum operator
 \end{example}
-\begin{sol}
-\end{sol}
+%\begin{sol}
+%\end{sol}
 Let $f_p(x)$ be the eigenfunction and $p$ the eigenvalue:
 \begin{equation}\label{3.30}
 	\frac{\hbar}{i}\frac{\dd}{\dd x}f_p(x)=pf_p(x)
@@ -210,11 +210,11 @@ Operators (representing obervables) are linear transformations--they "transform"
 \begin{equation}\label{3.79}
 	\ket{\beta}=\hat{Q}\ket{\alpha}
 \end{equation}
-Just as vectors are represented, with respect to a particular basis $\{\ket{e_n}\}$\footnote{I'll assume the basis is discrete: otherwise $n$ becomes a continuous index and the syms are replaced by integrals}, by their components,
+Just as vectors are represented, with respect to a particular basis $\{\ket{e_n}\}$\sn{I'll assume the basis is discrete: otherwise $n$ becomes a continuous index and the syms are replaced by integrals}, by their components,
 \begin{equation}\label{3.80}
 	\ket{\alpha}=\sum_n a_n\ket{e_n}, \mbox{with } a_n=\braket{e_n}{\alpha}:\quad \beta=\sum_n b_n\ket{e_n}, \mbox{with } b_n=\braket{e_n}{\beta}
 \end{equation}
-operators are represented (with respect to a particular basis) by their \textbf{matrix elements}\footnote{Tjis terminology is inspired, obviously, by the finite-dimensinal case, but the "matrix" will now typically have an infinite (maybe even uncountable) number of elements.}
+operators are represented (with respect to a particular basis) by their \textbf{matrix elements}\sn{Tjis terminology is inspired, obviously, by the finite-dimensinal case, but the "matrix" will now typically have an infinite (maybe even uncountable) number of elements.}
 \begin{equation}\label{3.81}
 	\mel{e_m}{\hat{Q}}{e_n}\equiv Q_{mn}
 \end{equation}

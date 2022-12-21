@@ -1,84 +1,19 @@
-\documentclass[letterpaper, onecolumn, 11pt]{report}
-\usepackage[utf8]{inputenc}
-%\usepackage[spanish]{babel}
-\usepackage{bbold}
-\usepackage{amsmath}
-\usepackage{amssymb}
+\documentclass[10pt]{report}
+\usepackage{NotesTeX} %/Path/to/package should be replaced with package location
+
 \usepackage{siunitx}
-\usepackage{graphicx}
-%\usepackage{txfonts} %bkn
-\usepackage{physics}
-\usepackage{wrapfig}
-\usepackage{hyperref}
-\usepackage{marginnote}
-\usepackage{caption}
-\usepackage{amsfonts}
-%\usepackage{draculatheme} %Agregar draculatheme.sty  al directorio del proyecto LaTeX
-%\spanishdecimal{.}
-\usepackage{hyperref}
-\usepackage{marginnote}
-\hypersetup{colorlinks=true, linkcolor=red}
-
-\newtheorem{teo}{Theorem}
-\newtheorem{axiom}{Axiom}
-\newtheorem{example}{Example}
-\newtheorem{sol}{Solution}
-
-
 \newcommand{\lambdabar}{{\mkern0.75mu\mathchar '26\mkern -9.75mu\lambda}}
 
-\renewcommand*{\marginnotevadjust}{-0.1cm}
-\renewcommand*{\marginfont}{\footnotesize}
-\usepackage[right=4.5cm,left=2cm,top=3cm,bottom=3.0cm]{geometry}
+\title{{\Huge Quantum Mechanics}}
+\author{Diez B. Borja\footnote{\href{https://github.com/10blackhole}{\textit{Author Website}}}}
+
+%\affiliation{Affiliation of Author}
+%\emailAdd{Email of Author}
 \begin{document}
-\sffamily
-\begin{center}
-
-
-
-\vspace{6.5cm}
-
-\rule{15cm}{0.1cm}
-
-\vspace{1.5cm}
-
-{\huge \textsc{\textbf{Quantum Mechanics}}}
-
-\vspace{1.5cm}
-
-\rule{15cm}{0.1cm}
-
-\vspace{1.5cm}
-Diez B. Borja
-
-
-\today
-
-\newpage
-\setcounter{page}{1}
-\pagenumbering{roman}
-
-\pagestyle{plain}
-\chapter*{Preface}
-\addcontentsline{toc}{chapter}{Preface}
-\bigskip
-\bigskip
-\bigskip
-\bigskip
-\bigskip
-\bigskip
-
-
-\emph{This notes has been written by \href{https://github.com/10BlackHole}{B. Diez} mainly from Introduction to Quantum Mechanics by David J. Griffiths and own knowledge.}
-
-\emph{Since these notes were written for self-study, this is an unfinished version.}
-\end{center}
-%\title{\Huge\textbf{{Quantum Mechanics}}}
-%\author{Diez B. Borja}
-%\maketitle
-\tableofcontents
-\pagenumbering{arabic}
-\setcounter{page}{1}
+  \maketitle
+  \flushbottom
+  \newpage
+  \pagestyle{fancynotes}
 \input{cap/the-wave-function.tex}
 \input{cap/time-independent-schrodinger-equation.tex}
 \input{cap/formalism.tex}
@@ -86,4 +21,5 @@ Diez B. Borja
 \input{cap/identical-particles.tex}
 \input{cap/particle-in-a-central-potential-the-hydrogen-atom.tex}
 \input{cap/electron-spin.tex}
+  %Some notes here.\sn{With some additional sidenotes}
 \end{document}

@@ -1,4 +1,4 @@
-\chapter{Particle in a Central Potential. The Hydrogen Atom}\footnote{Quantum Mechanics - Cohen-Tannoudji, Diau, Laloe.}
+\chapter{Particle in a Central Potential. The Hydrogen Atom}\sn{Quantum Mechanics - Cohen-Tannoudji, Diau, Laloe.}
 In this chapter, we shall consider the quantum mechanical properties of a particle placed in a central potential [that is, a potential $V(r)$ which depends only on the distance $r$ from the origin]. This problem is closely related to the study of angular momentum. As we shall know, the fact that $V(r)$ es invariant under any rotation about the origin means that the Hamiltonian $H$ of the particle conmutes with the three components of the orbital angular momentum operator $\vb{L}$. This cosiderably simplifies the determination of the eigenfunctions and eigenvalues of $\vb{L}^2$ and $L_z$ as well.
 
 
@@ -81,7 +81,7 @@ In quantum mechanics, we want to solve the eigenvalue equation of the Hamiltonia
 \begin{equation}\label{A-14}
 	\left[-\frac{\hbar^2}{2\mu}\Delta +V(r)\right]\varphi(\vb{r}) = E\varphi(\vb{r})
 \end{equation}
-Since the potential $V$ depends only on the distance  $r $of the particle from the origin, spherical coordinates are best adapted to the problem. We therefore express the Laplacian $\Delta$ in spherical coordinates \footnote{Expression (\ref{A-15}) gives the Laplacian only for non-zero $r$. This is because of the privileged position of the origin in spherical coordinates; it can be seen, moreover, that expression (\ref{A-15}) is not defined for $r=0$.}
+Since the potential $V$ depends only on the distance  $r $of the particle from the origin, spherical coordinates are best adapted to the problem. We therefore express the Laplacian $\Delta$ in spherical coordinates \sn{Expression (\ref{A-15}) gives the Laplacian only for non-zero $r$. This is because of the privileged position of the origin in spherical coordinates; it can be seen, moreover, that expression (\ref{A-15}) is not defined for $r=0$.}
 \begin{equation}\label{A-15}
 	\Delta = \frac{1}{r}\pdv[2]{r}r+\frac{1}{r^2}\left(\pdv[2]{\theta} +\frac{1}{\tan\theta}\pdv{\theta}+\frac{1}{\sin^2\theta}\pdv[2]{\varphi}\right)
 \end{equation}
@@ -100,7 +100,7 @@ We shall now show how one can solve the eigenvalue equation:
 
 \subsection{Separation of variables}
 \subsubsection{Angular dependence of the eigenfunctions}
-We know that the three components of the angular momentum operator $\vb{L}$ act only on the angular variables $\theta$ and $\varphi$ ; consequently, they commute with all operators acting only on the $r$-dependence. In addition, they commute with $\vb{L}^2$. Therefore, according to expression (\ref{A-16}) for the Hamiltonian, \textit{the three components of L are constants of the motion\footnote{(\ref{A-18}) express the fact that $H$ is a scalar operator with respect to rotations about the point $O$. This is true because the potential energy is invariant under rotations about $O$.}} in the quantum mechanical sense:
+We know that the three components of the angular momentum operator $\vb{L}$ act only on the angular variables $\theta$ and $\varphi$ ; consequently, they commute with all operators acting only on the $r$-dependence. In addition, they commute with $\vb{L}^2$. Therefore, according to expression (\ref{A-16}) for the Hamiltonian, \textit{the three components of L are constants of the motion\sn{(\ref{A-18}) express the fact that $H$ is a scalar operator with respect to rotations about the point $O$. This is true because the potential energy is invariant under rotations about $O$.}} in the quantum mechanical sense:
 \begin{equation}\label{A-18}
 	[H,\vb{L}]=\vb{0}
 \end{equation}
@@ -170,7 +170,7 @@ and, consequently:
 	\right.
 \end{equation}
 
-For a given value of $E_{k,l}$, there are therefore two linearly independent solutions of the second-order equation (\ref{A-22}), behaving at the origin like $r^l$ and $1/R^{l+1}$, respectively. But those which behave like $1/r^{l+1}$ must be rejected, since it can be shown\footnote{This is because the Laplacian of $\frac{1}{r^{l+1}}Y_l^m(\theta,\varphi)$ involves the $l$th derivatives of $\delta(\vb{r})$.} that $\frac{1}{r^{l+1}}Y_l^m(\theta,\varphi)$ is not a solution of the eigenvalue equation (\ref{A-14}) for $r=0$. From this, we see that acceptable solution of (\ref{A-24}) go to zero at the origin for all $l$, since:
+For a given value of $E_{k,l}$, there are therefore two linearly independent solutions of the second-order equation (\ref{A-22}), behaving at the origin like $r^l$ and $1/R^{l+1}$, respectively. But those which behave like $1/r^{l+1}$ must be rejected, since it can be shown\sn{This is because the Laplacian of $\frac{1}{r^{l+1}}Y_l^m(\theta,\varphi)$ involves the $l$th derivatives of $\delta(\vb{r})$.} that $\frac{1}{r^{l+1}}Y_l^m(\theta,\varphi)$ is not a solution of the eigenvalue equation (\ref{A-14}) for $r=0$. From this, we see that acceptable solution of (\ref{A-24}) go to zero at the origin for all $l$, since:
 \begin{equation}\label{A-29}
 	u_{k,l}(r)\thicksim Cr^{l+1}\quad  \mbox{,as } r\to 0
 \end{equation}

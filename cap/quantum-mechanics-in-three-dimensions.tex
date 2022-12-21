@@ -4,7 +4,7 @@ The generalization to three dimensions is straightforward. Schrodinger's equatio
 \begin{equation}\label{4.1}
 	i\hbar\pdv{\Psi}{t}=H\Psi
 \end{equation}
-the Hamiltonian operator\footnote{Where confusion might otherwise occur I have been putting "hats" on operators, to distinguish the from the corresponding classical observables. I don't think therw will be much occasion for ambiguity in this chapter, and the hats get to be cumbersome, so I going to leave the off from now on.} $H$ is obtained from the classical energy $$\frac{1}{2}mv^2+V=\frac{1}{2}(p_x^2+p_y^2+p_z^2)+V$$ by the standard prescription (applied now to $y$ and $z$, as well as $x$):
+the Hamiltonian operator\sn{Where confusion might otherwise occur I have been putting "hats" on operators, to distinguish the from the corresponding classical observables. I don't think therw will be much occasion for ambiguity in this chapter, and the hats get to be cumbersome, so I going to leave the off from now on.} $H$ is obtained from the classical energy $$\frac{1}{2}mv^2+V=\frac{1}{2}(p_x^2+p_y^2+p_z^2)+V$$ by the standard prescription (applied now to $y$ and $z$, as well as $x$):
 \begin{equation}\label{4.2}
 	p_x\to\frac{\hbar}{i}\frac{\partial}{\partial x},\quad p_y\to\frac{\hbar}{i}\frac{\partial}{\partial y},\quad p_z\to\frac{\hbar}{i}\frac{\partial}{\partial z}
 \end{equation}
@@ -41,7 +41,7 @@ The general solution to the (time-\textit{dependent}) Schrodinger equation is
 where de constants $c_n$ determined by the initial wave function, $\Psi(\vb{r},0)$, in the usual way. (If the potential admits cintinuum states, the the sum in (\ref{4.9}) becomes an integral.)
 
 \subsubsection{Separation of Variables}
-Typically, the potential s a function only of the distance from the origin. In that case it is natural to adopt \textbf{spherical coordinates}, $(r,\theta,\phi)$. In spherical cooridinates the Laplacian takes the form\footnote{In principle, this can be obtained by change of variables from the cartesian expression (\ref{4.5}). Howevere, there are much more efficient ways of getting it.}
+Typically, the potential s a function only of the distance from the origin. In that case it is natural to adopt \textbf{spherical coordinates}, $(r,\theta,\phi)$. In spherical cooridinates the Laplacian takes the form\sn{In principle, this can be obtained by change of variables from the cartesian expression (\ref{4.5}). Howevere, there are much more efficient ways of getting it.}
 \begin{equation}\label{4.13}
 	\nabla^2=\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial}{\partial r}\right)+\frac{1}{r^2\sin\theta}\frac{\partial}{\partial \theta}\left(\sin\theta\frac{\partial}{\partial \theta}\right)+\frac{1}{r^2\sin^2\theta}\left(\frac{\partial^2}{\partial\phi^2}\right)
 \end{equation}
@@ -57,7 +57,7 @@ Putting this into (\ref{4.14}), we have $$-\frac{\hbar^2}{2m}\left[\frac{Y}{r^2}
 \begin{equation*}
 	\left\{\frac{1}{R}\frac{\dd}{\dd r}\left(r^2\dv{R}{r}\right)-\frac{2mr^2}{\hbar^2}[V(r)-E]\right\}+\frac{1}{Y}\left\{\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\pdv{Y}{\theta}\right)+\frac{1}{\sin^2\theta}\pdv[2]{Y}{\phi}\right\}=0
 \end{equation*}
-The term in the first curly bracket depends only on $r$, whereas the remainder depends only on $\theta$ and $\phi$; accordingly, each must be a constant. For reasons that will appear on due course\footnote{Note that is no loss of generality here--at this stage $l$ coulds be any complex number. Later on we'll discover that $l$ must in fact be an \textit{integer}, and it is in antisipation of that result that I express the separation constant in a way that looks peculiar now.}, I will write this "separation constant" in the form $l(l+1)$
+The term in the first curly bracket depends only on $r$, whereas the remainder depends only on $\theta$ and $\phi$; accordingly, each must be a constant. For reasons that will appear on due course\sn{Note that is no loss of generality here--at this stage $l$ coulds be any complex number. Later on we'll discover that $l$ must in fact be an \textit{integer}, and it is in antisipation of that result that I express the separation constant in a way that looks peculiar now.}, I will write this "separation constant" in the form $l(l+1)$
 
 \subsubsection{The Angular Equation}
 (\ref{4.17}) determines the dependence of $\psi$ on $\theta$ and $\phi$; multiplying by $Y\sin^2\theta$, it becomes
@@ -182,7 +182,7 @@ but $e^{\rho}$ blows up (as $\rho\to\infty$), so $B=0$. Evidently
 \begin{equation}\label{4.58}
 	u(\rho)\thicksim Ae^{-\rho}
 \end{equation}
-for large $\rho$. On the other hand, as $\rho\to 0$ the centrifugal term dominates\footnote{This argument does not apply when $l=0$ (although the conclusion, (\ref{4.59}, is in fact valid for that case too). But never mind: All I am trying to do is provide some \textit{motivation} for a change of variables (\ref{4.60}))}; approximately, then: $$\dv[2]{u}{\rho}=\frac{l(l+1)}{\rho^2}u$$ The general solution (check it!) is $$u(\rho)=C\rho^{l+1}+D\rho^{-l}$$ but $\rho^{-1}$ blows op (as $\rho\to 0$), so $D=0$. Thus
+for large $\rho$. On the other hand, as $\rho\to 0$ the centrifugal term dominates\sn{This argument does not apply when $l=0$ (although the conclusion, (\ref{4.59}, is in fact valid for that case too). But never mind: All I am trying to do is provide some \textit{motivation} for a change of variables (\ref{4.60}))}; approximately, then: $$\dv[2]{u}{\rho}=\frac{l(l+1)}{\rho^2}u$$ The general solution (check it!) is $$u(\rho)=C\rho^{l+1}+D\rho^{-l}$$ but $\rho^{-1}$ blows op (as $\rho\to 0$), so $D=0$. Thus
 \begin{equation}\label{4.59}
 	u(\rho)\thicksim \rho^{l+1}
 \end{equation}
@@ -205,7 +205,7 @@ Our problem is to determine the coefficients ($c_0, c_1, c_2,...$). Differentiat
 \begin{equation}\label{4.63}
 	c_{j+1}=\left\{\frac{2(j+l+1)-\rho_0}{(j+1)(j+2l+2)}\right\}c_j
 \end{equation}
-This recursion formular determines the coefficients, and hence de function $v(\rho)$: We start with $c_0$ (this becomes an overall constant, to be fixde eventually by normalization), and (\ref{4.63}) gives is $c_1$; putting this back in, we obtain $c_2$, and so on\footnote{You might wonder why I didn't use the series method directly on $u(\rho)$--why factor out the asymptotic behavior before applying this procedure? Well, the reason for peeling off $\rho^{l+1}$ is largely aesthetic: Without this, the sequnce would begin with a long string of zeris (the first nonzero coefficient begin $c_{l+1}$): by factoring out $\rho^{l+1}$ we obtain a series that starts out with $\rho^0$. The $e^{-\rho}$ factor is more critical--if you don't pull that out, you get a three-term recursion formula, involving $c_{j+1}, c_{j+1}$, and $c_j$  and that is enormously more difficult to work with.}.
+This recursion formular determines the coefficients, and hence de function $v(\rho)$: We start with $c_0$ (this becomes an overall constant, to be fixde eventually by normalization), and (\ref{4.63}) gives is $c_1$; putting this back in, we obtain $c_2$, and so on\sn{You might wonder why I didn't use the series method directly on $u(\rho)$--why factor out the asymptotic behavior before applying this procedure? Well, the reason for peeling off $\rho^{l+1}$ is largely aesthetic: Without this, the sequnce would begin with a long string of zeris (the first nonzero coefficient begin $c_{l+1}$): by factoring out $\rho^{l+1}$ we obtain a series that starts out with $\rho^0$. The $e^{-\rho}$ factor is more critical--if you don't pull that out, you get a three-term recursion formula, involving $c_{j+1}, c_{j+1}$, and $c_j$  and that is enormously more difficult to work with.}.
 
 Now let's see what the coefficients look like for large $j$ (this corresponds to large $\rho$, where the higher powers dominate). In this regime the recursion formula says $$c_{j+1}\approx \frac{2j}{j(j+1)}c_j=\frac{2}{j+1}c_j$$ Suppose for a moment that this were \textit{exact}. Then 
 \begin{equation}\label{4.64}
@@ -265,12 +265,12 @@ which os to say,
 The corresponding quantum operators are obtained by the standard prescription $p_x\to -\hbar\partial/\partial x, p_y\to -i\hbar\partial/\partial y, p_z\to -\hbar\partial/\partial z$.
 
 \subsubsection{Eigenvalues}
-The operators $L_x$ and $L_y$ do not commute; in fact\footnote{Note that all the operators we encounter in quantum mechanics are distributive with respect to addition: $A(B+C)=AB +AC$. In particular, $[A,B+C]=[A,B]+[A,C]$.}
+The operators $L_x$ and $L_y$ do not commute; in fact\sn{Note that all the operators we encounter in quantum mechanics are distributive with respect to addition: $A(B+C)=AB +AC$. In particular, $[A,B+C]=[A,B]+[A,C]$.}
 \begin{align}
 	\nonumber [L_x,L_y]&=[yp_z-zp_y, zp_x-xp_z]\\
 										 &=[yp_z,zp_x]-[yp_z,zp_z]-[zp_y,zp_x]+[zp_y,xp_z]\label{4.97}
 \end{align}
-From the canonical commutation relations\footnote{The cannonical commutation relations are $[r_i,p_j]=-[p_i,r_j]=i\hbar\delta_{ij}\quad [r_i,r_j]=[p_i,p_j]=0$} we know that the inly operators here that \textit{fail} to commute are $x$ with $p_x$, $y$ with $p_y$, and $z$ with $p_z$. So the two middles terms drop out, leaving
+From the canonical commutation relations\sn{The cannonical commutation relations are $[r_i,p_j]=-[p_i,r_j]=i\hbar\delta_{ij}\quad [r_i,r_j]=[p_i,p_j]=0$} we know that the inly operators here that \textit{fail} to commute are $x$ with $p_x$, $y$ with $p_y$, and $z$ with $p_z$. So the two middles terms drop out, leaving
 \begin{equation}\label{4.98}
 	[L_x,L_y]=yp_x[p_z,z]+xp_y[z,p_z]=i\hbar(xp_y-yp_x)=i\hbar L_z
 \end{equation}
@@ -440,7 +440,7 @@ The \textit{algebraic} theory of spin is a carbon copy of the theory of orbital 
 \begin{equation}\label{4.124}
 	[S_x,S_y]=i\hbar S_z,\quad [S_y,S_z]=i\hbar S_x,\quad [S_z,S_x]=i\hbar S_y
 \end{equation}
-It follows (as before) that the eigenvectors of $S^2$ and $S_z$ satisfy\footnote{Because the eigensates of spin are not \textit{functions}, I will the "ket" notation for them. (I could have done the same in Section \ref{sec:4.3}, writing $\ket{lm}$ in place of $Y_l^m$, but in that context the function notation seems more natural.) By the way, I'm running out of letters,  so I'll use $m$ for the eigenvalue of $S_z$ just as I did for $L_z$ (some authors write $m_l$ and $m_s$ at this stage, just to be absolutely clear).}
+It follows (as before) that the eigenvectors of $S^2$ and $S_z$ satisfy\sn{Because the eigensates of spin are not \textit{functions}, I will the "ket" notation for them. (I could have done the same in Section \ref{sec:4.3}, writing $\ket{lm}$ in place of $Y_l^m$, but in that context the function notation seems more natural.) By the way, I'm running out of letters,  so I'll use $m$ for the eigenvalue of $S_z$ just as I did for $L_z$ (some authors write $m_l$ and $m_s$ at this stage, just to be absolutely clear).}
 \begin{equation}\label{4.135}
 	S^2\ket{sm}=\hbar^2s(s+q)\ket{sm};\quad S_z\ket{sm}=\hbar m\ket{sm}
 \end{equation}
@@ -507,7 +507,7 @@ If you measure $S_z$ on a particle in the general state $\chi$ (\ref{4.139}), yo
 \begin{equation}\label{4.150}
 	|a|^2+|b|^2=1
 \end{equation}
-(i.e., the spinor must be \textit{normalized}).\footnote{People often say that $|a|^2$ is the "probability that the particle is in the spin-up state", but this is slppy language; what they \textit{mean} is that if you \textit{measured} $S_z$, $|a|^2$ is the probability you'd get $\hbar/2$}.
+(i.e., the spinor must be \textit{normalized}).\sn{People often say that $|a|^2$ is the "probability that the particle is in the spin-up state", but this is slppy language; what they \textit{mean} is that if you \textit{measured} $S_z$, $|a|^2$ is the probability you'd get $\hbar/2$}.
 
 But what if, instead, you chose to measure $S_x$? What the possible results, and what are thei respective probabilities? According to the generalized statistical interpretation,  we need to know the eigenvalues and eigenspinors of $\vb{S}_x$. The characteristic equation is $$\mqty|-\lambda&\hbar/2\\\hbar/2&-\lambda|=0\Rightarrow \lambda^2=\left(\frac{\hbar}{2}\right)^2\Rightarrow \lambda =\pm\frac{\hbar}{2}$$
 Not surprisongly, the possible values for $S_x$ are the same as those for $S_z$. The eigenspinor are obtained in the usual way: $$\frac{\hbar}{2}\mqty(0&1\\1&0)\mqty(\alpha\\\beta)=\pm \frac{\hbar}{2}\mqty(\alpha\\\beta)\Rightarrow \mqty(\alpha\\\beta)=\pm \mqty(\alpha\\\beta)$$, so $\beta=\pm\alpha$. Evidently the (normalized) eigenspinors of $\vb{S}_x$ are
@@ -550,7 +550,7 @@ so the Hamiltonian of a spinning charged particle, at rest in a magnetic field $
 \end{example}
 
 \subsubsection{Addition of Angular Momenta}\label{sec:4.4.3}
-Suppose now that we have \textit{two} spin -$1/2$ particles--for example, the electron and the proton in the ground state\footnote{I put them in the ground state so there won't be any \textit{orbital} angular momentum to worry about.} of hydrogen. Each can have spin up or spin down, so there are four possibilities in all\footnote{More precisely, each particle is in a \textit{linear combinatio} of spin up and spin down, adn the composite system is in a \textit{linear combination} of the four states listed.}
+Suppose now that we have \textit{two} spin -$1/2$ particles--for example, the electron and the proton in the ground state\sn{I put them in the ground state so there won't be any \textit{orbital} angular momentum to worry about.} of hydrogen. Each can have spin up or spin down, so there are four possibilities in all\sn{More precisely, each particle is in a \textit{linear combinatio} of spin up and spin down, adn the composite system is in a \textit{linear combination} of the four states listed.}
 \begin{equation}\label{4.175}
 	\uparrow\uparrow,\quad \uparrow\downarrow,\quad \downarrow\uparrow, \quad \downarrow\downarrow
 \end{equation}
